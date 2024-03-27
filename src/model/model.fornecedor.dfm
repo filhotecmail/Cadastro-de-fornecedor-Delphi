@@ -1,0 +1,2 @@
+inherited ModelFornecedor: TModelFornecedor
+end

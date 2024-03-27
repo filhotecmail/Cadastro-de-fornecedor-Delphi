@@ -1,0 +1,2 @@
+inherited ControllerEmpresa: TControllerEmpresa
+end
