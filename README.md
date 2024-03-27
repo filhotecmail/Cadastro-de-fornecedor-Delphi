@@ -59,3 +59,22 @@ A importância do padrão MVC em uma arquitetura de projeto é significativa por
 
 - **Escalabilidade**: O MVC é altamente escalável, o que significa que é adequado para projetos de diferentes tamanhos e complexidades. Ele fornece uma estrutura organizacional que pode ser expandida e adaptada conforme necessário.
 
+### Fachada de Objetos
+
+O padrão Facade é um padrão de design estrutural que fornece uma interface simplificada para um conjunto complexo de classes, estruturas ou sistemas. Ele oculta a complexidade subjacente e fornece uma única interface unificada para interagir com o sistema.
+
+Em termos simples, o Facade atua como uma camada de abstração sobre um conjunto de subsistemas, fornecendo uma interface mais fácil de usar e compreender para os clientes que desejam interagir com esses subsistemas.
+
+## Os benefícios
+
+- **Interface simplificada**: O Facade fornece uma interface simplificada que oculta a complexidade do sistema subjacente. Em vez de lidar diretamente com múltiplas classes ou subsistemas, os clientes interagem apenas com o Facade.
+
+- **Coordenação de subsistemas**: Internamente, o Facade coordena as interações entre os subsistemas que compõem o sistema mais complexo. Ele direciona os pedidos dos clientes para as classes apropriadas e pode realizar operações mais complexas coordenando múltiplas chamadas de método.
+
+- **Encapsulamento de complexidade**: Uma das principais razões para usar o Facade é encapsular a complexidade do sistema. Isso melhora a modularidade, a manutenção e a legibilidade do código, já que os detalhes complexos são escondidos atrás de uma interface mais simples e coesa.
+
+- **Promoção de práticas de design limpo**: O Facade promove a prática de design limpo, isolando o cliente da complexidade interna do sistema. Isso facilita a adição de novos recursos ou a alteração da implementação interna do sistema sem afetar os clientes existentes.
+
+- **Melhoria na legibilidade e na compreensão**: O uso do Facade pode melhorar significativamente a legibilidade e a compreensão do código, especialmente em sistemas complexos. Ao fornecer uma interface clara e concisa, os desenvolvedores podem entender facilmente como interagir com o sistema e quais funcionalidades estão disponíveis.
+
+
