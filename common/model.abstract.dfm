@@ -1,9 +1,9 @@
 object ModelAbstract: TModelAbstract
   OldCreateOrder = False
-  Height = 150
-  Width = 215
-  object oProvider: TDataSetProvider
-    Left = 88
-    Top = 32
+  Height = 95
+  Width = 101
+  object oDataset: TFDQuery
+    Left = 32
+    Top = 24
   end
 end

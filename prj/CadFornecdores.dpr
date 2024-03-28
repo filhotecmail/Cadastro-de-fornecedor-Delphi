@@ -2,7 +2,7 @@ program CadFornecdores;
 
 uses
   Vcl.Forms,
-  view.master in '..\src\view\view.master.pas' {Form11},
+  view.master in '..\src\view\view.master.pas' {Viewmaster},
   dao.abstract in '..\common\dao.abstract.pas' {DaoAbstract: TDataModule},
   database.driver.abstract in '..\common\database.driver.abstract.pas' {DatabaseDriverAbstract: TDataModule},
   model.abstract in '..\common\model.abstract.pas' {ModelAbstract: TDataModule},
@@ -12,7 +12,11 @@ uses
   controller.empresa in '..\src\controller\controller.empresa.pas' {ControllerEmpresa: TDataModule},
   controller.fornecedor in '..\src\controller\controller.fornecedor.pas' {ControllerFornecedor: TDataModule},
   Vcl.Themes,
-  Vcl.Styles;
+  Vcl.Styles,
+  view.empresa in '..\src\view\view.empresa.pas' {ViewEmpresa},
+  view.fornecedor in '..\src\view\view.fornecedor.pas' {ViewFornecedor},
+  view.empresa.crud in '..\src\view\view.empresa.crud.pas' {ViewEmpresaCrud},
+  controller.empresa.crud in '..\src\controller\controller.empresa.crud.pas' {ControllerEmpresaCrud: TDataModule};
 
 {$R *.res}
 
@@ -20,6 +24,6 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   TStyleManager.TrySetStyle('Windows10');
-  Application.CreateForm(TForm11, Form11);
+  Application.CreateForm(TViewmaster, Viewmaster);
   Application.Run;
 end.
