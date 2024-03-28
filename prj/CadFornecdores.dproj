@@ -120,7 +120,7 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="..\src\view\view.master.pas">
-            <Form>Form11</Form>
+            <Form>Viewmaster</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\common\dao.abstract.pas">
@@ -160,6 +160,23 @@
         </DCCReference>
         <DCCReference Include="..\src\controller\controller.fornecedor.pas">
             <Form>ControllerFornecedor</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\src\view\view.empresa.pas">
+            <Form>ViewEmpresa</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\src\view\view.fornecedor.pas">
+            <Form>ViewFornecedor</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\src\view\view.empresa.crud.pas">
+            <Form>ViewEmpresaCrud</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\src\controller\controller.empresa.crud.pas">
+            <Form>ControllerEmpresaCrud</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>

@@ -1,9 +1,9 @@
-object Form11: TForm11
+object Viewmaster: TViewmaster
   Left = 0
   Top = 0
   Caption = 'Cadastro de fornecedores v.1.0'
-  ClientHeight = 459
-  ClientWidth = 870
+  ClientHeight = 698
+  ClientWidth = 1010
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -2134,17 +2134,19 @@ object Form11: TForm11
     79FF0001FAFF0003FAFF80FFFAFF}
   Menu = MainMenu1
   OldCreateOrder = False
+  Position = poScreenCenter
+  PrintScale = poPrintToFit
   PixelsPerInch = 96
   TextHeight = 13
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 440
-    Width = 870
+    Top = 679
+    Width = 1010
     Height = 19
     Panels = <>
-    ExplicitLeft = 264
-    ExplicitTop = 392
-    ExplicitWidth = 0
+    SizeGrip = False
+    ExplicitLeft = -282
+    ExplicitTop = 171
   end
   object MainMenu1: TMainMenu
     Left = 800
@@ -2153,6 +2155,7 @@ object Form11: TForm11
       Caption = 'Menu principal'
       object C1: TMenuItem
         Caption = 'Cadastrar uma nova empresa no sistema'
+        OnClick = C1Click
       end
       object I1: TMenuItem
         Caption = 'Incluir um fornecedor no sistema'
@@ -2161,5 +2164,9 @@ object Form11: TForm11
         Caption = 'Sobre o sistema'
       end
     end
+  end
+  object oEnterAsTab: TJvEnterAsTab
+    Left = 882
+    Top = 24
   end
 end

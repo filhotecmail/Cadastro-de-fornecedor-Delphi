@@ -8,16 +8,14 @@ uses
   System.IoUtils,
   IniFiles,
   Datasnap.Provider,
-  database.driver.abstract;
+  database.driver.abstract, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client;
 
- type TODriverTecnology = ( oDefaultDriver , oFirebirdDriver , oPostgresDriver ,  oOracleDriver );
- type TODriverTecnologyHelper = record helper for TODriverTecnology
-      function ITerateStr(PValue: String): TODriverTecnology;
- end;
  const C_InifileConfigdatabase  = 'conf.ini';
  type
   TModelAbstract = class(TDataModule)
-    oProvider: TDataSetProvider;
+    oDataset: TFDQuery;
   protected
     procedure ConfiureFirebirdDriver(PInifile: TIniFile);
     procedure ConfiurePostgresDriver(PInifile: TIniFile); experimental;
@@ -30,14 +28,12 @@ uses
     FFields: TArray<String>;
     FGeneratorName: string;
     FWhereClausule: TArray<String>;
-    FConnectionDriver: TODriverTecnology;
     procedure SetAutoincField(const Value: String);
     procedure SetFields(const Value: TArray<String>);
     procedure SetGeneratorName(const Value: string);
     procedure SetTablename(const Value: String);
     procedure SetWhereClausule(const Value: TArray<String>);
-    procedure SetConnectionDriver(const Value: TODriverTecnology);
-    { Private declarations }
+     { Private declarations }
   public
     constructor Create(AOwner: TComponent); override;
     { Public declarations }
@@ -46,7 +42,6 @@ uses
     property AutoincField:String read FAutoincField write SetAutoincField;
     property Fields: TArray<String> read FFields write SetFields;
     property WhereClausule: TArray<String> read FWhereClausule write SetWhereClausule;
-    property ConnectionDriver: TODriverTecnology read FConnectionDriver write SetConnectionDriver;
   end;
 
 implementation
@@ -56,7 +51,7 @@ implementation
 { TModelAbstract }
 
 procedure TModelAbstract.ConfiureFirebirdDriver(PInifile: TIniFile);
- var oParams: TStrings;
+ var oParams: TStringList;
 begin
   oParams := TStringList.Create;
  try
@@ -69,7 +64,8 @@ begin
   oParams.Add(Format('Port=%s'      , [PIniFile.ReadString('FIREBIRD', 'PORT', '')]));
   oParams.Add(Format('VendorHome=%s', [PIniFile.ReadString('FIREBIRD', 'VENDORHOME', '')]));
   oParams.Add(Format('VendorLib=%s' , [PIniFile.ReadString('FIREBIRD', 'VENDORLIB', '')]));
-  FTDatabaseDriverAbstract.ParamStr := oParams.Text;
+  FTDatabaseDriverAbstract.ParamStr := oParams;
+  oDataset.Connection := FTDatabaseDriverAbstract.Connection;
  finally
   FreeAndNil( oParams );
  end;
@@ -93,38 +89,15 @@ var
 begin
   inherited;
   FTDatabaseDriverAbstract:= TDatabaseDriverAbstract.Create( AOwner );
-  ConnectionDriver:= oDefaultDriver;
-
   LFileName:= TPath.Combine( ExtractFilePath( ParamStr( 0 ) ), C_InifileConfigdatabase );
   LInifile := TIniFile.Create( LFileName );
-  ConnectionDriver.IterateStr( LInifile.ReadString('ACTIVE DATABASE', 'database_name', ''));
-
-  case ConnectionDriver of
-    oFirebirdDriver: ConfiureFirebirdDriver( LInifile );
-    oPostgresDriver: ConfiurePostgresDriver( LInifile );
-    oOracleDriver  : ConfiureOracleDriver  ( LInifile );
-  end;
+  ConfiureFirebirdDriver( LInifile );
 
 end;
 
 procedure TModelAbstract.SetAutoincField(const Value: String);
 begin
   FAutoincField := Value;
-end;
-
-procedure TModelAbstract.SetConnectionDriver(const Value: TODriverTecnology);
-var
-  LInifile: TInifile;
-  LFileName: TFileName;
-  LParams: TStrings;
-begin
-  FConnectionDriver := Value;
-
-  LParams := TStringList.Create;
-  LFileName:= TPath.Combine( ExtractFilePath( ParamStr( 0 ) ), C_InifileConfigdatabase );
-  LInifile := TIniFile.Create( LFileName );
-
-  FConnectionDriver.IterateStr( LInifile.ReadString('ACTIVE DATABASE', 'database_name', ''));
 end;
 
 procedure TModelAbstract.SetFields(const Value: TArray<String>);
@@ -145,23 +118,6 @@ end;
 procedure TModelAbstract.SetWhereClausule(const Value: TArray<String>);
 begin
   FWhereClausule := Value;
-end;
-
-{ TODriverTecnologyHelper }
-
-function TODriverTecnologyHelper.ITerateStr(PValue: String): TODriverTecnology;
- const C_Firebird = 'FIREBIRD';
- const C_Postgres = 'POSTGRES';
- const C_Oracle   = 'ORACLE';
-begin
- Result:= oDefaultDriver;
-
- if PValue.Trim.IsEmpty then Exit;
- 
- if PValue = C_Firebird then Result:= oFirebirdDriver;
- if PValue = C_Postgres then Result:= oPostgresDriver;
- if PValue = C_Oracle   then Result:= oOracleDriver;
-
 end;
 
 end.

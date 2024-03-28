@@ -1,4 +1,4 @@
-unit view.master;
+unit view.fornecedor;
 
 interface
 
@@ -12,21 +12,20 @@ uses
   Vcl.Controls,
   Vcl.Forms,
   Vcl.Dialogs,
-  Vcl.Menus,
-  Vcl.ComCtrls,
   JvComponentBase,
-  JvEnterTab;
+  JvEnterTab,
+  Vcl.Menus,
+  Vcl.ComCtrls;
 
 type
-  TViewmaster = class( TForm )
+  TViewFornecedor = class( TForm )
+    StatusBar1: TStatusBar;
     MainMenu1: TMainMenu;
     M1: TMenuItem;
     C1: TMenuItem;
     I1: TMenuItem;
     S1: TMenuItem;
     oEnterAsTab: TJvEnterAsTab;
-    StatusBar1: TStatusBar;
-    procedure C1Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -34,18 +33,12 @@ type
     { Public declarations }
   end;
 
-var
-  Viewmaster: TViewmaster;
-
 implementation
+
 {$R *.dfm}
 
-uses controller.abstract;
-
-procedure TViewmaster.C1Click(Sender: TObject);
-begin
- TControllerFactory.CreateController('controller empresa');
-end;
-
-
+ Initialization
+  RegisterClassAlias( TViewFornecedor, 'fornecedor' );
+ Finalization
+  UnRegisterClass( TViewFornecedor );
 end.
