@@ -11,6 +11,7 @@ type
   TDatabaseDriverAbstract = class sealed(TDataModule)
   private
     FParamStr: string;
+    FDao: TDaoAbstract;
     procedure SetParamStr(const Value: string);
     { Private declarations }
   public
@@ -35,6 +36,7 @@ end;
 procedure TDatabaseDriverAbstract.SetParamStr(const Value: string);
 begin
   FParamStr := Value;
+
 end;
 
 end.
