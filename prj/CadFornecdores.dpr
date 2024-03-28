@@ -16,7 +16,9 @@ uses
   view.empresa in '..\src\view\view.empresa.pas' {ViewEmpresa},
   view.fornecedor in '..\src\view\view.fornecedor.pas' {ViewFornecedor},
   view.empresa.crud in '..\src\view\view.empresa.crud.pas' {ViewEmpresaCrud},
-  controller.empresa.crud in '..\src\controller\controller.empresa.crud.pas' {ControllerEmpresaCrud: TDataModule};
+  controller.empresa.crud in '..\src\controller\controller.empresa.crud.pas' {ControllerEmpresaCrud: TDataModule},
+  view.forcenedor.crud in '..\src\view\view.forcenedor.crud.pas' {ViewFornecedorCrud},
+  controller.fornecedor.crud in '..\src\controller\controller.fornecedor.crud.pas' {ControllerFornecedorCrud: TDataModule};
 
 {$R *.res}
 

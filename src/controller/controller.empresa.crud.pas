@@ -8,6 +8,8 @@ uses
   controller.abstract,
   Datasnap.Provider;
 
+
+
 type
   TControllerEmpresaCrud = class( TControllerAbstract )
   private
@@ -27,13 +29,30 @@ uses model.empresa;
 procedure TControllerEmpresaCrud.AfterConstruction;
 begin
   inherited;
-  model := TModelEmpresa.Create( Self );
-  ViewName:= 'empresa crud';
+  model    := TModelEmpresa.Create( Self );
+  ViewName := 'empresa crud';
 end;
 
 procedure TControllerEmpresaCrud.ShowController;
 begin
- View.ShowModal;
+ dataset.Open;
+
+ case ListenAction of
+   oActionNone: View.ShowModal;
+
+   oActionAppend: begin
+                   Dataset.Append;
+                   View.ShowModal;
+                  end;
+
+   oActionOpen: begin
+                 Dataset.Locate('ID',ListenDataset.FieldByName('ID').AsInteger,[]);
+                 View.ShowModal;
+                end;
+
+ end;
+
+
 end;
 
 Initialization

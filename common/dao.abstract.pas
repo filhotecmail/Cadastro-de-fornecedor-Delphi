@@ -5,24 +5,34 @@ interface
 uses
   System.SysUtils,
   System.Classes,
-  Winapi.Windows, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
-  FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait, Data.DB,
+  Winapi.Windows,
+  FireDAC.Stan.Intf,
+  FireDAC.Stan.Option,
+  FireDAC.Stan.Error,
+  FireDAC.UI.Intf,
+  FireDAC.Phys.Intf,
+  FireDAC.Stan.Def,
+  FireDAC.Stan.Pool,
+  FireDAC.Stan.Async,
+  FireDAC.Phys,
+  FireDAC.VCLUI.Wait,
+  Data.DB,
   FireDAC.Comp.Client;
 
 type
-  TDaoAbstract = class(TDataModule)
+  TDaoAbstract = class( TDataModule )
     oCon: TFDConnection;
+
   private
     { Private declarations }
   public
+    { Public declarations }
     procedure BeforeDestruction; override;
     procedure AfterConstruction; override;
-    { Public declarations }
-
-
   end;
 
 implementation
+
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 {$R *.dfm}
 
@@ -31,9 +41,9 @@ var
   MainHandle: THandle;
 begin
   try
-    MainHandle := OpenProcess(PROCESS_ALL_ACCESS, false, GetCurrentProcessID);
-    SetProcessWorkingSetSize(MainHandle, $FFFFFFFF, $FFFFFFFF);
-    CloseHandle(MainHandle);
+    MainHandle := OpenProcess( PROCESS_ALL_ACCESS, false, GetCurrentProcessID );
+    SetProcessWorkingSetSize( MainHandle, $FFFFFFFF, $FFFFFFFF );
+    CloseHandle( MainHandle );
   except
   end;
 
@@ -43,7 +53,7 @@ end;
 procedure TDaoAbstract.AfterConstruction;
 begin
   inherited;
- TrimAppMemorySize;
+  TrimAppMemorySize;
 end;
 
 procedure TDaoAbstract.BeforeDestruction;

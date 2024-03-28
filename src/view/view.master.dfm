@@ -2145,8 +2145,6 @@ object Viewmaster: TViewmaster
     Height = 19
     Panels = <>
     SizeGrip = False
-    ExplicitLeft = -282
-    ExplicitTop = 171
   end
   object MainMenu1: TMainMenu
     Left = 800
@@ -2159,6 +2157,7 @@ object Viewmaster: TViewmaster
       end
       object I1: TMenuItem
         Caption = 'Incluir um fornecedor no sistema'
+        OnClick = I1Click
       end
       object S1: TMenuItem
         Caption = 'Sobre o sistema'
@@ -2168,5 +2167,10 @@ object Viewmaster: TViewmaster
   object oEnterAsTab: TJvEnterAsTab
     Left = 882
     Top = 24
+  end
+  object oAppEvents: TApplicationEvents
+    OnException = oAppEventsException
+    Left = 800
+    Top = 88
   end
 end

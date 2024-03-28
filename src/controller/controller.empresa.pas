@@ -31,14 +31,14 @@ uses model.empresa;
 procedure TControllerEmpresa.AfterConstruction;
 begin
   inherited;
-  model    := TModelEmpresa.Create( Self );
-  ViewName := 'empresa';
+ model    := TModelEmpresa.Create( Self );
+ ViewName := 'empresa';
 end;
 
 procedure TControllerEmpresa.ShowController;
 begin
-  DataSet.Open;
-  View.ShowModal;
+ DataSet.Open;
+ View.ShowModal;
 end;
 
 initialization

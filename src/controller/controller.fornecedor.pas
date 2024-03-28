@@ -14,6 +14,7 @@ type
   public
    { Public declarations }
     procedure AfterConstruction; override;
+    procedure ShowController; override;
   end;
 
 implementation
@@ -26,11 +27,18 @@ uses model.fornecedor;
 procedure TControllerFornecedor.AfterConstruction;
 begin
   inherited;
- Model:= TModelFornecedor.Create( Self );
+ Model    := TModelFornecedor.Create( Self );
+ ViewName := 'fornecedor' ;
 end;
 
 
- initialization
+ procedure TControllerFornecedor.ShowController;
+begin
+  Dataset.Open;
+  View.ShowModal;
+end;
+
+initialization
   RegisterClassAlias( TControllerFornecedor, 'controller fornecedor' );
  finalization
   UnRegisterClass( TControllerFornecedor );

@@ -27,11 +27,7 @@ implementation
 procedure TModelEmpresa.AfterConstruction;
 begin
   inherited;
-  Tablename     := 'EMPRESA';
-  GeneratorName := 'GEN_EMPRESA_ID';
-  AutoincField  := 'ID';
-  Fields        := ['*'];
-  WhereClausule := [];
+
 end;
 
 end.

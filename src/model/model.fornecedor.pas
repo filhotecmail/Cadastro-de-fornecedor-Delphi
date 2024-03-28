@@ -12,6 +12,7 @@ uses
 
 type
   TModelFornecedor = class( TModelAbstract )
+    oEmpresas: TFDQuery;
   private
     { Private declarations }
   public
@@ -28,11 +29,7 @@ implementation
 procedure TModelFornecedor.AfterConstruction;
 begin
   inherited;
-  Tablename     := '';
-  GeneratorName := '';
-  AutoincField  := '';
-  Fields        := [];
-  WhereClausule := [];
+ oEmpresas.Connection := oDataset.Connection;
 end;
 
 end.
