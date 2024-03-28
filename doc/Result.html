@@ -1,0 +1,1142 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<LINK HREF="IBEHTMLDoc.css" type=text/css rel=STYLESHEET>
+ 
+<xml>
+<IBEHelp:Attr Name="ItemOrder" Value="0800"/>
+</xml>
+ 
+</HEAD>
+<BODY>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base"></P><BR><HR>
+<P CLASS="Base">Database: 127.0.0.1/3050:C:\Cadfornecedores\Cadastro-de-fornecedor-Delphi\bin\DATA.fdb</P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Base">Domains&nbsp(0)</P>
+<P CLASS="Base"><A HREF="#_TABLES">Tables</A>&nbsp(2)</P>
+<P CLASS="Base">Views&nbsp(0)</P>
+<P CLASS="Base"><A HREF="#_PROCEDURES">Procedures</A>&nbsp(4)</P>
+<P CLASS="Base"><A HREF="#_TRIGGERS">Triggers</A>&nbsp(2)</P>
+<P CLASS="Base"><A HREF="#_GENERATORS">Generators</A>&nbsp(2)</P>
+<P CLASS="Base">Exceptions&nbsp(0)</P>
+<P CLASS="Base"><A HREF="#_UDFS">UDFs</A>&nbsp(2)</P>
+<P CLASS="Base"><A HREF="#_INDICES">Indices</A>&nbsp(5)</P>
+<P CLASS="Base"><A HREF="#_FOREIGN_KEYS">Foreign Keys</A>&nbsp(1)</P>
+<P CLASS="Base"><A HREF="#_CHECKS">Checks</A>&nbsp(4)</P>
+<P CLASS="Base"><A HREF="#_ROLES">Roles</A>&nbsp(1)</P>
+<HR><A NAME="_DOMAINS"><P CLASS="Header0">Domains</P></A>
+<P CLASS="Base">&nbsp;</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Domain</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>NN</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Default</B></P>
+  <TH WIDTH="50%"><P CLASS="Base2"><B>Description</B></P>
+</TABLE>
+
+<HR>
+<A NAME="_TABLES"><P CLASS="Header0">Tables</P></A>
+<P CLASS="Base">&nbsp;</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Table</B></P>
+  <TH><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#TBL_EMPRESA"><NOBR>EMPRESA</NOBR></A></TD>
+    <TD><P CLASS="Base2">A tabela EMPRESA é uma entidade fundamental em um sistema<br>ERP (Enterprise Resource Planning),pois armazena informações sobre as empresas<br>que utilizam o sistema.<br><br>Aqui estão alguns pontos importantes sobre a tabela e sua importância para um<br>sistema ERP:<br><br>Armazenamento de informações da empresa: A tabela EMPRESA armazena dados<br>importantes sobre as empresas, como o nome fantasia (E001XFANT), a sigla do<br>estado (E002UF) e o CNPJ (E003CNPJ). Essas informações são cruciais para identificar<br>e diferenciar as empresas cadastradas no sistema.<br><br>Garantia de integridade dos dados: A restrição UNQ1_EMPRESA garante que cada<br>CNPJ seja único na tabela, evitando a inserção de empresas duplicadas com o mesmo CNPJ.<br><br>Validação de dados: As restrições CHK1_EMPRESA e CHK2_EMPRESA aplicam validações<br>nos dados inseridos na tabela. A primeira restrição garante que a sigla do<br>estado esteja dentro de um conjunto pré-definido de valores válidos, enquanto a<br>segunda restrição verifica se o CNPJ informado é válido por meio de uma função<br>externa (PROC_VALID_CNPJ).<br><br>Chave primária e identificador único: A coluna ID é uma chave primária<br>autoincrementada que garante a unicidade de cada registro na tabela. O gatilho<br>EMPRESA_BI é responsável por gerar valores para o campo ID antes de inserir um<br>novo registro na tabela.<br><br>Descrição dos campos: A tabela inclui comentários que descrevem cada campo,<br>fornecendo informações adicionais sobre o propósito e o formato dos dados<br>armazenados em cada coluna.</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#TBL_FORNECEDOR"><NOBR>FORNECEDOR</NOBR></A></TD>
+    <TD><P CLASS="Base2">A entidade "Fornecedor" desempenha um papel fundamental em um sistema ERP<br>(Enterprise Resource Planning) e em processos de negócios em geral.<br><br>Abastecimento de Recursos: Os fornecedores são fontes externas de recursos,<br>materiais e serviços que uma empresa precisa para operar. Eles fornecem matérias-primas,<br>componentes, equipamentos, serviços e outros itens essenciais para a produção<br>ou prestação de serviços da empresa.<br><br>Relacionamento Comercial: O relacionamento com os fornecedores é vital para o<br> sucesso de uma empresa. Um sistema ERP armazena informações detalhadas sobre<br> os fornecedores, incluindo dados de contato, histórico de transações, contratos,<br> termos de pagamento e outros detalhes importantes que ajudam a manter e<br> gerenciar esse relacionamento.<br><br>Gestão de Compras e Estoque: A entidade fornecedor permite que as empresas<br>gerenciem eficientemente suas compras e estoques. Os sistemas ERP usam informações de<br>fornecedores para realizar cotações, ordens de compra, recebimentos de<br>mercadorias, controle de estoque e outras atividades relacionadas à cadeia de<br>suprimentos.<br><br>Qualidade e Confiabilidade: Selecionar fornecedores confiáveis e de alta qualidade<br>é essencial para garantir a qualidade dos produtos e serviços oferecidos pela empresa.<br><br>O sistema ERP pode manter registros detalhados de desempenho do fornecedor,<br>incluindo avaliações de qualidade, conformidade com regulamentações, histórico<br>de entregas e feedbacks de clientes.<br><br>Gestão Financeira: A gestão financeira eficaz depende de informações precisas<br>sobre os custos de materiais e serviços fornecidos pelos fornecedores.<br><br>Os sistemas ERP integram informações financeiras relacionadas a fornecedores,<br>como faturas, pagamentos, termos de crédito e relatórios de desempenho financeiro.<br><br>Análise e Tomada de Decisão: Os dados relacionados aos fornecedores são<br>essenciais para análises e tomadas de decisão estratégicas.<br><br>As empresas podem usar informações sobre desempenho de fornecedores, tendências<br>de preços, condições de mercado e outros fatores para otimizar suas operações,<br>reduzir custos, identificar oportunidades de melhoria e mitigar riscos.<br><br><br>ID: É um identificador único para cada registro de fornecedor na tabela.<br>EMPRESA: Representa o CNPJ da empresa fornecedora. Essa referência é importante<br>         para vincular o fornecedor a uma empresa específica no sistema.<br><br>F001DATETIEMEC: Indica a data e hora em que o registro do fornecedor foi criado no sistema.<br>                Isso é útil para fins de auditoria e controle.<br><br>F002CPFCNPJ: Armazena o documento CPF ou CNPJ do fornecedor. Essa informação é<br>             crucial para identificar o fornecedor de forma única e para fins legais e fiscais.<br><br>F003FUNDDATANASC: Representa a data de fundação ou data de nascimento do fornecedor.<br>                  Esta data é relevante para verificar se o fornecedor é menor de idade,<br>                  especialmente se for uma pessoa física.<br><br>F004NOMERAZAO: Contém o nome ou razão social do fornecedor. É fundamental<br>               para identificar o fornecedor de forma legível e para fins<br>               de comunicação e negociação.<br><br>Restrição de Verificação (CHECK CONSTRAINT):<br><br>Garante que o documento CPF/CNPJ seja válido, verificando se o tamanho do documento<br>está correto e se o CPF/CNPJ passa em uma validação específica.<br><br>Verifica se o fornecedor é menor de idade (menos de 18 anos) e se a empresa associada<br>está localizada no estado do Paraná. Isso é feito para garantir que não sejam cadastrados<br>fornecedores pessoa física menores de idade do Paraná.<br><br>Restrição de Unicidade (UNIQUE CONSTRAINT):<br><br>Garante que não haja fornecedores duplicados na tabela com base no documento<br>CPF/CNPJ e na empresa associada.<br><br>Chave Estrangeira (FOREIGN KEY CONSTRAINT):<br><br>Estabelece uma relação entre a tabela de fornecedores e a tabela de empresas (EMPRESA),<br>garantindo que cada fornecedor esteja associado a uma empresa válida.<br><br>Essas restrições e relações garantem a consistência e a integridade dos dados na<br>tabela de fornecedores, essenciais para um funcionamento adequado do sistema ERP.<br><br>O cadastro correto e completo de fornecedores é crucial para o bom funcionamento<br>de operações de compras, estoque e gestão financeira em um negócio.</TD>
+  </TR>
+</TABLE>
+
+<HR>
+<A NAME="TBL_EMPRESA"><P CLASS="Header0">Table: EMPRESA</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base">A tabela EMPRESA é uma entidade fundamental em um sistema<br>ERP (Enterprise Resource Planning),pois armazena informações sobre as empresas<br>que utilizam o sistema.<br><br>Aqui estão alguns pontos importantes sobre a tabela e sua importância para um<br>sistema ERP:<br><br>Armazenamento de informações da empresa: A tabela EMPRESA armazena dados<br>importantes sobre as empresas, como o nome fantasia (E001XFANT), a sigla do<br>estado (E002UF) e o CNPJ (E003CNPJ). Essas informações são cruciais para identificar<br>e diferenciar as empresas cadastradas no sistema.<br><br>Garantia de integridade dos dados: A restrição UNQ1_EMPRESA garante que cada<br>CNPJ seja único na tabela, evitando a inserção de empresas duplicadas com o mesmo CNPJ.<br><br>Validação de dados: As restrições CHK1_EMPRESA e CHK2_EMPRESA aplicam validações<br>nos dados inseridos na tabela. A primeira restrição garante que a sigla do<br>estado esteja dentro de um conjunto pré-definido de valores válidos, enquanto a<br>segunda restrição verifica se o CNPJ informado é válido por meio de uma função<br>externa (PROC_VALID_CNPJ).<br><br>Chave primária e identificador único: A coluna ID é uma chave primária<br>autoincrementada que garante a unicidade de cada registro na tabela. O gatilho<br>EMPRESA_BI é responsável por gerar valores para o campo ID antes de inserir um<br>novo registro na tabela.<br><br>Descrição dos campos: A tabela inclui comentários que descrevem cada campo,<br>fornecendo informações adicionais sobre o propósito e o formato dos dados<br>armazenados em cada coluna.</P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Fields</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>PK</B></P>
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>FK</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Field</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Domain</B></P>
+  <TH WIDTH="20%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>NN</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Default</B></P>
+  <TH WIDTH="40%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/PK1.gif" BORDER="0"></P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="EMPRESA.ID"><P CLASS="Base2">ID</P></A></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">INTEGER</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">ID Auto incremento da tabela , de ordem sequencial</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="EMPRESA.E001XFANT"><P CLASS="Base2">E001XFANT</P></A></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">VARCHAR(60)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">Nome fantasia da Empresa</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="EMPRESA.E002UF"><P CLASS="Base2">E002UF</P></A></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">VARCHAR(2)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">Sigla da UF</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="EMPRESA.E003CNPJ"><P CLASS="Base2">E003CNPJ</P></A></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">VARCHAR(14)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">Informar o CNPJ da empresa, deverão ser informados com os zeros <br>não significativos.</P></TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Triggers</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Trigger</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Activity</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Order</B></P>
+  <TH WIDTH="50%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#TRG_EMPRESA_BI">EMPRESA_BI</A></TD>
+    <TD><P CLASS="Base2">BEFORE&nbsp;INSERT</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">0</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Indices</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH><P CLASS="Base2"><B>Index</B></P>
+  <TH><P CLASS="Base2"><B>Fields</B></P>
+  <TH ALIGN="middle"><P CLASS="Base2"><B>Active</B></P>
+  <TH ALIGN="middle"><P CLASS="Base2"><B>Unique</B></P>
+  <TH ALIGN="middle"><P CLASS="Base2"><B>Order</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#IND_PK_EMPRESA">PK_EMPRESA</A></TD>
+    <TD><P CLASS="Base2">ID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#IND_UNQ1_EMPRESA">UNQ1_EMPRESA</A></TD>
+    <TD><P CLASS="Base2">E003CNPJ</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">References</P>
+<P CLASS="Base"><I>(There are no references for table EMPRESA)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Referenced By</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH><P CLASS="Base2"><B>Table</B></P>
+  <TH><P CLASS="Base2"><B>Foreign Key</B></P>
+  <TH><P CLASS="Base2"><B>Fields</B></P>
+  <TH><P CLASS="Base2"><B>FK Field</B></P>
+  <TH><P CLASS="Base2"><B>Delete Rule</B></P>
+  <TH><P CLASS="Base2"><B>Update Rule</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A></TD>
+    <TD><P CLASS="Base2"><A HREF="#FKEY_FK_FORNECEDOR_1">FK_FORNECEDOR_1</A></TD>
+    <TD><P CLASS="Base2">EMPRESA</TD>
+    <TD><P CLASS="Base2">E003CNPJ</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>TABLE</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b> </b><b>(</b>
+<b>    </b>ID<b>         </b><b>INTEGER</b><b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>E001XFANT<b>  </b><b>VARCHAR</b><b>(</b>60<b>)</b><b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>E002UF<b>     </b><b>VARCHAR</b><b>(</b>2<b>)</b><b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>E003CNPJ<b>   </b><b>VARCHAR</b><b>(</b>14<b>)</b><b> </b><b>NOT</b><b> </b><b>NULL</b>
+<b>)</b><b>;</b>
+
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>CHK_EMPRESA_UF<b> </b><b>CHECK</b><b> </b><b>(</b><b>UPPER</b><b>(</b>E002UF<b>)</b><b> </b><b>IN</b><b> </b><b>(</b>'AC'<b>,</b><b> </b>'AL'<b>,</b><b> </b>'AP'<b>,</b><b> </b>'AM'<b>,</b><b> </b>'BA'<b>,</b><b> </b>'CE'<b>,</b><b> </b>'DF'<b>,</b><b> </b>'ES'<b>,</b><b> </b>'GO'<b>,</b><b> </b>'MA'<b>,</b><b> </b>'MT'<b>,</b><b> </b>'MS'<b>,</b><b> </b>'MG'<b>,</b><b> </b>'PA'<b>,</b><b> </b>'PB'<b>,</b><b> </b>'PR'<b>,</b><b> </b>'PE'<b>,</b><b> </b>'PI'<b>,</b><b> </b>'RJ'<b>,</b><b> </b>'RN'<b>,</b><b> </b>'RS'<b>,</b><b> </b>'RO'<b>,</b><b> </b>'RR'<b>,</b><b> </b>'SC'<b>,</b><b> </b>'SP'<b>,</b><b> </b>'SE'<b>,</b><b> </b>'TO'<b>)</b><b>)</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>CHK_EMPRESA_CNPJ<b> </b><b>CHECK</b><b> </b><b>(</b><b>(</b><b>SELECT</b><b> </b>VALIDO<b> </b><b>FROM</b><b> </b><A HREF="#PROC_PROC_VALID_CNPJ">PROC_VALID_CNPJ</A><b>(</b>E003CNPJ<b> </b><b>)</b><b> </b><b>)</b><b> </b><b>=</b>1<b>)</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>UNQ1_EMPRESA<b> </b><b>UNIQUE</b><b> </b><b>(</b>E003CNPJ<b>)</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>PK_EMPRESA<b> </b><b>PRIMARY</b><b> </b><b>KEY</b><b> </b><b>(</b>ID<b>)</b><b>;</b>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+
+<HR>
+<A NAME="TBL_FORNECEDOR"><P CLASS="Header0">Table: FORNECEDOR</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base">A entidade "Fornecedor" desempenha um papel fundamental em um sistema ERP<br>(Enterprise Resource Planning) e em processos de negócios em geral.<br><br>Abastecimento de Recursos: Os fornecedores são fontes externas de recursos,<br>materiais e serviços que uma empresa precisa para operar. Eles fornecem matérias-primas,<br>componentes, equipamentos, serviços e outros itens essenciais para a produção<br>ou prestação de serviços da empresa.<br><br>Relacionamento Comercial: O relacionamento com os fornecedores é vital para o<br> sucesso de uma empresa. Um sistema ERP armazena informações detalhadas sobre<br> os fornecedores, incluindo dados de contato, histórico de transações, contratos,<br> termos de pagamento e outros detalhes importantes que ajudam a manter e<br> gerenciar esse relacionamento.<br><br>Gestão de Compras e Estoque: A entidade fornecedor permite que as empresas<br>gerenciem eficientemente suas compras e estoques. Os sistemas ERP usam informações de<br>fornecedores para realizar cotações, ordens de compra, recebimentos de<br>mercadorias, controle de estoque e outras atividades relacionadas à cadeia de<br>suprimentos.<br><br>Qualidade e Confiabilidade: Selecionar fornecedores confiáveis e de alta qualidade<br>é essencial para garantir a qualidade dos produtos e serviços oferecidos pela empresa.<br><br>O sistema ERP pode manter registros detalhados de desempenho do fornecedor,<br>incluindo avaliações de qualidade, conformidade com regulamentações, histórico<br>de entregas e feedbacks de clientes.<br><br>Gestão Financeira: A gestão financeira eficaz depende de informações precisas<br>sobre os custos de materiais e serviços fornecidos pelos fornecedores.<br><br>Os sistemas ERP integram informações financeiras relacionadas a fornecedores,<br>como faturas, pagamentos, termos de crédito e relatórios de desempenho financeiro.<br><br>Análise e Tomada de Decisão: Os dados relacionados aos fornecedores são<br>essenciais para análises e tomadas de decisão estratégicas.<br><br>As empresas podem usar informações sobre desempenho de fornecedores, tendências<br>de preços, condições de mercado e outros fatores para otimizar suas operações,<br>reduzir custos, identificar oportunidades de melhoria e mitigar riscos.<br><br><br>ID: É um identificador único para cada registro de fornecedor na tabela.<br>EMPRESA: Representa o CNPJ da empresa fornecedora. Essa referência é importante<br>         para vincular o fornecedor a uma empresa específica no sistema.<br><br>F001DATETIEMEC: Indica a data e hora em que o registro do fornecedor foi criado no sistema.<br>                Isso é útil para fins de auditoria e controle.<br><br>F002CPFCNPJ: Armazena o documento CPF ou CNPJ do fornecedor. Essa informação é<br>             crucial para identificar o fornecedor de forma única e para fins legais e fiscais.<br><br>F003FUNDDATANASC: Representa a data de fundação ou data de nascimento do fornecedor.<br>                  Esta data é relevante para verificar se o fornecedor é menor de idade,<br>                  especialmente se for uma pessoa física.<br><br>F004NOMERAZAO: Contém o nome ou razão social do fornecedor. É fundamental<br>               para identificar o fornecedor de forma legível e para fins<br>               de comunicação e negociação.<br><br>Restrição de Verificação (CHECK CONSTRAINT):<br><br>Garante que o documento CPF/CNPJ seja válido, verificando se o tamanho do documento<br>está correto e se o CPF/CNPJ passa em uma validação específica.<br><br>Verifica se o fornecedor é menor de idade (menos de 18 anos) e se a empresa associada<br>está localizada no estado do Paraná. Isso é feito para garantir que não sejam cadastrados<br>fornecedores pessoa física menores de idade do Paraná.<br><br>Restrição de Unicidade (UNIQUE CONSTRAINT):<br><br>Garante que não haja fornecedores duplicados na tabela com base no documento<br>CPF/CNPJ e na empresa associada.<br><br>Chave Estrangeira (FOREIGN KEY CONSTRAINT):<br><br>Estabelece uma relação entre a tabela de fornecedores e a tabela de empresas (EMPRESA),<br>garantindo que cada fornecedor esteja associado a uma empresa válida.<br><br>Essas restrições e relações garantem a consistência e a integridade dos dados na<br>tabela de fornecedores, essenciais para um funcionamento adequado do sistema ERP.<br><br>O cadastro correto e completo de fornecedores é crucial para o bom funcionamento<br>de operações de compras, estoque e gestão financeira em um negócio.</P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Fields</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>PK</B></P>
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>FK</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Field</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Domain</B></P>
+  <TH WIDTH="20%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>NN</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Default</B></P>
+  <TH WIDTH="40%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/PK1.gif" BORDER="0"></P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="FORNECEDOR.ID"><P CLASS="Base2">ID</P></A></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">INTEGER</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">ID Auto incremento da tabela, controlador de ordem numérica</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/FK.gif" BORDER="0"></P></TD>
+    <TD><A NAME="FORNECEDOR.EMPRESA"><P CLASS="Base2">EMPRESA</P></A></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">VARCHAR(14)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">Documento CNPJ da empresa relacional a Tabela EMPRESA</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="FORNECEDOR.F001DATETIEMEC"><P CLASS="Base2">F001DATETIEMEC</P></A></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">TIMESTAMP</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">Data e hora da inclusao do registro no sistema</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="FORNECEDOR.F002CPFCNPJ"><P CLASS="Base2">F002CPFCNPJ</P></A></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">VARCHAR(14)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">Documento CPF/CNPJ do Fornecedor</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="FORNECEDOR.F003FUNDDATANASC"><P CLASS="Base2">F003FUNDDATANASC</P></A></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">DATE</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">Fundação ou Data de nascimento caso seja informado um CPF.<br>Caso a empresa seja do Paraná, não permitir cadastrar um fornecedor <br>pessoa física menor de idade;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="FORNECEDOR.F004NOMERAZAO"><P CLASS="Base2">F004NOMERAZAO</P></A></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">VARCHAR(60)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">Razão Social ou Nome do fornecedor</P></TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Triggers</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Trigger</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Activity</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Order</B></P>
+  <TH WIDTH="50%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#TRG_FORNECEDOR_BI">FORNECEDOR_BI</A></TD>
+    <TD><P CLASS="Base2">BEFORE&nbsp;INSERT</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">0</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Indices</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH><P CLASS="Base2"><B>Index</B></P>
+  <TH><P CLASS="Base2"><B>Fields</B></P>
+  <TH ALIGN="middle"><P CLASS="Base2"><B>Active</B></P>
+  <TH ALIGN="middle"><P CLASS="Base2"><B>Unique</B></P>
+  <TH ALIGN="middle"><P CLASS="Base2"><B>Order</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#IND_FK_FORNECEDOR_1">FK_FORNECEDOR_1</A></TD>
+    <TD><P CLASS="Base2">EMPRESA</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/No.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#IND_PK_FORNECEDOR">PK_FORNECEDOR</A></TD>
+    <TD><P CLASS="Base2">ID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#IND_UNQ1_FORNECEDOR">UNQ1_FORNECEDOR</A></TD>
+    <TD><P CLASS="Base2">F002CPFCNPJ, EMPRESA</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">References</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH><P CLASS="Base2"><B>Table</B></P>
+  <TH><P CLASS="Base2"><B>Foreign Key</B></P>
+  <TH><P CLASS="Base2"><B>Fields</B></P>
+  <TH><P CLASS="Base2"><B>FK Field</B></P>
+  <TH><P CLASS="Base2"><B>Delete Rule</B></P>
+  <TH><P CLASS="Base2"><B>Update Rule</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#TBL_EMPRESA">EMPRESA</A></TD>
+    <TD><P CLASS="Base2"><A HREF="#FKEY_FK_FORNECEDOR_1">FK_FORNECEDOR_1</A></TD>
+    <TD><P CLASS="Base2">EMPRESA</TD>
+    <TD><P CLASS="Base2">E003CNPJ</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Referenced By</P>
+<P CLASS="Base"><I>(There are no tables referenced by table FORNECEDOR)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>TABLE</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b> </b><b>(</b>
+<b>    </b>ID<b>                </b><b>INTEGER</b><b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b>           </b><b>VARCHAR</b><b>(</b>14<b>)</b><b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>F001DATETIEMEC<b>    </b><b>TIMESTAMP</b><b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>F002CPFCNPJ<b>       </b><b>VARCHAR</b><b>(</b>14<b>)</b><b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>F003FUNDDATANASC<b>  </b><b>DATE</b><b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>F004NOMERAZAO<b>     </b><b>VARCHAR</b><b>(</b>60<b>)</b><b> </b><b>NOT</b><b> </b><b>NULL</b>
+<b>)</b><b>;</b>
+
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>CHK_FORNECEDOR_DATANASC<b> </b><b>CHECK</b><b> </b><b>(</b><b>(</b>
+<b>        </b><b>CHARACTER_LENGTH</b><b>(</b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b>.</b>F002CPFCNPJ<b>)</b><b> </b><b>=</b><b> </b>11<b> </b><font color="# 0 0FF"><i>-- Verifica se é um CPF válido</i></font>
+<b>        </b><b>AND</b><b> </b>
+<b>        </b><b>DATEADD</b><b>(</b><b>YEAR</b><b>,</b><b> </b>18<b>,</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b>.</b>F003FUNDDATANASC<b>)</b><b> </b><b>&lt;</b><b> </b><b>CURRENT_DATE</b><b> </b><font color="# 0 0FF"><i>-- Verifica se o fornecedor tem menos de 18 anos</i></font>
+<b>        </b><b>AND</b>
+<b>        </b><b>(</b>
+<b>            </b><b>SELECT</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b>.</b>E002UF
+<b>            </b><b>FROM</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A>
+<b>            </b><b>WHERE</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b>.</b>E003CNPJ<b> </b><b>=</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b>.</b><A HREF="#TBL_EMPRESA">EMPRESA</A>
+<b>        </b><b>)</b><b> </b><b>=</b><b> </b>'PR'
+<b>    </b><b>)</b>
+<b>    </b><b>OR</b>
+<b>    </b><b>CHARACTER_LENGTH</b><b>(</b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b>.</b>F002CPFCNPJ<b>)</b><b> </b><b>&lt;</b><b>&gt;</b><b> </b>11<b>)</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>CHK_FORNECEDOR_ISVALIDDOC<b> </b><b>CHECK</b><b> </b><b>(</b>
+<b>       </b><b>IIF</b><b>(</b><b> </b><b>CHARACTER_LENGTH</b><b>(</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b>.</b>F002CPFCNPJ<b>)</b><b> </b><b>&lt;</b><b> </b>14<b> </b><b>,</b><b> </b><b>(</b><b> </b><b>SELECT</b><b> </b>VALIDO
+<b>                                                               </b><b>FROM</b><b> </b><A HREF="#PROC_PROC_VALID_CPF">PROC_VALID_CPF</A><b>(</b>F002CPFCNPJ<b>)</b><b>  </b><b>)</b><b>,</b>
+
+<b>                                                               </b><b>(</b><b>select</b><b> </b>VALIDO
+<b>                                                               </b><b>from</b><b> </b><A HREF="#PROC_PROC_VALID_CNPJ">PROC_VALID_CNPJ</A><b>(</b>F002CPFCNPJ<b>)</b>
+<b>                                                               </b><b>)</b><b>)</b><b> </b><b>=</b>1
+
+<b>      </b><b>)</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>UNQ1_FORNECEDOR<b> </b><b>UNIQUE</b><b> </b><b>(</b>F002CPFCNPJ<b>,</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b>)</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>PK_FORNECEDOR<b> </b><b>PRIMARY</b><b> </b><b>KEY</b><b> </b><b>(</b>ID<b>)</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>FK_FORNECEDOR_1<b> </b><b>FOREIGN</b><b> </b><b>KEY</b><b> </b><b>(</b><A HREF="#TBL_EMPRESA">EMPRESA</A><b>)</b><b> </b><b>REFERENCES</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b> </b><b>(</b>E003CNPJ<b>)</b><b> </b><b>ON</b><b> </b><b>DELETE</b><b> </b><b>CASCADE</b><b>;</b>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+
+<HR>
+<A NAME="_VIEWS"><P CLASS="Header0">Views</P></A>
+<P CLASS="Base">&nbsp;</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>View</B></P>
+  <TH><P CLASS="Base2"><B>Description</B></P>
+</TABLE>
+
+<HR>
+<A NAME="_TRIGGERS"><P CLASS="Header0">Triggers</P></A>
+<P CLASS="Base">&nbsp;</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Trigger</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Table</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Active</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Position</B></P>
+  <TH WIDTH="40%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#TRG_EMPRESA_BI">EMPRESA_BI</A></TD>
+    <TD><P CLASS="Base2"><A HREF="#TBL_EMPRESA">EMPRESA</A></TD>
+    <TD><P CLASS="Base2">BEFORE&nbsp;INSERT</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="right"><P CLASS="Base2">0</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#TRG_FORNECEDOR_BI">FORNECEDOR_BI</A></TD>
+    <TD><P CLASS="Base2"><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A></TD>
+    <TD><P CLASS="Base2">BEFORE&nbsp;INSERT</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="right"><P CLASS="Base2">0</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+</TABLE>
+
+<HR><A NAME="TRG_EMPRESA_BI"><P CLASS="Header0">Trigger: EMPRESA_BI</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base"><I>(There is no description for trigger EMPRESA_BI)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>TRIGGER</b><b> </b><A HREF="#TRG_EMPRESA_BI">EMPRESA_BI</A><b> </b><b>FOR</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A>
+<b>ACTIVE</b><b> </b><b>BEFORE</b><b> </b><b>INSERT</b><b> </b><b>POSITION</b><b> </b>0
+<b>AS</b>
+<b>BEGIN</b>
+<b>  </b><b>IF</b><b> </b><b>(</b><b>NEW</b><b>.</b>ID<b> </b><b>IS</b><b> </b><b>NULL</b><b>)</b><b> </b><b>THEN</b>
+<b>    </b><b>NEW</b><b>.</b>ID<b> </b><b>=</b><b> </b><b>GEN_ID</b><b>(</b><A HREF="#GEN_GEN_EMPRESA_ID">GEN_EMPRESA_ID</A><b>,</b>1<b>)</b><b>;</b>
+<b>END</b>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+
+<HR><A NAME="TRG_FORNECEDOR_BI"><P CLASS="Header0">Trigger: FORNECEDOR_BI</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base"><I>(There is no description for trigger FORNECEDOR_BI)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>TRIGGER</b><b> </b><A HREF="#TRG_FORNECEDOR_BI">FORNECEDOR_BI</A><b> </b><b>FOR</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A>
+<b>ACTIVE</b><b> </b><b>BEFORE</b><b> </b><b>INSERT</b><b> </b><b>POSITION</b><b> </b>0
+<b>AS</b>
+<b>BEGIN</b>
+<b>  </b><b>IF</b><b> </b><b>(</b><b>NEW</b><b>.</b>ID<b> </b><b>IS</b><b> </b><b>NULL</b><b>)</b><b> </b><b>THEN</b>
+<b>    </b><b>NEW</b><b>.</b>ID<b> </b><b>=</b><b> </b><b>GEN_ID</b><b>(</b><A HREF="#GEN_GEN_FORNECEDOR_ID">GEN_FORNECEDOR_ID</A><b>,</b>1<b>)</b><b>;</b>
+<b>END</b>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+
+<HR>
+<A NAME="_PROCEDURES"><P CLASS="Header0">Procedures</P></A>
+<P CLASS="Base">&nbsp;</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Procedure</B></P>
+  <TH WIDTH="50%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#PROC_PROC_VALID_CNPJ">PROC_VALID_CNPJ</A></TD>
+    <TD><P CLASS="Base2">Essa stored procedure é uma rotina armazenada em um banco de dados Firebird, que<br>tem a finalidade de validar se um CNPJ (Cadastro Nacional da Pessoa Jurídica) é<br>válido. Ela verifica se o CNPJ tem 14 dígitos numéricos e se está de acordo com<br>as regras de formação desse documento no Brasil.<br><br>Atribuição e tratamento do CNPJ: O CNPJ é recebido como parâmetro e é removido<br>de possíveis espaços em branco no início e no fim utilizando a função TRIM.<br><br>Verificação de dígitos idênticos: A primeira verificação feita é para garantir<br>que o CNPJ não seja composto apenas de dígitos idênticos, como '00000000000000',<br>'11111111111111', etc. Se o CNPJ tiver essa característica, a variável VALIDO é<br>definida como 0 e a execução da stored procedure é interrompida.<br><br>Limpeza e validação do CNPJ: O próximo passo é remover quaisquer caracteres que<br>não sejam dígitos numéricos do CNPJ e garantir que o CNPJ tenha exatamente 14<br>dígitos após essa limpeza. Se o CNPJ não tiver 14 dígitos após essa etapa, a<br>variável VALIDO é definida como 0 e a execução é interrompida.<br><br>Validação dos dígitos verificadores: Em seguida, a stored procedure valida os<br>dígitos verificadores do CNPJ. O algoritmo utilizado para isso segue as regras<br>estabelecidas pela Receita Federal do Brasil para verificar a validade do CNPJ.<br><br>Os dígitos verificadores são calculados e comparados com os dígitos informados no<br>CNPJ. Se os dígitos verificadores não corresponderem, a variável VALIDO é<br>definida como 0 e a execução é interrompida.<br><br>Resultado da validação: Se todas as etapas de validação forem concluídas com<br>sucesso, a variável VALIDO é definida como 1, indicando que o CNPJ é válido.<br>A execução da stored procedure é então suspensa e o resultado da validação é<br>retornado.<br><br>Esta stored procedure é utilizada para garantir a integridade dos dados em um<br>banco de dados Firebird, permitindo que o sistema valide se os CNPJs fornecidos<br>são válidos de acordo com as regras estabelecidas.</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#PROC_PROC_VALID_CPF">PROC_VALID_CPF</A></TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#PROC_SP_GEN_EMPRESA_ID">SP_GEN_EMPRESA_ID</A></TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#PROC_SP_GEN_FORNECEDOR_ID">SP_GEN_FORNECEDOR_ID</A></TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+</TABLE>
+
+<HR>
+<A NAME="PROC_PROC_VALID_CNPJ"><P CLASS="Header0">Procedure: PROC_VALID_CNPJ</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Input Parameters</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Parameter</B></P>
+  <TH WIDTH="20%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="50%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2">CNPJ</TD>
+    <TD><P CLASS="Base2">VARCHAR(30)</TD>
+    <TD><P CLASS="Base2">&nbsp;</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Output Parameters</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Parameter</B></P>
+  <TH WIDTH="20%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="50%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2">VALIDO</TD>
+    <TD><P CLASS="Base2">SMALLINT</TD>
+    <TD><P CLASS="Base2">&nbsp;</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base">Essa stored procedure é uma rotina armazenada em um banco de dados Firebird, que<br>tem a finalidade de validar se um CNPJ (Cadastro Nacional da Pessoa Jurídica) é<br>válido. Ela verifica se o CNPJ tem 14 dígitos numéricos e se está de acordo com<br>as regras de formação desse documento no Brasil.<br><br>Atribuição e tratamento do CNPJ: O CNPJ é recebido como parâmetro e é removido<br>de possíveis espaços em branco no início e no fim utilizando a função TRIM.<br><br>Verificação de dígitos idênticos: A primeira verificação feita é para garantir<br>que o CNPJ não seja composto apenas de dígitos idênticos, como '00000000000000',<br>'11111111111111', etc. Se o CNPJ tiver essa característica, a variável VALIDO é<br>definida como 0 e a execução da stored procedure é interrompida.<br><br>Limpeza e validação do CNPJ: O próximo passo é remover quaisquer caracteres que<br>não sejam dígitos numéricos do CNPJ e garantir que o CNPJ tenha exatamente 14<br>dígitos após essa limpeza. Se o CNPJ não tiver 14 dígitos após essa etapa, a<br>variável VALIDO é definida como 0 e a execução é interrompida.<br><br>Validação dos dígitos verificadores: Em seguida, a stored procedure valida os<br>dígitos verificadores do CNPJ. O algoritmo utilizado para isso segue as regras<br>estabelecidas pela Receita Federal do Brasil para verificar a validade do CNPJ.<br><br>Os dígitos verificadores são calculados e comparados com os dígitos informados no<br>CNPJ. Se os dígitos verificadores não corresponderem, a variável VALIDO é<br>definida como 0 e a execução é interrompida.<br><br>Resultado da validação: Se todas as etapas de validação forem concluídas com<br>sucesso, a variável VALIDO é definida como 1, indicando que o CNPJ é válido.<br>A execução da stored procedure é então suspensa e o resultado da validação é<br>retornado.<br><br>Esta stored procedure é utilizada para garantir a integridade dos dados em um<br>banco de dados Firebird, permitindo que o sistema valide se os CNPJs fornecidos<br>são válidos de acordo com as regras estabelecidas.</P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>PROCEDURE</b><b> </b><A HREF="#PROC_PROC_VALID_CNPJ">PROC_VALID_CNPJ</A><b>(</b>
+<b>    </b>CNPJ<b> </b><b>VARCHAR</b><b>(</b>30<b>)</b><b>)</b>
+<b>RETURNS</b><b> </b><b>(</b>
+<b>    </b>VALIDO<b> </b><b>SMALLINT</b><b>)</b>
+<b>AS</b>
+<b>declare</b><b> </b><b>variable</b><b> </b>TMP_CNPJ<b> </b><b>varchar</b><b>(</b>30<b>)</b><b>;</b>
+<b>declare</b><b> </b><b>variable</b><b> </b>I<b> </b><b>integer</b><b>;</b>
+<b>declare</b><b> </b><b>variable</b><b> </b>L<b> </b><b>integer</b><b>;</b>
+<b>declare</b><b> </b><b>variable</b><b> </b>T<b> </b><b>integer</b><b>;</b>
+<b>BEGIN</b>
+<b>  </b><font color="# 0 0FF"><i>-- código da comunidade show delphi, adaptado por Giovani Da Cruz</i></font>
+<b>  </b>CNPJ<b> </b><b>=</b><b> </b><b>TRIM</b><b>(</b>:CNPJ<b>)</b><b>;</b>
+<b> </b>
+<b>  </b><font color="# 0 0FF"><i>/* DIGITOS IDENTICOS */</i></font>
+<b>  </b><b>IF</b><b> </b><b>(</b>
+<b>  </b><b>(</b><b>CHARACTER_LENGTH</b><b>(</b>CNPJ<b>)</b><b> </b><b>&lt;</b><b>&gt;</b><b> </b>14<b>)</b><b> </b><b>OR</b>
+<b>  </b><b>(</b>CNPJ<b> </b><b>=</b><b> </b>'00000000000000'<b>)</b><b> </b><b>OR</b><b> </b><b>(</b>CNPJ<b> </b><b>=</b><b> </b>'11111111111111'<b>)</b><b> </b><b>OR</b>
+<b>  </b><b>(</b>CNPJ<b> </b><b>=</b><b> </b>'22222222222222'<b>)</b><b> </b><b>OR</b><b> </b><b>(</b>CNPJ<b> </b><b>=</b><b> </b>'33333333333333'<b>)</b><b> </b><b>OR</b><b> </b><b>(</b>CNPJ<b> </b><b>=</b><b> </b>'44444444444444'<b>)</b><b>OR</b>
+<b>  </b><b>(</b>CNPJ<b> </b><b>=</b><b> </b>'55555555555555'<b>)</b><b> </b><b>OR</b><b> </b><b>(</b>CNPJ<b> </b><b>=</b><b> </b>'66666666666666'<b>)</b><b> </b><b>OR</b><b> </b><b>(</b>CNPJ<b> </b><b>=</b><b> </b>'77777777777777'<b>)</b><b>OR</b>
+<b>  </b><b>(</b>CNPJ<b> </b><b>=</b><b> </b>'88888888888888'<b>)</b><b> </b><b>OR</b><b> </b><b>(</b>CNPJ<b> </b><b>=</b><b> </b>'99999999999999'<b>)</b>
+<b>  </b><b>)</b><b> </b><b>THEN</b>
+<b>  </b><b>BEGIN</b>
+<b>    </b>VALIDO<b> </b><b>=</b><b> </b>0<b>;</b>
+<b> </b>
+<b>    </b><b>SUSPEND</b><b>;</b>
+<b>    </b><b>Exit</b><b>;</b>
+<b>  </b><b>END</b>
+<b> </b>
+<b>  </b>I<b> </b><b>=</b><b> </b>1<b>;</b>
+<b>  </b>TMP_CNPJ<b> </b><b>=</b><b> </b>''<b>;</b>
+<b>  </b><b>while</b><b> </b><b>(</b>I<b> </b><b>&lt;</b><b>=</b><b> </b><b>CHAR_LENGTH</b><b>(</b>CNPJ<b>)</b><b>)</b><b> </b><b>do</b>
+<b>  </b><b>BEGIN</b>
+<b>    </b><b>IF</b><b> </b><b>(</b><b>SUBSTRING</b><b>(</b>CNPJ<b> </b><b>FROM</b><b> </b>I<b> </b><b>FOR</b><b> </b>1<b>)</b><b> </b><b>BETWEEN</b><b> </b>'0'<b> </b><b>AND</b><b> </b>'9'<b>)</b><b> </b><b>THEN</b>
+<b>      </b>TMP_CNPJ<b> </b><b>=</b><b> </b>TMP_CNPJ<b> </b><b>|</b><b>|</b><b> </b><b>SUBSTRING</b><b>(</b>CNPJ<b> </b><b>FROM</b><b> </b>I<b> </b><b>FOR</b><b> </b>1<b>)</b><b>;</b>
+<b>    </b>I<b> </b><b>=</b><b> </b>I<b> </b><b>+</b><b> </b>1<b>;</b>
+<b>  </b><b>END</b>
+<b> </b>
+<b>  </b><b>IF</b><b> </b><b>(</b><b>CHAR_LENGTH</b><b>(</b>TMP_CNPJ<b>)</b><b> </b><b>&lt;</b><b>&gt;</b><b> </b>14<b>)</b><b> </b><b>THEN</b>
+<b>  </b><b>BEGIN</b>
+<b>    </b>VALIDO<b> </b><b>=</b><b> </b>0<b>;</b>
+<b>    </b><b>suspend</b><b>;</b>
+<b>    </b><b>exit</b><b>;</b>
+<b>  </b><b>END</b>
+<b> </b>
+<b>  </b>L<b> </b><b>=</b><b> </b>0<b>;</b>
+<b>  </b><b>while</b><b> </b><b>(</b>L<b> </b><b>&lt;</b><b> </b>2<b>)</b><b> </b><b>do</b>
+<b>  </b><b>BEGIN</b>
+<b>    </b>I<b> </b><b>=</b><b> </b>1<b>;</b>
+<b>    </b>T<b> </b><b>=</b><b> </b>0<b>;</b>
+<b>    </b><b>while</b><b> </b><b>(</b>I<b> </b><b>&lt;</b><b> </b>13<b> </b><b>+</b><b> </b>L<b>)</b><b> </b><b>do</b>
+<b>    </b><b>BEGIN</b>
+<b>      </b>T<b> </b><b>=</b><b> </b>T<b> </b><b>+</b><b> </b><b>(</b><b>MOD</b><b>(</b>20<b> </b><b>-</b><b> </b>I<b> </b><b>+</b><b> </b>L<b>,</b><b> </b>8<b>)</b><b> </b><b>+</b><b> </b>2<b>)</b><b> </b><b>*</b><b> </b><b>CAST</b><b>(</b><b>SUBSTRING</b><b>(</b>TMP_CNPJ<b> </b><b>FROM</b><b> </b>I<b> </b><b>FOR</b><b> </b>1<b>)</b><b> </b><b>AS</b><b> </b><b>INTEGER</b><b>)</b><b>;</b>
+<b>      </b>I<b> </b><b>=</b><b> </b>I<b> </b><b>+</b><b> </b>1<b>;</b>
+<b>    </b><b>END</b>
+<b>    </b>T<b> </b><b>=</b><b> </b><b>MOD</b><b>(</b>T<b>,</b><b> </b>11<b>)</b><b>;</b>
+<b>    </b><b>IF</b><b> </b><b>(</b>T<b> </b><b>&lt;</b><b> </b>2<b>)</b><b> </b><b>THEN</b>
+<b>    </b><b>BEGIN</b>
+<b>      </b>T<b> </b><b>=</b><b> </b>0<b>;</b>
+<b>    </b><b>END</b>
+<b>    </b><b>ELSE</b>
+<b>    </b><b>BEGIN</b>
+<b>      </b>T<b> </b><b>=</b><b> </b>11<b> </b><b>-</b><b> </b>T<b>;</b>
+<b>    </b><b>END</b>
+<b> </b>
+<b>    </b><b>IF</b><b> </b><b>(</b>T<b> </b><b>&lt;</b><b>&gt;</b><b> </b><b>CAST</b><b>(</b><b>SUBSTRING</b><b>(</b>TMP_CNPJ<b> </b><b>FROM</b><b> </b>13<b> </b><b>+</b><b> </b>L<b> </b><b>FOR</b><b> </b>1<b>)</b><b> </b><b>AS</b><b> </b><b>INTEGER</b><b>)</b><b>)</b><b> </b><b>THEN</b>
+<b>    </b><b>BEGIN</b>
+<b>      </b>VALIDO<b> </b><b>=</b><b> </b>0<b>;</b>
+<b>      </b><b>suspend</b><b>;</b>
+<b>      </b><b>exit</b><b>;</b>
+<b>    </b><b>END</b>
+<b> </b>
+<b>    </b>L<b> </b><b>=</b><b> </b>L<b> </b><b>+</b><b> </b>1<b>;</b>
+<b>  </b><b>END</b>
+<b> </b>
+<b>  </b>VALIDO<b> </b><b>=</b><b> </b>1<b>;</b>
+<b>  </b><b>suspend</b><b>;</b>
+<b>END</b>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+
+<HR>
+<A NAME="PROC_PROC_VALID_CPF"><P CLASS="Header0">Procedure: PROC_VALID_CPF</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Input Parameters</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Parameter</B></P>
+  <TH WIDTH="20%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="50%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2">CPF</TD>
+    <TD><P CLASS="Base2">CHAR(11)</TD>
+    <TD><P CLASS="Base2">&nbsp;</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Output Parameters</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Parameter</B></P>
+  <TH WIDTH="20%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="50%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2">VALIDO</TD>
+    <TD><P CLASS="Base2">SMALLINT</TD>
+    <TD><P CLASS="Base2">&nbsp;</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base"><I>(There is no description for procedure PROC_VALID_CPF)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>PROCEDURE</b><b> </b><A HREF="#PROC_PROC_VALID_CPF">PROC_VALID_CPF</A><b>(</b>
+<b>    </b>CPF<b> </b><b>CHAR</b><b>(</b>11<b>)</b><b> </b><b>CHARACTER</b><b> </b><b>SET</b><b> </b>WIN1252<b>)</b>
+<b>RETURNS</b><b> </b><b>(</b>
+<b>    </b>VALIDO<b> </b><b>SMALLINT</b><b>)</b>
+<b>AS</b>
+<b>DECLARE</b><b> </b><b>variable</b><b> </b>SOMA<b> </b><b>INTEGER</b><b>;</b>
+<b>DECLARE</b><b> </b><b>variable</b><b> </b>RESTO<b> </b><b>SMALLINT</b><b>;</b>
+<b>DECLARE</b><b> </b><b>variable</b><b> </b>CONT<b> </b><b>SMALLINT</b><b>;</b>
+<b>BEGIN</b>
+<b>  </b><font color="# 0 0FF"><i>-- código da comunidade show delphi, adaptado por Giovani Da Cruz</i></font>
+<b> </b>
+<b>  </b><font color="# 0 0FF"><i>/* DIGITOS IDENTICOS */</i></font>
+<b>  </b><b>IF</b><b> </b><b>(</b>
+<b>  </b><b>(</b><b>CHARACTER_LENGTH</b><b>(</b>CPF<b>)</b><b> </b><b>&lt;</b><b>&gt;</b><b> </b>11<b>)</b><b> </b><b>OR</b>
+<b>  </b><b>(</b>CPF<b> </b><b>=</b><b> </b>'00000000000'<b>)</b><b> </b><b>OR</b><b> </b><b>(</b>CPF<b> </b><b>=</b><b> </b>'11111111111'<b>)</b><b> </b><b>OR</b>
+<b>  </b><b>(</b>CPF<b> </b><b>=</b><b> </b>'22222222222'<b>)</b><b> </b><b>OR</b><b> </b><b>(</b>CPF<b> </b><b>=</b><b> </b>'33333333333'<b>)</b><b> </b><b>OR</b><b> </b><b>(</b>CPF<b> </b><b>=</b><b> </b>'44444444444'<b>)</b><b>OR</b>
+<b>  </b><b>(</b>CPF<b> </b><b>=</b><b> </b>'55555555555'<b>)</b><b> </b><b>OR</b><b> </b><b>(</b>CPF<b> </b><b>=</b><b> </b>'66666666666'<b>)</b><b> </b><b>OR</b><b> </b><b>(</b>CPF<b> </b><b>=</b><b> </b>'77777777777'<b>)</b><b>OR</b>
+<b>  </b><b>(</b>CPF<b> </b><b>=</b><b> </b>'88888888888'<b>)</b><b> </b><b>OR</b><b> </b><b>(</b>CPF<b> </b><b>=</b><b> </b>'99999999999'<b>)</b>
+<b>  </b><b>)</b><b> </b><b>THEN</b>
+<b>  </b><b>BEGIN</b>
+<b>    </b>VALIDO<b> </b><b>=</b><b> </b>0<b>;</b>
+<b> </b>
+<b>    </b><b>SUSPEND</b><b>;</b>
+<b>    </b><b>Exit</b><b>;</b>
+<b>  </b><b>END</b>
+<b> </b>
+<b>  </b><font color="# 0 0FF"><i>/* INICIALIZA VARIÁVEIS */</i></font>
+<b>  </b>CONT<b>=</b>1<b>;</b>
+<b>  </b>SOMA<b>=</b>0<b>;</b>
+<b>  </b>RESTO<b>=</b>0<b>;</b>
+<b> </b>
+<b>  </b><font color="# 0 0FF"><i>/* SOMA OS DÍGITOS MULTIPLICADOS E CALCULA O RESTO */</i></font>
+<b>  </b><b>WHILE</b><b> </b><b>(</b>CONT<b>&lt;</b><b>=</b>9<b>)</b><b> </b><b>DO</b>
+<b>  </b><b>BEGIN</b>
+<b>    </b>SOMA<b> </b><b>=</b><b> </b>SOMA<b> </b><b>+</b><b> </b><b>CAST</b><b>(</b><b> </b><b>SUBSTRING</b><b>(</b>CPF<b> </b><b>FROM</b><b> </b>:CONT<b> </b><b>FOR</b><b> </b>1<b>)</b><b> </b><b>AS</b><b> </b><b>SMALLINT</b><b>)</b><b> </b><b>*</b><b> </b><b>(</b>11<b> </b><b>-</b><b> </b>:CONT<b>)</b><b>;</b>
+<b>    </b>CONT<b> </b><b>=</b><b> </b>CONT<b> </b><b>+</b><b> </b>1<b>;</b>
+<b>  </b><b>END</b>
+<b>  </b>RESTO<b>=</b><b>MOD</b><b>(</b>SOMA<b>,</b>11<b>)</b><b>;</b>
+<b> </b>
+<b>  </b><font color="# 0 0FF"><i>/* TRATA O CASO DE RESTO INFERIOR A 2 */</i></font>
+<b>  </b><b>IF</b><b> </b><b>(</b><b> </b><b>(</b>RESTO<b> </b><b>&lt;</b><b> </b>2<b>)</b><b> </b><b>AND</b><b> </b><b>(</b><b>SUBSTRING</b><b>(</b>CPF<b> </b><b>FROM</b><b> </b>10<b> </b><b>FOR</b><b> </b>1<b>)</b><b> </b><b>&lt;</b><b>&gt;</b><b> </b>'0'<b>)</b><b> </b><b>)</b><b>THEN</b>
+<b>  </b><b>BEGIN</b>
+<b>    </b>VALIDO<b> </b><b>=</b><b> </b>0<b>;</b>
+<b>  </b><b>END</b>
+<b>  </b><b>ELSE</b>
+<b>  </b><b>BEGIN</b>
+<b>    </b><font color="# 0 0FF"><i>/*VERIFICA SE O PRIMEIRO DIGITO CONFERE*/</i></font>
+<b>    </b><b>IF</b><b> </b><b>(</b>11<b>-</b>:RESTO<b>&lt;</b><b>&gt;</b><b>CAST</b><b>(</b><b>SUBSTRING</b><b>(</b>CPF<b> </b><b>FROM</b><b> </b>10<b> </b><b>FOR</b><b> </b>1<b>)</b><b> </b><b>AS</b><b> </b><b>INTEGER</b><b>)</b><b>)</b><b> </b><b>THEN</b>
+<b>    </b><b>BEGIN</b>
+<b>      </b>VALIDO<b>=</b>0<b>;</b>
+<b>    </b><b>END</b>
+<b>    </b><b>ELSE</b>
+<b>    </b><b>BEGIN</b>
+<b>      </b>CONT<b>=</b>1<b>;</b>
+<b>      </b>SOMA<b>=</b>0<b>;</b>
+<b> </b>
+<b>      </b><font color="# 0 0FF"><i>/*MULTIPLICA, SOMA E CALCULA O RESTO*/</i></font>
+<b>      </b><b>WHILE</b><b> </b><b>(</b>CONT<b>&lt;</b><b>=</b>10<b>)</b><b> </b><b>DO</b>
+<b>      </b><b>BEGIN</b>
+<b>        </b>SOMA<b> </b><b>=</b><b> </b>SOMA<b> </b><b>+</b><b> </b><b>CAST</b><b>(</b><b>SUBSTRING</b><b>(</b>CPF<b> </b><b>FROM</b><b> </b>:CONT<b> </b><b>FOR</b><b> </b>1<b>)</b><b> </b><b>AS</b><b> </b><b>SMALLINT</b><b>)</b><b> </b><b>*</b><b> </b><b>(</b>12<b>-</b>:CONT<b>)</b><b>;</b>
+<b>        </b>CONT<b> </b><b>=</b><b> </b>CONT<b> </b><b>+</b><b> </b>1<b>;</b>
+<b>      </b><b>END</b>
+<b>      </b>RESTO<b> </b><b>=</b><b> </b><b>MOD</b><b>(</b>:SOMA<b>,</b>11<b>)</b><b>;</b>
+<b> </b>
+<b>      </b><font color="# 0 0FF"><i>/*VERIFICA O SEGUNDO DÍGITO*/</i></font>
+<b>      </b><b>IF</b><b> </b><b>(</b><b>(</b>RESTO<b> </b><b>&lt;</b><b> </b>2<b>)</b><b> </b><b>AND</b><b> </b><b>(</b><b>SUBSTRING</b><b>(</b>CPF<b> </b><b>FROM</b><b> </b>11<b> </b><b>FOR</b><b> </b>1<b>)</b><b> </b><b>&lt;</b><b>&gt;</b><b> </b>'0'<b>)</b><b>)</b><b> </b><b>THEN</b>
+<b>      </b><b>BEGIN</b>
+<b>        </b>VALIDO<b>=</b>0<b>;</b>
+<b>      </b><b>END</b>
+<b>      </b><b>ELSE</b>
+<b>      </b><b>BEGIN</b>
+<b>        </b><b>IF</b><b> </b><b>(</b>11<b> </b><b>-</b><b> </b>:RESTO<b> </b><b>&lt;</b><b>&gt;</b><b> </b><b>CAST</b><b>(</b><b>SUBSTRING</b><b>(</b>CPF<b> </b><b>FROM</b><b> </b>11<b> </b><b>FOR</b><b> </b>1<b>)</b><b> </b><b>AS</b><b> </b><b>INTEGER</b><b>)</b><b>)</b><b> </b><b>THEN</b>
+<b>        </b><b>BEGIN</b>
+<b>          </b>VALIDO<b> </b><b>=</b><b> </b>0<b>;</b>
+<b>        </b><b>END</b>
+<b>        </b><b>ELSE</b>
+<b>        </b><b>BEGIN</b>
+<b>          </b>VALIDO<b> </b><b>=</b><b> </b>1<b>;</b>
+<b>        </b><b>END</b>
+<b>      </b><b>END</b>
+<b>    </b><b>END</b>
+<b>  </b><b>END</b>
+<b> </b>
+<b>  </b><b>SUSPEND</b><b>;</b>
+<b>END</b>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+
+<HR>
+<A NAME="PROC_SP_GEN_EMPRESA_ID"><P CLASS="Header0">Procedure: SP_GEN_EMPRESA_ID</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Input Parameters</P>
+<P CLASS="Base"><I>(There are no input parameters)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Output Parameters</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Parameter</B></P>
+  <TH WIDTH="20%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="50%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2">ID</TD>
+    <TD><P CLASS="Base2">INTEGER</TD>
+    <TD><P CLASS="Base2">&nbsp;</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base"><I>(There is no description for procedure SP_GEN_EMPRESA_ID)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>PROCEDURE</b><b> </b><A HREF="#PROC_SP_GEN_EMPRESA_ID">SP_GEN_EMPRESA_ID</A>
+<b>RETURNS</b><b> </b><b>(</b>
+<b>    </b>ID<b> </b><b>INTEGER</b><b>)</b>
+<b>AS</b>
+<b>BEGIN</b>
+<b>  </b>ID<b> </b><b>=</b><b> </b><b>GEN_ID</b><b>(</b><A HREF="#GEN_GEN_EMPRESA_ID">GEN_EMPRESA_ID</A><b>,</b><b> </b>1<b>)</b><b>;</b>
+<b>  </b><b>SUSPEND</b><b>;</b>
+<b>END</b>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+
+<HR>
+<A NAME="PROC_SP_GEN_FORNECEDOR_ID"><P CLASS="Header0">Procedure: SP_GEN_FORNECEDOR_ID</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Input Parameters</P>
+<P CLASS="Base"><I>(There are no input parameters)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Output Parameters</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Parameter</B></P>
+  <TH WIDTH="20%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="50%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2">ID</TD>
+    <TD><P CLASS="Base2">INTEGER</TD>
+    <TD><P CLASS="Base2">&nbsp;</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base"><I>(There is no description for procedure SP_GEN_FORNECEDOR_ID)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>PROCEDURE</b><b> </b><A HREF="#PROC_SP_GEN_FORNECEDOR_ID">SP_GEN_FORNECEDOR_ID</A>
+<b>RETURNS</b><b> </b><b>(</b>
+<b>    </b>ID<b> </b><b>INTEGER</b><b>)</b>
+<b>AS</b>
+<b>BEGIN</b>
+<b>  </b>ID<b> </b><b>=</b><b> </b><b>GEN_ID</b><b>(</b><A HREF="#GEN_GEN_FORNECEDOR_ID">GEN_FORNECEDOR_ID</A><b>,</b><b> </b>1<b>)</b><b>;</b>
+<b>  </b><b>SUSPEND</b><b>;</b>
+<b>END</b>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+
+<HR>
+<A NAME="_GENERATORS"><P CLASS="Header0">Generators</P></A>
+<P CLASS="Base">&nbsp;</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH><P CLASS="Base2"><B>Generator</B></P>
+  <TH><P CLASS="Base2"><B>Value</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#GEN_GEN_EMPRESA_ID">GEN_EMPRESA_ID</A></TD>
+    <TD ALIGN="right"><P CLASS="Base2">8</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#GEN_GEN_FORNECEDOR_ID">GEN_FORNECEDOR_ID</A></TD>
+    <TD ALIGN="right"><P CLASS="Base2">1</TD>
+  </TR>
+</TABLE>
+
+<HR>
+<A NAME="GEN_GEN_EMPRESA_ID"><P CLASS="Header0">Generator: GEN_EMPRESA_ID</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>GENERATOR</b><b> </b><A HREF="#GEN_GEN_EMPRESA_ID">GEN_EMPRESA_ID</A>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+
+<HR>
+<A NAME="GEN_GEN_FORNECEDOR_ID"><P CLASS="Header0">Generator: GEN_FORNECEDOR_ID</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>GENERATOR</b><b> </b><A HREF="#GEN_GEN_FORNECEDOR_ID">GEN_FORNECEDOR_ID</A>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+
+<HR>
+<A NAME="_EXCEPTIONS"><P CLASS="Header0">Exceptions</P></A>
+<P CLASS="Base">&nbsp;</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Exception</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>ID</B></P>
+  <TH WIDTH="45%"><P CLASS="Base2"><B>Exception text</B></P>
+  <TH WIDTH="50%"><P CLASS="Base2"><B>Description</B></P>
+</TABLE>
+
+<HR>
+<A NAME="_UDFS"><P CLASS="Header0">UDFs</P></A>
+<P CLASS="Base">&nbsp;</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>UDF</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Entry Point</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Library Name</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Input Parameters</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Returns</B></P>
+  <TH><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#UDF_RDB$GET_CONTEXT">RDB$GET_CONTEXT</A></TD>
+    <TD><P CLASS="Base2">get_context</TD>
+    <TD><P CLASS="Base2">system_module</TD>
+    <TD><P CLASS="Base2">VARCHAR(80),<br>VARCHAR(80)</TD>
+    <TD><P CLASS="Base2">VARCHAR(255) FREE_IT</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#UDF_RDB$SET_CONTEXT">RDB$SET_CONTEXT</A></TD>
+    <TD><P CLASS="Base2">set_context</TD>
+    <TD><P CLASS="Base2">system_module</TD>
+    <TD><P CLASS="Base2">VARCHAR(80),<br>VARCHAR(80),<br>VARCHAR(255)</TD>
+    <TD><P CLASS="Base2">INTEGER BY VALUE</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+</TABLE>
+
+<HR>
+<A NAME="UDF_RDB$GET_CONTEXT"><P CLASS="Header0">UDF: RDB$GET_CONTEXT</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base"><I>(There is no description for UDF RDB$GET_CONTEXT)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>DECLARE</b><b> </b><b>EXTERNAL</b><b> </b><b>FUNCTION</b><b> </b><A HREF="#UDF_RDB$GET_CONTEXT">RDB$GET_CONTEXT</A>
+<b>    </b><b>VARCHAR</b><b>(</b>80<b>)</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b><b>VARCHAR</b><b>(</b>80<b>)</b><b> </b><b>NULL</b>
+<b>    </b><b>RETURNS</b><b> </b><b>VARCHAR</b><b>(</b>255<b>)</b><b> </b><b>FREE_IT</b>
+<b>    </b><b>ENTRY_POINT</b><b> </b>'get_context'<b> </b><b>MODULE_NAME</b><b> </b>'system_module'<b>;</b>
+
+</pre></code>
+</span></P>
+<HR>
+<A NAME="UDF_RDB$SET_CONTEXT"><P CLASS="Header0">UDF: RDB$SET_CONTEXT</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base"><I>(There is no description for UDF RDB$SET_CONTEXT)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>DECLARE</b><b> </b><b>EXTERNAL</b><b> </b><b>FUNCTION</b><b> </b><A HREF="#UDF_RDB$SET_CONTEXT">RDB$SET_CONTEXT</A>
+<b>    </b><b>VARCHAR</b><b>(</b>80<b>)</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b><b>VARCHAR</b><b>(</b>80<b>)</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b><b>VARCHAR</b><b>(</b>255<b>)</b><b> </b><b>NULL</b>
+<b>    </b><b>RETURNS</b><b> </b><b>INTEGER</b><b> </b><b>BY</b><b> </b><b>VALUE</b>
+<b>    </b><b>ENTRY_POINT</b><b> </b>'set_context'<b> </b><b>MODULE_NAME</b><b> </b>'system_module'<b>;</b>
+
+</pre></code>
+</span></P>
+<HR>
+<A NAME="_INDICES"><P CLASS="Header0">Indices</P></A>
+<P CLASS="Base">&nbsp;</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Index</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Table</B></P>
+  <TH WIDTH="45%"><P CLASS="Base2"><B>Fields</B></P>
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>Active</B></P>
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>Unique</B></P>
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>Order</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#IND_FK_FORNECEDOR_1">FK_FORNECEDOR_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A></TD>
+    <TD><P CLASS="Base2">EMPRESA</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/No.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#IND_PK_EMPRESA">PK_EMPRESA</A></TD>
+    <TD><P CLASS="Base2"><A HREF="#TBL_EMPRESA">EMPRESA</A></TD>
+    <TD><P CLASS="Base2">ID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#IND_PK_FORNECEDOR">PK_FORNECEDOR</A></TD>
+    <TD><P CLASS="Base2"><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A></TD>
+    <TD><P CLASS="Base2">ID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#IND_UNQ1_EMPRESA">UNQ1_EMPRESA</A></TD>
+    <TD><P CLASS="Base2"><A HREF="#TBL_EMPRESA">EMPRESA</A></TD>
+    <TD><P CLASS="Base2">E003CNPJ</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#IND_UNQ1_FORNECEDOR">UNQ1_FORNECEDOR</A></TD>
+    <TD><P CLASS="Base2"><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A></TD>
+    <TD><P CLASS="Base2">F002CPFCNPJ, EMPRESA</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+</TABLE>
+
+<HR>
+<A NAME="IND_FK_FORNECEDOR_1"><P CLASS="Header0">Index: FK_FORNECEDOR_1</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>INDEX</b><b> </b>FK_FORNECEDOR_1<b> </b><b>ON</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b> </b><b>(</b><A HREF="#TBL_EMPRESA">EMPRESA</A><b>)</b><b>;</b>
+
+</pre></code>
+</span></P>
+
+<HR>
+<A NAME="IND_PK_EMPRESA"><P CLASS="Header0">Index: PK_EMPRESA</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>UNIQUE</b><b> </b><b>INDEX</b><b> </b>PK_EMPRESA<b> </b><b>ON</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b> </b><b>(</b>ID<b>)</b><b>;</b>
+
+</pre></code>
+</span></P>
+
+<HR>
+<A NAME="IND_PK_FORNECEDOR"><P CLASS="Header0">Index: PK_FORNECEDOR</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>UNIQUE</b><b> </b><b>INDEX</b><b> </b>PK_FORNECEDOR<b> </b><b>ON</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b> </b><b>(</b>ID<b>)</b><b>;</b>
+
+</pre></code>
+</span></P>
+
+<HR>
+<A NAME="IND_UNQ1_EMPRESA"><P CLASS="Header0">Index: UNQ1_EMPRESA</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>UNIQUE</b><b> </b><b>INDEX</b><b> </b>UNQ1_EMPRESA<b> </b><b>ON</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b> </b><b>(</b>E003CNPJ<b>)</b><b>;</b>
+
+</pre></code>
+</span></P>
+
+<HR>
+<A NAME="IND_UNQ1_FORNECEDOR"><P CLASS="Header0">Index: UNQ1_FORNECEDOR</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>UNIQUE</b><b> </b><b>INDEX</b><b> </b>UNQ1_FORNECEDOR<b> </b><b>ON</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b> </b><b>(</b>F002CPFCNPJ<b>,</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b>)</b><b>;</b>
+
+</pre></code>
+</span></P>
+
+<HR>
+<A NAME="_FOREIGN_KEYS"><P CLASS="Header0">Foreign Keys</P></A>
+<P CLASS="Base">&nbsp;</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Foreign Key</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Table</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Fields</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>FK Table</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>FK Field</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Delete Rule</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Update Rule</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#FKEY_FK_FORNECEDOR_1">FK_FORNECEDOR_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A></TD>
+    <TD><P CLASS="Base2">EMPRESA</TD>
+    <TD><P CLASS="Base2"><A HREF="#TBL_EMPRESA">EMPRESA</A></TD>
+    <TD><P CLASS="Base2">E003CNPJ</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+  </TR>
+</TABLE>
+
+<HR>
+<A NAME="FKEY_FK_FORNECEDOR_1"><P CLASS="Header0">Foreign Key: FK_FORNECEDOR_1</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>FK_FORNECEDOR_1
+<b>FOREIGN</b><b> </b><b>KEY</b><b> </b><b>(</b><A HREF="#TBL_EMPRESA">EMPRESA</A><b>)</b>
+<b>REFERENCES</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b> </b><b>(</b>E003CNPJ<b>)</b>
+<b>ON</b><b> </b><b>DELETE</b><b> </b><b>CASCADE</b>
+
+</pre></code>
+</span></P>
+
+<HR>
+<A NAME="_CHECKS"><P CLASS="Header0">Checks</P></A>
+<P CLASS="Base">&nbsp;</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Check</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Table</B></P>
+  <TH WIDTH="80%"><P CLASS="Base2"><B>Source</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#CHECK_CHK_EMPRESA_CNPJ">CHK_EMPRESA_CNPJ</A></P></TD>
+    <TD><P CLASS="Base2"><A HREF="#TBL_EMPRESA">EMPRESA</A></P></TD>
+    <TD><P CLASS="Base2">CHECK ((SELECT VALIDO FROM PROC_VALID_CNPJ(E003CNPJ ) ) =1)</P></TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#CHECK_CHK_EMPRESA_UF">CHK_EMPRESA_UF</A></P></TD>
+    <TD><P CLASS="Base2"><A HREF="#TBL_EMPRESA">EMPRESA</A></P></TD>
+    <TD><P CLASS="Base2">CHECK (UPPER(E002UF) IN ('AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'))</P></TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#CHECK_CHK_FORNECEDOR_DATANASC">CHK_FORNECEDOR_DATANASC</A></P></TD>
+    <TD><P CLASS="Base2"><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A></P></TD>
+    <TD><P CLASS="Base2">CHECK ((<br>        CHARACTER_LENGTH(FORNECEDOR.F002CPFCNPJ) = 11 -- Verifica se é um CPF válido<br>        AND <br>        DATEADD(YEAR, 18, FORNECEDOR.F003FUNDDATANASC) < CURRENT_DATE -- Verifica se o fornecedor tem menos de 18 anos<br>        AND<br>        (<br>            SELECT EMPRESA.E002UF<br>            FROM EMPRESA<br>            WHERE EMPRESA.E003CNPJ = FORNECEDOR.EMPRESA<br>        ) = 'PR'<br>    )<br>    OR<br>    CHARACTER_LENGTH(FORNECEDOR.F002CPFCNPJ) <> 11)</P></TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#CHECK_CHK_FORNECEDOR_ISVALIDDOC">CHK_FORNECEDOR_ISVALIDDOC</A></P></TD>
+    <TD><P CLASS="Base2"><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A></P></TD>
+    <TD><P CLASS="Base2">CHECK (<br>       IIF( CHARACTER_LENGTH( FORNECEDOR.F002CPFCNPJ) < 14 , ( SELECT VALIDO<br>                                                               FROM PROC_VALID_CPF(F002CPFCNPJ)  ),<br><br>                                                               (select VALIDO<br>                                                               from PROC_VALID_CNPJ(F002CPFCNPJ)<br>                                                               )) =1<br><br>      )</P></TD>
+  </TR>
+</TABLE>
+
+<HR>
+<A NAME="CHECK_CHK_EMPRESA_CNPJ"><P CLASS="Header0">Check: CHK_EMPRESA_CNPJ</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>CHK_EMPRESA_CNPJ<b> </b><b>CHECK</b><b> </b><b>(</b><b>(</b><b>SELECT</b><b> </b>VALIDO<b> </b><b>FROM</b><b> </b><A HREF="#PROC_PROC_VALID_CNPJ">PROC_VALID_CNPJ</A><b>(</b>E003CNPJ<b> </b><b>)</b><b> </b><b>)</b><b> </b><b>=</b>1<b>)</b>
+
+</pre></code>
+</span></P>
+
+<HR>
+<A NAME="CHECK_CHK_EMPRESA_UF"><P CLASS="Header0">Check: CHK_EMPRESA_UF</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>CHK_EMPRESA_UF<b> </b><b>CHECK</b><b> </b><b>(</b><b>UPPER</b><b>(</b>E002UF<b>)</b><b> </b><b>IN</b><b> </b><b>(</b>'AC'<b>,</b><b> </b>'AL'<b>,</b><b> </b>'AP'<b>,</b><b> </b>'AM'<b>,</b><b> </b>'BA'<b>,</b><b> </b>'CE'<b>,</b><b> </b>'DF'<b>,</b><b> </b>'ES'<b>,</b><b> </b>'GO'<b>,</b><b> </b>'MA'<b>,</b><b> </b>'MT'<b>,</b><b> </b>'MS'<b>,</b><b> </b>'MG'<b>,</b><b> </b>'PA'<b>,</b><b> </b>'PB'<b>,</b><b> </b>'PR'<b>,</b><b> </b>'PE'<b>,</b><b> </b>'PI'<b>,</b><b> </b>'RJ'<b>,</b><b> </b>'RN'<b>,</b><b> </b>'RS'<b>,</b><b> </b>'RO'<b>,</b><b> </b>'RR'<b>,</b><b> </b>'SC'<b>,</b><b> </b>'SP'<b>,</b><b> </b>'SE'<b>,</b><b> </b>'TO'<b>)</b><b>)</b>
+
+</pre></code>
+</span></P>
+
+<HR>
+<A NAME="CHECK_CHK_FORNECEDOR_DATANASC"><P CLASS="Header0">Check: CHK_FORNECEDOR_DATANASC</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>CHK_FORNECEDOR_DATANASC<b> </b><b>CHECK</b><b> </b><b>(</b><b>(</b>
+<b>        </b><b>CHARACTER_LENGTH</b><b>(</b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b>.</b>F002CPFCNPJ<b>)</b><b> </b><b>=</b><b> </b>11<b> </b><font color="# 0 0FF"><i>-- Verifica se é um CPF válido</i></font>
+<b>        </b><b>AND</b><b> </b>
+<b>        </b><b>DATEADD</b><b>(</b><b>YEAR</b><b>,</b><b> </b>18<b>,</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b>.</b>F003FUNDDATANASC<b>)</b><b> </b><b>&lt;</b><b> </b><b>CURRENT_DATE</b><b> </b><font color="# 0 0FF"><i>-- Verifica se o fornecedor tem menos de 18 anos</i></font>
+<b>        </b><b>AND</b>
+<b>        </b><b>(</b>
+<b>            </b><b>SELECT</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b>.</b>E002UF
+<b>            </b><b>FROM</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A>
+<b>            </b><b>WHERE</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b>.</b>E003CNPJ<b> </b><b>=</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b>.</b><A HREF="#TBL_EMPRESA">EMPRESA</A>
+<b>        </b><b>)</b><b> </b><b>=</b><b> </b>'PR'
+<b>    </b><b>)</b>
+<b>    </b><b>OR</b>
+<b>    </b><b>CHARACTER_LENGTH</b><b>(</b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b>.</b>F002CPFCNPJ<b>)</b><b> </b><b>&lt;</b><b>&gt;</b><b> </b>11<b>)</b>
+
+</pre></code>
+</span></P>
+
+<HR>
+<A NAME="CHECK_CHK_FORNECEDOR_ISVALIDDOC"><P CLASS="Header0">Check: CHK_FORNECEDOR_ISVALIDDOC</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>CHK_FORNECEDOR_ISVALIDDOC<b> </b><b>CHECK</b><b> </b><b>(</b>
+<b>       </b><b>IIF</b><b>(</b><b> </b><b>CHARACTER_LENGTH</b><b>(</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b>.</b>F002CPFCNPJ<b>)</b><b> </b><b>&lt;</b><b> </b>14<b> </b><b>,</b><b> </b><b>(</b><b> </b><b>SELECT</b><b> </b>VALIDO
+<b>                                                               </b><b>FROM</b><b> </b><A HREF="#PROC_PROC_VALID_CPF">PROC_VALID_CPF</A><b>(</b>F002CPFCNPJ<b>)</b><b>  </b><b>)</b><b>,</b>
+
+<b>                                                               </b><b>(</b><b>select</b><b> </b>VALIDO
+<b>                                                               </b><b>from</b><b> </b><A HREF="#PROC_PROC_VALID_CNPJ">PROC_VALID_CNPJ</A><b>(</b>F002CPFCNPJ<b>)</b>
+<b>                                                               </b><b>)</b><b>)</b><b> </b><b>=</b>1
+
+<b>      </b><b>)</b>
+
+</pre></code>
+</span></P>
+
+<HR>
+<A NAME="_ROLES"><P CLASS="Header0">Roles</P></A>
+<P CLASS="Base">&nbsp;</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Role</B></P>
+  <TH><P CLASS="Base2"><B>Members</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#ROLE_RDB$ADMIN">RDB$ADMIN</A></P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+</TABLE>
+
+<HR>
+<A NAME="ROLE_RDB$ADMIN"><P CLASS="Header0">Role: RDB$ADMIN</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>ROLE</b><b> </b>RDB$ADMIN
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Members</P>
+<P CLASS="Base">&nbsp;</P>

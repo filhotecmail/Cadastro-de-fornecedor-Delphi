@@ -15,16 +15,14 @@ type
     { Private declarations }
   public
     { Public declarations }
-    property ModelName: TModelAbstract read FModelName write SetModelName;
+    property Model: TModelAbstract read FModelName write SetModelName;
   end;
 
 implementation
-
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 {$R *.dfm}
 
 { TControllerAbstract }
-
 procedure TControllerAbstract.SetModelName(const Value: TModelAbstract);
 begin
   FModelName := Value;
