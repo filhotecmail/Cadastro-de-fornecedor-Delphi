@@ -5,7 +5,7 @@
         <FrameworkType>VCL</FrameworkType>
         <MainSource>CadFornecdores.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Config Condition="'$(Config)'==''">Release</Config>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
@@ -61,6 +61,7 @@
         <DCC_DcpOutput>..\dcp\</DCC_DcpOutput>
         <VerInfo_Locale>1046</VerInfo_Locale>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <Custom_Styles>Windows10|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows10.vsf</Custom_Styles>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_UsePackage>DBXSqliteDriver;dxFlowChartRS26;dxPSdxMapControlLnkRS26;DBXDb2Driver;vclactnband;dxBarRS26;vclFireDAC;dxFireDACEMFRS26;tethering;dxSpreadSheetInplaceRichEditRS26;FireDACADSDriver;ACBr_BoletoFPDF;ACBr_BPeDabpeESCPOS;JvPluginSystem;ACBr_BPe;tmswizdXE12;dxRichEditCoreRS26;dxPSdxSpreadSheetLnkRS26;FireDACMSSQLDriver;vcltouch;JvBands;ACBr_NFe;vcldb;svn;JvJans;dxPSTeeChartRS26;ACBr_NFeDanfeESCPOS;ACBr_PAFNFCe;ACBr_OFX;JvDotNetCtrls;dxGDIPlusRS26;dxPSdxFCLnkRS26;vclib;dxCloudServiceLibraryRS26;dxPSLnksRS26;FireDACDBXDriver;cxGridRS26;dxPsPrVwAdvRS26;dxPDFViewerRS26;vclx;dxPScxTLLnkRS26;ACBr_SATExtratoRL;ACBr_GTIN;RESTBackendComponents;ACBr_Reinf;VCLRESTComponents;vclie;bindengine;CloudService;dxmdsRS26;JvHMI;FireDACMySQLDriver;ACBr_PAF;ACBr_SATECFVirtual;dxdborRS26;DataSnapClient;ACBr_OpenDelivery;dxFireDACServerModeRS26;bindcompdbx;ACBr_CTeDacteRL;ACBr_TCP;DBXSybaseASEDriver;IndyIPServer;ACBr_CTe;cxPivotGridRS26;IndySystem;cxTreeListdxBarPopupMenuRS26;ACBr_PagFor;dsnapcon;cxTreeListRS26;dxPScxPivotGridLnkRS26;ACBre_Social;cxSchedulerRibbonStyleEventEditorRS26;dxPSCoreRS26;FireDACMSAccDriver;fmxFireDAC;FireDACInfxDriver;vclimg;dxSpreadSheetRS26;Jcl;dxBarExtItemsRS26;dxPSdxGaugeControlLnkRS26;ACBr_SPED;ACBr_SPEDImportar;emshosting;ACBr_MDFe;tmsdXE12;ACBr_LFD;ACBr_BoletoRL;DBXOdbcDriver;FireDACTDataDriver;FMXTee;dxdbtrRS26;dxRichEditControlCoreRS26;soaprtl;DbxCommonDriver;dxFlowChartAdvancedCustomizeFormRS26;ACBr_CIOT;JvManagedThreads;ACBr_NFSeDanfseRL;dxDockingRS26;xmlrtl;soapmidas;DataSnapNativeClient;fmxobj;JvTimeFramework;cxLibraryRS26;rtl;emsserverresource;DbxClientDriver;DBXSybaseASADriver;dxPScxSchedulerLnkRS26;JvSystem;JvStdCtrls;dxSpreadSheetConditionalFormattingDialogsRS26;ACBr_Convenio115;appanalytics;dxRibbonCustomizationFormRS26;cxSchedulerGridRS26;LockBox3DR;IndyIPClient;ACBr_DebitoAutomatico;bindcompvcl;dxFlowChartLayoutsRS26;TeeUI;dxADOEMFRS26;JvDocking;JvPascalInterpreter;VclSmp;FireDACODBCDriver;JclVcl;DataSnapIndy10ServerTransport;dxRibbonRS26;dxPScxCommonRS26;dxRichEditDocumentModelRS26;ACBr_Boleto;DataSnapProviderClient;ACBr_SEF2;FireDACMongoDBDriver;dxFlowChartDesignerRS26;JvControls;dxPScxGridLnkRS26;JvPrintPreview;ACBr_NFSe;dxSpreadSheetCoreRS26;DataSnapServerMidas;RESTComponents;DBXInterBaseDriver;dxPScxExtCommonRS26;ACBr_NF3e;ACBr_TEFD;emsclientfiredac;ACBr_SATWS;DataSnapFireDAC;svnui;JvGlobus;DBXMSSQLDriver;JvMM;ACBr_MDFeDamdfeRL;dxRichEditControlRS26;DatasnapConnectorsFreePascal;dxGaugeControlRS26;dxorgcRS26;dxPScxVGridLnkRS26;ACBr_EDI;ACBr_ONE;bindcompfmx;JvNet;DBXOracleDriver;inetdb;JvAppFrm;CEF4Delphi;ACBr_Diversos;dxBarDBNavRS26;dxDBXServerModeRS26;FmxTeeUI;emsedge;ACBr_LCDPR;FireDACIBDriver;fmx;fmxdae;dxServerModeRS26;dxWizardControlRS26;JvWizards;dxTabbedMDIRS26;ACBr_Ponto;dxEMFRS26;dbexpress;IndyCore;dxComnRS26;JvPageComps;dsnap;DataSnapCommon;emsclient;FireDACCommon;JvDB;ACBr_NFSeX;DataSnapConnectors;cxSchedulerTreeBrowserRS26;dxADOServerModeRS26;ACBR_DeSTDA;soapserver;ACBr_SAT;JclDeveloperTools;cxPivotGridOLAPRS26;cxVerticalGridRS26;dxtrmdRS26;FireDACOracleDriver;DBXMySQLDriver;JvCmp;cxSchedulerRS26;cxSchedulerWebServiceStorageRS26;DBXFirebirdDriver;dxPSdxLCLnkRS26;ACBr_Sintegra;FireDACCommonODBC;FireDACCommonDriver;dxMapControlRS26;ACBr_ADRCST;ACBr_GNRE;inet;dxSpellCheckerRS26;IndyIPCommon;JvCustom;dxSpreadSheetCoreConditionalFormattingDialogsRS26;vcl;dxPSdxDBOCLnkRS26;ACBr_NFeDanfeRL;JvXPCtrls;ACBr_SATExtratoESCPOS;FireDACDb2Driver;dxSpreadSheetReportDesignerRS26;ACBr_Integrador;dxPScxPCProdRS26;tmsxlsdXE12;dxNavBarRS26;dxCoreRS26;madBasic_;cxExportRS26;TeeDB;FireDAC;dxHttpIndyRequestRS26;dxPSPrVwRibbonRS26;JvCore;ACBr_Comum;JvCrypt;FireDACSqliteDriver;FireDACPgDriver;ibmonitor;FireDACASADriver;dxPSRichEditControlLnkRS26;cxPivotGridChartRS26;ACBr_GNREGuiaRL;JvDlgs;JvRuntimeDesign;dxPSDBTeeChartRS26;ibxpress;Tee;DataSnapServer;ibxbindings;dxPSdxDBTVLnkRS26;vclwinx;FireDACDSDriver;ACBr_OpenSSL;tmsexdXE12;dxTileControlRS26;dxSkinsCoreRS26;CustomIPTransport;vcldsnap;ACBr_PIXCD;bindcomp;dxPSdxOCLnkRS26;DBXInformixDriver;ACBr_Serial;frce;acntDX10Rio_R;ACBr_NFSeXDanfseRL;ACBr_BlocoX;dbxcds;ACBr_NFCeECFVirtual;adortl;dxSpreadSheetCoreDialogsRS26;ACBr_ANe;dxBarExtDBItemsRS26;dsnapxml;dbrtl;inetdbxpress;IndyProtocols;dxPSdxPDFViewerLnkRS26;dxRichEditInplaceRS26;JclContainers;WebView4DelphiVCLRTL;ACBr_MTER;ACBr_NF3eDANF3eESCPOS;fmxase;$(DCC_UsePackage)</DCC_UsePackage>
@@ -95,6 +96,13 @@
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Icon_MainIcon>CadFornecdores_Icon.ico</Icon_MainIcon>
+        <VerInfo_Debug>true</VerInfo_Debug>
+        <VerInfo_PreRelease>true</VerInfo_PreRelease>
+        <VerInfo_Special>true</VerInfo_Special>
+        <VerInfo_Private>true</VerInfo_Private>
+        <VerInfo_DLL>true</VerInfo_DLL>
+        <VerInfo_AutoGenVersion>true</VerInfo_AutoGenVersion>
+        <VerInfo_Keys>CompanyName=Teste listagem de fornecedores;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=CadFornecedor v1 ;LegalCopyright=listagem de fornecedores;LegalTrademarks=listagem de fornecedores;OriginalFilename=CadFornecedor v1 ;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=Executável criado para exemplificar um aplicativo Delphi simples para cadastro de clientes;SpecialBuild=;PrivateBuild=</VerInfo_Keys>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -112,9 +120,108 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="..\src\view\view.master.pas">
-            <Form>Form11</Form>
+            <Form>Viewmaster</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\common\dao.abstract.pas">
+            <Form>DaoAbstract</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\common\database.driver.abstract.pas">
+            <Form>DatabaseDriverAbstract</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\common\model.abstract.pas">
+            <Form>ModelAbstract</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\src\model\model.empresa.pas">
+            <Form>ModelEmpresa</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\src\model\model.fornecedor.pas">
+            <Form>ModelFornecedor</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\common\controller.abstract.pas">
+            <Form>ControllerAbstract</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\src\controller\controller.empresa.pas">
+            <Form>ControllerEmpresa</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\src\controller\controller.fornecedor.pas">
+            <Form>ControllerFornecedor</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\src\view\view.empresa.pas">
+            <Form>ViewEmpresa</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\src\view\view.fornecedor.pas">
+            <Form>ViewFornecedor</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\src\view\view.empresa.crud.pas">
+            <Form>ViewEmpresaCrud</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\src\controller\controller.empresa.crud.pas">
+            <Form>ControllerEmpresaCrud</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\src\view\view.forcenedor.crud.pas">
+            <Form>ViewFornecedorCrud</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\src\controller\controller.fornecedor.crud.pas">
+            <Form>ControllerFornecedorCrud</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <None Include="ModelSupport_CadFornecdores\default.txaPackage"/>
+        <None Include="ModelSupport_CadFornecdores\default.txvpck"/>
+        <None Include="ModelSupport_CadFornecdores\CadFornecdores\default.txvpck"/>
+        <None Include="ModelSupport_CadFornecdores\CadFornecdores\default.txaPackage"/>
+        <None Include="ModelSupport_CadFornecdores\controller\default.txvpck"/>
+        <None Include="ModelSupport_CadFornecdores\controller\abstract\default.txvpck"/>
+        <None Include="ModelSupport_CadFornecdores\controller\fornecedor\default.txvpck"/>
+        <None Include="ModelSupport_CadFornecdores\controller\empresa\default.txvpck"/>
+        <None Include="ModelSupport_CadFornecdores\controller\default.txaPackage"/>
+        <None Include="ModelSupport_CadFornecdores\model\abstract\default.txaPackage"/>
+        <None Include="ModelSupport_CadFornecdores\view\default.txvpck"/>
+        <None Include="ModelSupport_CadFornecdores\dao\default.txvpck"/>
+        <None Include="ModelSupport_CadFornecdores\database\default.txvpck"/>
+        <None Include="ModelSupport_CadFornecdores\model\default.txvpck"/>
+        <None Include="ModelSupport_CadFornecdores\view\master\default.txvpck"/>
+        <None Include="ModelSupport_CadFornecdores\dao\abstract\default.txvpck"/>
+        <None Include="ModelSupport_CadFornecdores\database\driver\default.txvpck"/>
+        <None Include="ModelSupport_CadFornecdores\model\abstract\default.txvpck"/>
+        <None Include="ModelSupport_CadFornecdores\model\fornecedor\default.txvpck"/>
+        <None Include="ModelSupport_CadFornecdores\model\empresa\default.txvpck"/>
+        <None Include="ModelSupport_CadFornecdores\controller\empresa\crud\default.txvpck"/>
+        <None Include="ModelSupport_CadFornecdores\controller\fornecedor\crud\default.txvpck"/>
+        <None Include="ModelSupport_CadFornecdores\view\empresa\default.txvpck"/>
+        <None Include="ModelSupport_CadFornecdores\view\fornecedor\default.txvpck"/>
+        <None Include="ModelSupport_CadFornecdores\view\forcenedor\default.txvpck"/>
+        <None Include="ModelSupport_CadFornecdores\view\forcenedor\default.txaPackage"/>
+        <None Include="ModelSupport_CadFornecdores\controller\empresa\crud\default.txaPackage"/>
+        <None Include="ModelSupport_CadFornecdores\view\empresa\default.txaPackage"/>
+        <None Include="ModelSupport_CadFornecdores\view\forcenedor\crud\default.txaPackage"/>
+        <None Include="ModelSupport_CadFornecdores\view\fornecedor\default.txaPackage"/>
+        <None Include="ModelSupport_CadFornecdores\view\empresa\crud\default.txaPackage"/>
+        <None Include="ModelSupport_CadFornecdores\view\master\default.txaPackage"/>
+        <None Include="ModelSupport_CadFornecdores\controller\fornecedor\crud\default.txaPackage"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -146,9 +253,207 @@
                 </Source>
             </Delphi.Personality>
             <Deployment Version="3">
-                <DeployFile LocalName="Win32\Debug\CadFornecdores.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="ModelSupport_CadFornecdores\controller\fornecedor\crud\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\database\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\view\forcenedor\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\view\forcenedor\crud\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\dao\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\controller\fornecedor\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\model\abstract\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\database\driver\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\controller\fornecedor\crud\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\view\empresa\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\controller\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\view\empresa\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\controller\abstract\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\model\empresa\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\view\fornecedor\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\model\fornecedor\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\view\fornecedor\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\view\empresa\crud\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\CadFornecdores\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\CadFornecdores\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\view\master\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\controller\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\view\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\view\forcenedor\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\model\abstract\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\view\master\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\controller\empresa\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\model\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\dao\abstract\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="..\bin\CadFornecdores.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>CadFornecdores.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\controller\empresa\crud\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_CadFornecdores\controller\empresa\crud\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -983,6 +1288,7 @@
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">False</Platform>
             </Platforms>
+            <ModelSupport>True</ModelSupport>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>
     </ProjectExtensions>

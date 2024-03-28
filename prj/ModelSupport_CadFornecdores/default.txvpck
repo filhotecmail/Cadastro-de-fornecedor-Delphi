@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="2wdh5q5gylg_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::pm0wl0siccj_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="10,10,100,119" />
+      <reference referencedUin="design:view:::ll4nmrsjr5o_v" />
+      <reference referencedUin="design:view:::l6zl8oab5n6x60zbr_v" />
+      <reference referencedUin="design:view:::jn4jir8npn69kog4j_v" />
+      <reference referencedUin="design:view:::lr1oxinio6j25g2h_v" />
+    </reference>
+    <reference referencedUin="design:view:::yuqy6ifr16i_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="129,1,100,119" />
+      <reference referencedUin="design:view:::x6v8r27skus_v" />
+    </reference>
+    <reference referencedUin="design:view:::8igb7h0xcfs_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="129,139,100,119" />
+      <reference referencedUin="design:view:::u4qg2emk3zr_v" />
+    </reference>
+    <reference referencedUin="design:view:::ev6ojxo6z1f_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="20,148,100,149" />
+      <reference referencedUin="design:view:::dokp1a2pfuo_v" />
+      <reference referencedUin="design:view:::x3pbe3jrkpi_v" />
+      <reference referencedUin="design:view:::68q98nw28gm_v" />
+    </reference>
+    <reference referencedUin="design:view:::ceykp05yy4o_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="140,280,140,180" />
+      <property name="location_set_by_user" value="True" />
+      <property name="bounds_setted_by_user" value="True" />
+      <reference referencedUin="design:view:::acr2ndl0whj_v" />
+      <reference referencedUin="design:view:::f58cv2unm1t_v" />
+      <reference referencedUin="design:view:::ztzyjt5z31t_v" />
+    </reference>
+    <reference referencedUin="design:view:::o7cn4zkr34r_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="560,40,147,220" />
+      <property name="location_set_by_user" value="True" />
+      <property name="bounds_setted_by_user" value="True" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:CadFornecdores.@unitclass" />
+    </reference>
+  </view>
+</nodeSet>

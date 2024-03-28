@@ -1,9 +1,9 @@
-object Form11: TForm11
+object Viewmaster: TViewmaster
   Left = 0
   Top = 0
   Caption = 'Cadastro de fornecedores v.1.0'
-  ClientHeight = 439
-  ClientWidth = 870
+  ClientHeight = 698
+  ClientWidth = 1010
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -2132,7 +2132,64 @@ object Form11: TForm11
     0000000000000000000000000000C03F3CFFC03FFAFFC000FAFFC00079FFC000
     A6EFC000E7FFC000EFFF8000EFFF0000EDFF0000ECFF0000EBFF0000EBFF0000
     79FF0001FAFF0003FAFF80FFFAFF}
+  Menu = MainMenu1
   OldCreateOrder = False
+  Position = poScreenCenter
+  PrintScale = poPrintToFit
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 679
+    Width = 1010
+    Height = 19
+    Panels = <>
+    SizeGrip = False
+  end
+  object oWb: TWebBrowser
+    Left = 0
+    Top = 0
+    Width = 1010
+    Height = 679
+    Align = alClient
+    TabOrder = 1
+    ExplicitLeft = 136
+    ExplicitTop = 88
+    ExplicitWidth = 300
+    ExplicitHeight = 150
+    ControlData = {
+      4C000000636800002D4600000000000000000000000000000000000000000000
+      000000004C000000000000000000000001000000E0D057007335CF11AE690800
+      2B2E126208000000000000004C0000000114020000000000C000000000000046
+      8000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000100000000000000000000000000000000000000}
+  end
+  object MainMenu1: TMainMenu
+    Left = 800
+    Top = 24
+    object M1: TMenuItem
+      Caption = 'Menu principal'
+      object C1: TMenuItem
+        Caption = 'Cadastrar uma nova empresa no sistema'
+        OnClick = C1Click
+      end
+      object I1: TMenuItem
+        Caption = 'Incluir um fornecedor no sistema'
+        OnClick = I1Click
+      end
+      object S1: TMenuItem
+        Caption = 'Sobre o sistema'
+      end
+    end
+  end
+  object oEnterAsTab: TJvEnterAsTab
+    Left = 882
+    Top = 24
+  end
+  object oAppEvents: TApplicationEvents
+    OnException = oAppEventsException
+    Left = 800
+    Top = 88
+  end
 end

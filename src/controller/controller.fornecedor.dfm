@@ -1,0 +1,2 @@
+inherited ControllerFornecedor: TControllerFornecedor
+end

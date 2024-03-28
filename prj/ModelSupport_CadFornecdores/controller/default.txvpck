@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="ceykp05yy4o_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::acr2ndl0whj_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="10,10,130,151" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.abstract.TControllerAbstract" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.abstract.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.abstract.TActionController" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.abstract.TControllerFactory" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.abstract.TViewController" />
+    </reference>
+    <reference referencedUin="design:view:::f58cv2unm1t_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="159,1,147,151" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.fornecedor.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.fornecedor.TControllerFornecedor" />
+      <reference referencedUin="design:view:::r4gi8boodm6oiblfi_v" />
+    </reference>
+    <reference referencedUin="design:view:::ztzyjt5z31t_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="159,171,134,151" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.empresa.TControllerEmpresa" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.empresa.@unitclass" />
+      <reference referencedUin="design:view:::xpuuidoepl6zmiqtp_v" />
+    </reference>
+  </view>
+</nodeSet>
