@@ -42,6 +42,7 @@ uses
     property AutoincField:String read FAutoincField write SetAutoincField;
     property Fields: TArray<String> read FFields write SetFields;
     property WhereClausule: TArray<String> read FWhereClausule write SetWhereClausule;
+    function GetDatasetbyName(ADatasetname: String):TDataset;
   end;
 
 implementation
@@ -93,6 +94,11 @@ begin
   LInifile := TIniFile.Create( LFileName );
   ConfiureFirebirdDriver( LInifile );
 
+end;
+
+function TModelAbstract.GetDatasetbyName(ADatasetname: String): TDataset;
+begin
+  Result:= Self.FindComponent(ADatasetname) as TDataset;
 end;
 
 procedure TModelAbstract.SetAutoincField(const Value: String);

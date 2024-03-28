@@ -3,25 +3,25 @@ object ViewEmpresaCrud: TViewEmpresaCrud
   Top = 0
   BorderStyle = bsSizeToolWin
   Caption = 'Formulario de cadastro e controles da empresa'
-  ClientHeight = 207
-  ClientWidth = 728
+  ClientHeight = 317
+  ClientWidth = 548
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  Menu = MainMenu1
   OldCreateOrder = False
   Position = poScreenCenter
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object GroupBox2: TGroupBox
     AlignWithMargins = True
     Left = 10
     Top = 10
-    Width = 708
-    Height = 168
+    Width = 528
+    Height = 278
     Margins.Left = 10
     Margins.Top = 10
     Margins.Right = 10
@@ -35,10 +35,6 @@ object ViewEmpresaCrud: TViewEmpresaCrud
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitLeft = -2
-    ExplicitTop = -3
-    ExplicitWidth = 1004
-    ExplicitHeight = 671
     object Label1: TLabel
       Left = 24
       Top = 26
@@ -85,13 +81,15 @@ object ViewEmpresaCrud: TViewEmpresaCrud
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
+      ParentShowHint = False
       ReadOnly = True
+      ShowHint = True
       TabOrder = 0
     end
     object oXFant: TDBEdit
       Left = 87
       Top = 48
-      Width = 594
+      Width = 418
       Height = 27
       Hint = 'Informe o Nome fantasia da empresa, * campo obrigat'#243'rio'
       CharCase = ecUpperCase
@@ -103,12 +101,14 @@ object ViewEmpresaCrud: TViewEmpresaCrud
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 1
     end
     object oCnpj: TDBEdit
       Left = 280
       Top = 112
-      Width = 217
+      Width = 225
       Height = 27
       Hint = 'Informe o documento CNPJ da empresa. * Campo Obrigat'#243'rio'
       CharCase = ecUpperCase
@@ -120,13 +120,17 @@ object ViewEmpresaCrud: TViewEmpresaCrud
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
-      TabOrder = 2
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
     end
     object oUfs: TJvDBComboBox
       Left = 24
       Top = 112
       Width = 250
       Height = 27
+      DataField = 'E002UF'
+      DataSource = ods
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -161,7 +165,9 @@ object ViewEmpresaCrud: TViewEmpresaCrud
         'SE - Sergipe'
         'TO - Tocantins')
       ParentFont = False
-      TabOrder = 3
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
       Values.Strings = (
         'AC'
         'AL'
@@ -196,38 +202,59 @@ object ViewEmpresaCrud: TViewEmpresaCrud
       ListSettings.OutfilteredValueFont.Name = 'Tahoma'
       ListSettings.OutfilteredValueFont.Style = []
     end
+    object GroupBox1: TGroupBox
+      Left = 2
+      Top = 214
+      Width = 524
+      Height = 62
+      Align = alBottom
+      TabOrder = 4
+      object oBtConfirm: TButton
+        Left = 147
+        Top = 16
+        Width = 125
+        Height = 33
+        Caption = 'Gravar os dados'
+        Enabled = False
+        TabOrder = 0
+        OnClick = oBtConfirmClick
+      end
+      object oBtCancel: TButton
+        Left = 278
+        Top = 16
+        Width = 125
+        Height = 33
+        Caption = 'Cancelar'
+        Enabled = False
+        TabOrder = 1
+        OnClick = oBtCancelClick
+      end
+    end
+    object oBtEdit: TButton
+      Left = 24
+      Top = 157
+      Width = 125
+      Height = 33
+      Caption = 'Editar os dados'
+      TabOrder = 5
+      OnClick = oBtEditClick
+    end
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 188
-    Width = 728
+    Top = 298
+    Width = 548
     Height = 19
     Panels = <>
     SizeGrip = False
-    ExplicitLeft = -282
-    ExplicitTop = 171
-    ExplicitWidth = 1010
   end
   object oEnterAsTab: TJvEnterAsTab
-    Left = 656
-    Top = 120
-  end
-  object MainMenu1: TMainMenu
-    Left = 591
-    Top = 120
-    object I1: TMenuItem
-      Caption = 'Salvar'
-    end
-    object D1: TMenuItem
-      Caption = 'Cancelar F4'
-    end
-    object S1: TMenuItem
-      Caption = 'Sair F9'
-    end
+    Left = 32
+    Top = 224
   end
   object ods: TDataSource
     AutoEdit = False
-    Left = 523
-    Top = 125
+    Left = 99
+    Top = 229
   end
 end
