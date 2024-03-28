@@ -78,3 +78,73 @@ Em termos simples, o Facade atua como uma camada de abstração sobre um conjunt
 - **Melhoria na legibilidade e na compreensão**: O uso do Facade pode melhorar significativamente a legibilidade e a compreensão do código, especialmente em sistemas complexos. Ao fornecer uma interface clara e concisa, os desenvolvedores podem entender facilmente como interagir com o sistema e quais funcionalidades estão disponíveis.
 
 
+### A Entidade Relacional
+
+![image](https://github.com/filhotecmail/Cadastro-de-fornecedor-Delphi/assets/18727307/7b92c523-8908-44ba-9a9a-1d0eb6b228cd)
+
+# Tabela EMPRESA
+
+A tabela **EMPRESA** é uma entidade fundamental em um sistema ERP (Enterprise Resource Planning), pois armazena informações sobre as empresas que utilizam o sistema.
+
+## Pontos Importantes
+
+### Armazenamento de Informações da Empresa
+- **E001XFANT**: Nome fantasia da empresa.
+- **E002UF**: Sigla do estado onde a empresa está localizada.
+- **E003CNPJ**: Número de CNPJ da empresa.
+
+Essas informações são cruciais para identificar e diferenciar as empresas cadastradas no sistema.
+
+### Garantia de Integridade dos Dados
+- A restrição `UNQ1_EMPRESA` garante que cada CNPJ seja único na tabela, evitando a inserção de empresas duplicadas com o mesmo CNPJ.
+
+### Validação de Dados
+- As restrições `CHK1_EMPRESA` e `CHK2_EMPRESA` aplicam validações nos dados inseridos na tabela. A primeira restrição garante que a sigla do estado esteja dentro de um conjunto pré-definido de valores válidos, enquanto a segunda restrição verifica se o CNPJ informado é válido por meio de uma função externa (`PROC_VALID_CNPJ`).
+
+### Chave Primária e Identificador Único
+- A coluna **ID** é uma chave primária autoincrementada que garante a unicidade de cada registro na tabela. 
+- O gatilho `EMPRESA_BI` é responsável por gerar valores para o campo **ID** antes de inserir um novo registro na tabela.
+
+### Descrição dos Campos
+- A tabela inclui comentários que descrevem cada campo, fornecendo informações adicionais sobre o propósito e o formato dos dados armazenados em cada coluna.
+
+# Tabela FORNECEDOR
+
+A entidade **FORNECEDOR** desempenha um papel fundamental em um sistema ERP (Enterprise Resource Planning) e em processos de negócios em geral.
+
+## Abastecimento de Recursos
+- Os fornecedores são fontes externas de recursos, materiais e serviços que uma empresa precisa para operar. Eles fornecem matérias-primas, componentes, equipamentos, serviços e outros itens essenciais para a produção ou prestação de serviços da empresa.
+
+## Relacionamento Comercial
+- O relacionamento com os fornecedores é vital para o sucesso de uma empresa. Um sistema ERP armazena informações detalhadas sobre os fornecedores, incluindo dados de contato, histórico de transações, contratos, termos de pagamento e outros detalhes importantes que ajudam a manter e gerenciar esse relacionamento.
+
+## Gestão de Compras e Estoque
+- A entidade fornecedor permite que as empresas gerenciem eficientemente suas compras e estoques. Os sistemas ERP usam informações de fornecedores para realizar cotações, ordens de compra, recebimentos de mercadorias, controle de estoque e outras atividades relacionadas à cadeia de suprimentos.
+
+## Qualidade e Confiabilidade
+- Selecionar fornecedores confiáveis e de alta qualidade é essencial para garantir a qualidade dos produtos e serviços oferecidos pela empresa. O sistema ERP pode manter registros detalhados de desempenho do fornecedor, incluindo avaliações de qualidade, conformidade com regulamentações, histórico de entregas e feedbacks de clientes.
+
+## Gestão Financeira
+- A gestão financeira eficaz depende de informações precisas sobre os custos de materiais e serviços fornecidos pelos fornecedores. Os sistemas ERP integram informações financeiras relacionadas a fornecedores, como faturas, pagamentos, termos de crédito e relatórios de desempenho financeiro.
+
+## Análise e Tomada de Decisão
+- Os dados relacionados aos fornecedores são essenciais para análises e tomadas de decisão estratégicas. As empresas podem usar informações sobre desempenho de fornecedores, tendências de preços, condições de mercado e outros fatores para otimizar suas operações, reduzir custos, identificar oportunidades de melhoria e mitigar riscos.
+
+## Descrição dos Campos
+
+- **ID**: Identificador único para cada registro de fornecedor na tabela.
+- **EMPRESA**: CNPJ da empresa fornecedora, relacionado à tabela EMPRESA.
+- **F001DATETIEMEC**: Data e hora da inclusão do registro no sistema.
+- **F002CPFCNPJ**: Documento CPF ou CNPJ do fornecedor.
+- **F003FUNDDATANASC**: Data de fundação ou data de nascimento do fornecedor.
+- **F004NOMERAZAO**: Razão Social ou Nome do fornecedor.
+
+## Restrições e Relacionamentos
+
+- Restrição `CHK_FORNECEDOR_DATANASC`: Garante que o fornecedor seja maior de idade se a empresa associada estiver localizada no estado do Paraná.
+- Restrição `CHK_FORNECEDOR_ISVALIDDOC`: Verifica se o documento CPF/CNPJ é válido.
+- Restrição `UNQ1_FORNECEDOR`: Garante a unicidade do CPF/CNPJ de cada fornecedor associado a uma empresa.
+- Chave Estrangeira `FK_FORNECEDOR_1`: Estabelece uma relação entre a tabela de fornecedores e a tabela de empresas (EMPRESA), garantindo que cada fornecedor esteja associado a uma empresa válida.
+
+Essas restrições e relacionamentos garantem a consistência e a integridade dos dados na tabela de fornecedores, essenciais para um funcionamento adequado do sistema ERP.
+
