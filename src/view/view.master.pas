@@ -27,10 +27,11 @@ type
     oEnterAsTab: TJvEnterAsTab;
     StatusBar1: TStatusBar;
     oAppEvents: TApplicationEvents;
-    WebBrowser1: TWebBrowser;
+    oWb: TWebBrowser;
     procedure C1Click(Sender: TObject);
     procedure I1Click(Sender: TObject);
     procedure oAppEventsException(Sender: TObject; E: Exception);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -53,6 +54,11 @@ begin
 end;
 
 
+
+procedure TViewmaster.FormShow(Sender: TObject);
+begin
+ //oWb.LocationURL:= '';
+end;
 
 procedure TViewmaster.I1Click(Sender: TObject);
 begin

@@ -2136,6 +2136,7 @@ object Viewmaster: TViewmaster
   OldCreateOrder = False
   Position = poScreenCenter
   PrintScale = poPrintToFit
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object StatusBar1: TStatusBar
@@ -2146,7 +2147,7 @@ object Viewmaster: TViewmaster
     Panels = <>
     SizeGrip = False
   end
-  object WebBrowser1: TWebBrowser
+  object oWb: TWebBrowser
     Left = 0
     Top = 0
     Width = 1010
