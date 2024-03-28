@@ -2146,6 +2146,24 @@ object Viewmaster: TViewmaster
     Panels = <>
     SizeGrip = False
   end
+  object WebBrowser1: TWebBrowser
+    Left = 0
+    Top = 0
+    Width = 1010
+    Height = 679
+    Align = alClient
+    TabOrder = 1
+    ExplicitLeft = 136
+    ExplicitTop = 88
+    ExplicitWidth = 300
+    ExplicitHeight = 150
+    ControlData = {
+      4C000000636800002D4600000000000000000000000000000000000000000000
+      000000004C000000000000000000000001000000E0D057007335CF11AE690800
+      2B2E126208000000000000004C0000000114020000000000C000000000000046
+      8000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000100000000000000000000000000000000000000}
+  end
   object MainMenu1: TMainMenu
     Left = 800
     Top = 24

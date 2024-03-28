@@ -15,7 +15,7 @@ uses
   Vcl.Menus,
   Vcl.ComCtrls,
   JvComponentBase,
-  JvEnterTab, Vcl.AppEvnts;
+  JvEnterTab, Vcl.AppEvnts, Vcl.OleCtrls, SHDocVw;
 
 type
   TViewmaster = class( TForm )
@@ -27,6 +27,7 @@ type
     oEnterAsTab: TJvEnterAsTab;
     StatusBar1: TStatusBar;
     oAppEvents: TApplicationEvents;
+    WebBrowser1: TWebBrowser;
     procedure C1Click(Sender: TObject);
     procedure I1Click(Sender: TObject);
     procedure oAppEventsException(Sender: TObject; E: Exception);
@@ -46,8 +47,11 @@ uses controller.abstract;
 
 procedure TViewmaster.C1Click(Sender: TObject);
 begin
+
  TControllerFactory.CreateController('controller empresa');
+
 end;
+
 
 
 procedure TViewmaster.I1Click(Sender: TObject);

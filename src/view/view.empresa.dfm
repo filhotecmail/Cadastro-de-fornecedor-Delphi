@@ -3,7 +3,7 @@ object ViewEmpresa: TViewEmpresa
   Top = 0
   BorderStyle = bsSizeToolWin
   Caption = 'Cadastro e manuten'#231#227'o dos dados da empresa'
-  ClientHeight = 378
+  ClientHeight = 398
   ClientWidth = 1010
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -12,7 +12,6 @@ object ViewEmpresa: TViewEmpresa
   Font.Name = 'Tahoma'
   Font.Style = []
   KeyPreview = True
-  Menu = MainMenu1
   OldCreateOrder = False
   Position = poMainFormCenter
   PixelsPerInch = 96
@@ -22,7 +21,7 @@ object ViewEmpresa: TViewEmpresa
     Left = 10
     Top = 10
     Width = 990
-    Height = 339
+    Height = 359
     Margins.Left = 10
     Margins.Top = 10
     Margins.Right = 10
@@ -36,16 +35,13 @@ object ViewEmpresa: TViewEmpresa
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitLeft = -2
-    ExplicitTop = -3
-    ExplicitWidth = 1004
-    ExplicitHeight = 671
+    ExplicitHeight = 339
     object oGrid: TJvDBGrid
       AlignWithMargins = True
       Left = 5
       Top = 28
       Width = 980
-      Height = 244
+      Height = 264
       Cursor = crHandPoint
       Margins.Top = 10
       Align = alClient
@@ -103,12 +99,12 @@ object ViewEmpresa: TViewEmpresa
     end
     object GroupBox1: TGroupBox
       Left = 2
-      Top = 275
+      Top = 295
       Width = 986
       Height = 62
       Align = alBottom
       TabOrder = 1
-      ExplicitTop = 145
+      ExplicitTop = 275
       object oEditar: TButton
         Left = 156
         Top = 16
@@ -119,6 +115,7 @@ object ViewEmpresa: TViewEmpresa
         Images = ImageList1
         SelectedImageIndex = 0
         TabOrder = 0
+        OnClick = oEditarClick
       end
       object oExluir: TButton
         Left = 407
@@ -147,27 +144,12 @@ object ViewEmpresa: TViewEmpresa
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 359
+    Top = 379
     Width = 1010
     Height = 19
     Panels = <>
     SizeGrip = False
-    ExplicitLeft = -282
-    ExplicitTop = 171
-  end
-  object MainMenu1: TMainMenu
-    Left = 855
-    Top = 144
-    object I1: TMenuItem
-      Caption = 'Insere F1'
-      OnClick = I1Click
-    end
-    object D1: TMenuItem
-      Caption = 'Deleta F2'
-    end
-    object S1: TMenuItem
-      Caption = 'Sair F9'
-    end
+    ExplicitTop = 359
   end
   object oEnterAsTab: TJvEnterAsTab
     Left = 864

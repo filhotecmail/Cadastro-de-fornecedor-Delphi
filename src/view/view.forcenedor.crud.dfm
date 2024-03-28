@@ -107,7 +107,9 @@ object ViewFornecedorCrud: TViewFornecedorCrud
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
+      ParentShowHint = False
       ReadOnly = True
+      ShowHint = True
       TabOrder = 0
     end
     object oXFant: TDBEdit
@@ -127,6 +129,8 @@ object ViewFornecedorCrud: TViewFornecedorCrud
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 2
     end
     object DBEdit1: TDBEdit
@@ -147,7 +151,9 @@ object ViewFornecedorCrud: TViewFornecedorCrud
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
+      ParentShowHint = False
       ReadOnly = True
+      ShowHint = True
       TabOrder = 5
     end
     object JvDBDatePickerEdit1: TJvDBDatePickerEdit
@@ -164,6 +170,8 @@ object ViewFornecedorCrud: TViewFornecedorCrud
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 4
     end
     object GroupBox1: TGroupBox
@@ -208,6 +216,9 @@ object ViewFornecedorCrud: TViewFornecedorCrud
       Top = 48
       Width = 602
       Height = 27
+      Hint = 
+        'Selecione uma empresa cadastrada na lista suspensa , este campo ' +
+        #233' obrigat'#243'rio '
       DataField = 'EMPRESA'
       DataSource = ods
       Font.Charset = DEFAULT_CHARSET
@@ -216,6 +227,8 @@ object ViewFornecedorCrud: TViewFornecedorCrud
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 1
       ListSettings.OutfilteredValueFont.Charset = DEFAULT_CHARSET
       ListSettings.OutfilteredValueFont.Color = clRed
@@ -238,6 +251,8 @@ object ViewFornecedorCrud: TViewFornecedorCrud
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 3
       OnKeyPress = oCnpjKeyPress
     end

@@ -26,14 +26,10 @@ uses
 
 type
   TViewEmpresa = class( TViewController )
-    MainMenu1: TMainMenu;
     oEnterAsTab: TJvEnterAsTab;
     GroupBox2: TGroupBox;
     oGrid: TJvDBGrid;
     ods: TDataSource;
-    I1: TMenuItem;
-    D1: TMenuItem;
-    S1: TMenuItem;
     StatusBar1: TStatusBar;
     GroupBox1: TGroupBox;
     oEditar: TButton;
@@ -44,6 +40,7 @@ type
     procedure oGridDblClick(Sender: TObject);
     procedure oExluirClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure oEditarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -75,6 +72,24 @@ begin
  finally
   FreeAndNil( LController );
  end;
+end;
+
+procedure TViewEmpresa.oEditarClick(Sender: TObject);
+ var
+  LController: TObject;
+begin
+ if ods.DataSet.IsEmpty then exit;
+
+begin
+ try
+  LController:=  TControllerFactory.CreateController( 'controller empresa crud', oActionOpen , ods.Dataset );
+  Controller.Refresh;
+ finally
+  FreeAndNil( LController );
+ end;
+
+end;
+
 end;
 
 procedure TViewEmpresa.oExluirClick(Sender: TObject);

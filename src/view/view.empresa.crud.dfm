@@ -35,10 +35,6 @@ object ViewEmpresaCrud: TViewEmpresaCrud
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitLeft = -2
-    ExplicitTop = -3
-    ExplicitWidth = 1004
-    ExplicitHeight = 671
     object Label1: TLabel
       Left = 24
       Top = 26
@@ -85,7 +81,9 @@ object ViewEmpresaCrud: TViewEmpresaCrud
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
+      ParentShowHint = False
       ReadOnly = True
+      ShowHint = True
       TabOrder = 0
     end
     object oXFant: TDBEdit
@@ -103,6 +101,8 @@ object ViewEmpresaCrud: TViewEmpresaCrud
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 1
     end
     object oCnpj: TDBEdit
@@ -120,7 +120,9 @@ object ViewEmpresaCrud: TViewEmpresaCrud
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
-      TabOrder = 2
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
     end
     object oUfs: TJvDBComboBox
       Left = 24
@@ -163,7 +165,9 @@ object ViewEmpresaCrud: TViewEmpresaCrud
         'SE - Sergipe'
         'TO - Tocantins')
       ParentFont = False
-      TabOrder = 3
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
       Values.Strings = (
         'AC'
         'AL'
@@ -205,8 +209,6 @@ object ViewEmpresaCrud: TViewEmpresaCrud
       Height = 62
       Align = alBottom
       TabOrder = 4
-      ExplicitTop = 145
-      ExplicitWidth = 986
       object oBtConfirm: TButton
         Left = 147
         Top = 16
@@ -245,9 +247,6 @@ object ViewEmpresaCrud: TViewEmpresaCrud
     Height = 19
     Panels = <>
     SizeGrip = False
-    ExplicitLeft = -282
-    ExplicitTop = 171
-    ExplicitWidth = 1010
   end
   object oEnterAsTab: TJvEnterAsTab
     Left = 32
