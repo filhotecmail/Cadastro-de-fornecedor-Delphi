@@ -5,6 +5,7 @@ interface
 uses
   Winapi.Windows,
   Winapi.Messages,
+  Winapi.ShellAPI,
   System.SysUtils,
   System.Variants,
   System.Classes,
@@ -15,7 +16,10 @@ uses
   Vcl.Menus,
   Vcl.ComCtrls,
   JvComponentBase,
-  JvEnterTab, Vcl.AppEvnts, Vcl.OleCtrls, SHDocVw;
+  JvEnterTab,
+  Vcl.AppEvnts,
+  Vcl.OleCtrls,
+  SHDocVw;
 
 type
   TViewmaster = class( TForm )
@@ -32,6 +36,7 @@ type
     procedure I1Click(Sender: TObject);
     procedure oAppEventsException(Sender: TObject; E: Exception);
     procedure FormShow(Sender: TObject);
+    procedure S1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -56,8 +61,12 @@ end;
 
 
 procedure TViewmaster.FormShow(Sender: TObject);
+var
+  HTMLFilePath: string;
 begin
- //oWb.LocationURL:= '';
+  HTMLFilePath := ExtractFilePath(ParamStr(0));
+  HTMLFilePath := HTMLFilePath + 'doc\Result.html';
+  oWb.Navigate('file:///' + HTMLFilePath);
 end;
 
 procedure TViewmaster.I1Click(Sender: TObject);
@@ -126,6 +135,17 @@ begin
       Free;
     end;
   end;
+
+end;
+
+procedure TViewmaster.S1Click(Sender: TObject);
+begin
+  ShellExecute(Handle,
+               'open',
+               'https://github.com/filhotecmail/Cadastro-de-fornecedor-Delphi',
+               nil,
+               nil,
+               SW_SHOWMAXIMIZED);
 
 end;
 

@@ -1,3 +1,25 @@
+{*****************************************************************************}
+{                                                                             }
+{                          Unit Controller.Abstract                           }
+{                        Developed by: Carlos Alberto                         }
+{                        Email: filhotecmail@gmail.com                        }
+{   GitHub: https://github.com/filhotecmail/Cadastro-de-fornecedor-Delphi     }
+{               Objective: Create a simple MVC CRUD program                   }
+{                                                                             }
+{  Licensed under the Apache License, Version 2.0 (the "License");            }
+{  you may not use this file except in compliance with the License.           }
+{  You may obtain a copy of the License at                                    }
+{                                                                             }
+{      http://www.apache.org/licenses/LICENSE-2.0                             }
+{                                                                             }
+{  Unless required by applicable law or agreed to in writing, software        }
+{  distributed under the License is distributed on an "AS IS" BASIS,          }
+{  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.   }
+{  See the License for the specific language governing permissions and        }
+{  limitations under the License.                                             }
+{                                                                             }
+{*****************************************************************************}
+
 unit controller.abstract;
 
 interface
@@ -53,19 +75,83 @@ uses
     procedure Refresh;
     procedure Edit;
    {Propriedades} 
-    property model: TModelAbstract read FModelName write SetModelName;   
-    property ViewName: String read FViewName write SetViewName;
-    property Dataset: TDataset read FDataset write SetDataset;
-    property View: TViewController read FView write SetView;
-    property ListenAction: TActionController read FListenAction write SetListenAction;
-    property ListenDataset:TDataset read FListenDataset write SetListenDataset;
-    property OutherDataset:TDataset read FOutherDataset write SetOutherDataset;
+       ///  <summary>
+      ///    Representa o modelo associado a este controlador.
+      ///  </summary>
+      ///  <remarks>
+      ///    Utilize esta propriedade para acessar e manipular o modelo de dados associado a este controlador.
+      ///  </remarks>
+      ///  <seealso cref="TModelAbstract"/>
+      property model: TModelAbstract read FModelName write SetModelName;
+
+      ///  <summary>
+      ///    Representa o nome da visualização associada a este controlador.
+      ///  </summary>
+      ///  <remarks>
+      ///    Utilize esta propriedade para obter ou definir o nome da visualização associada a este controlador.
+      ///  </remarks>
+      property ViewName: String read FViewName write SetViewName;
+
+      ///  <summary>
+      ///    Representa o conjunto de dados associado a este controlador.
+      ///  </summary>
+      ///  <remarks>
+      ///    Utilize esta propriedade para acessar e manipular o conjunto de dados associado a este controlador.
+      ///  </remarks>
+      ///  <seealso cref="TDataset"/>
+      property Dataset: TDataset read FDataset write SetDataset;
+
+      ///  <summary>
+      ///    Representa a visualização associada a este controlador.
+      ///  </summary>
+      ///  <remarks>
+      ///    Utilize esta propriedade para obter ou definir a visualização associada a este controlador.
+      ///  </remarks>
+      ///  <seealso cref="TViewController"/>
+      property View: TViewController read FView write SetView;
+
+      ///  <summary>
+      ///    Representa a ação de escuta associada a este controlador.
+      ///  </summary>
+      ///  <remarks>
+      ///    Utilize esta propriedade para obter ou definir a ação de escuta associada a este controlador.
+      ///  </remarks>
+      ///  <seealso cref="TActionController"/>
+      property ListenAction: TActionController read FListenAction write SetListenAction;
+
+      ///  <summary>
+      ///    Representa o conjunto de dados de escuta associado a este controlador.
+      ///  </summary>
+      ///  <remarks>
+      ///    Utilize esta propriedade para acessar e manipular o conjunto de dados de escuta associado a este controlador.
+      ///  </remarks>
+      ///  <seealso cref="TDataset"/>
+      property ListenDataset: TDataset read FListenDataset write SetListenDataset;
+
+      ///  <summary>
+      ///    Representa outro conjunto de dados associado a este controlador.
+      ///  </summary>
+      ///  <remarks>
+      ///    Utilize esta propriedade para acessar e manipular outro conjunto de dados associado a este controlador.
+      ///  </remarks>
+      ///  <seealso cref="TDataset"/>
+      property OutherDataset: TDataset read FOutherDataset write SetOutherDataset;
+
   end;    
  
   TControllerFactory = class
   public
-    class function CreateController(const NomeRegistrado: string): TObject; overload;
-    class function CreateController(const NomeRegistrado: string; Action: TActionController; ADeps: TDataset): TObject; overload;
+  ///  <summary>Cria uma instância do controlador registrado especificado.</summary>
+  ///  <param name="NomeRegistrado">O nome do controlador registrado a ser criado.</param>
+  ///  <returns>Uma instância do controlador especificado.</returns>
+  class function CreateController(const NomeRegistrado: string): TObject; overload;
+
+  ///  <summary>Cria uma instância do controlador registrado especificado com ação e dependências.</summary>
+  ///  <param name="NomeRegistrado">O nome do controlador registrado a ser criado.</param>
+  ///  <param name="Action">Ação a ser associada ao controlador.</param>
+  ///  <param name="ADeps">Dataset de dependências associado ao controlador.</param>
+  ///  <returns>Uma instância do controlador especificado com ação e dependências.</returns>
+  class function CreateController(const NomeRegistrado: string; Action: TActionController; ADeps: TDataset): TObject; overload;
   end;
 
   TViewController = class(TForm)
@@ -81,6 +167,20 @@ implementation
 {$R *.dfm}
 
 { TControllerAbstract }
+
+{  --------------------------------------------------------------------------
+  Procedimento: TControllerAbstract.Append
+  Resumo: Solicita confirmação antes de iniciar um novo registro na tabela.
+  Descrição:
+    Este procedimento exibe um diálogo de confirmação para o usuário antes de iniciar um novo registro na 
+    tabela associada ao controlador. O diálogo apresenta uma mensagem perguntando se o usuário deseja iniciar 
+    um novo registro. Se o usuário confirmar, um novo registro é iniciado na tabela.
+  Parâmetros:
+    Nenhum.
+  Observações:
+    O diálogo de confirmação é exibido com um ícone de escudo e botões "Sim" e "Não".
+  ---------------------------------------------------------------------------
+}
 procedure TControllerAbstract.Append;
 var
   TaskDialog: TTaskDialog;
@@ -103,6 +203,19 @@ begin
   end;
 end;
 
+{  --------------------------------------------------------------------------
+  Procedimento: TControllerAbstract.Cancel
+  Resumo: Solicita confirmação antes de cancelar a operação atual.
+  Descrição:
+    Este procedimento exibe um diálogo de confirmação para o usuário antes de cancelar a operação atual. 
+    O diálogo apresenta uma mensagem perguntando se o usuário realmente deseja cancelar a operação atual, 
+    alertando que os dados serão perdidos se confirmado. Se o usuário confirmar, a operação atual é cancelada.
+  Parâmetros:
+    Nenhum.
+  Observações:
+    O diálogo de confirmação é exibido com um ícone de escudo e botões "Sim" e "Não".
+  ---------------------------------------------------------------------------
+}
 procedure TControllerAbstract.Cancel;
  var
   TaskDialog: TTaskDialog;
@@ -125,6 +238,21 @@ begin
   end;
 end;
 
+
+{  --------------------------------------------------------------------------
+  Procedimento: TControllerAbstract.Delete
+  Resumo: Solicita confirmação antes de excluir o registro atual.
+  Descrição:
+    Este procedimento verifica se o conjunto de dados está vazio e, em seguida, exibe um diálogo de confirmação 
+    para o usuário antes de excluir o registro atual. O diálogo apresenta uma mensagem perguntando se o usuário 
+    realmente deseja excluir o registro atual, alertando que os dados serão perdidos se confirmado. 
+    Se o usuário confirmar, o registro atual é excluído.
+  Parâmetros:
+    Nenhum.
+  Observações:
+    O diálogo de confirmação é exibido com um ícone de escudo e botões "Sim" e "Não".
+  ---------------------------------------------------------------------------
+}
 procedure TControllerAbstract.Delete;
 var
   TaskDialog: TTaskDialog;
@@ -148,6 +276,20 @@ begin
   end;
 end;
 
+
+{  --------------------------------------------------------------------------
+  Procedimento: TControllerAbstract.Edit
+  Resumo: Solicita confirmação antes de editar o registro atual.
+  Descrição:
+    Este procedimento verifica se o conjunto de dados está vazio e, em seguida, exibe um diálogo de confirmação 
+    para o usuário antes de editar o registro atual. O diálogo apresenta uma mensagem perguntando se o usuário 
+    realmente deseja editar o registro atual. Se o usuário confirmar, o registro atual é editado.
+  Parâmetros:
+    Nenhum.
+  Observações:
+    O diálogo de confirmação é exibido com um ícone de informação e botões "Sim" e "Não".
+  ---------------------------------------------------------------------------
+}
 procedure TControllerAbstract.Edit;
 var
   TaskDialog: TTaskDialog;
@@ -171,6 +313,20 @@ begin
   end;
 end;
 
+{  --------------------------------------------------------------------------
+  Procedimento: TControllerAbstract.Post
+  Resumo: Solicita confirmação antes de gravar os dados na tabela.
+  Descrição:
+    Este procedimento exibe um diálogo de confirmação para o usuário antes de gravar os dados na tabela 
+    associada ao controlador. O diálogo apresenta uma mensagem perguntando se o usuário realmente deseja 
+    gravar os dados na tabela, com uma nota para revisar os dados antes de confirmar. Se o usuário confirmar, 
+    os dados são gravados na tabela.
+  Parâmetros:
+    Nenhum.
+  Observações:
+    O diálogo de confirmação é exibido com um ícone de escudo e botões "Sim" e "Não".
+  ---------------------------------------------------------------------------
+}
 procedure TControllerAbstract.Post;
 var
   TaskDialog: TTaskDialog;
@@ -193,6 +349,17 @@ begin
   end;
 end;
 
+
+{  --------------------------------------------------------------------------
+  Procedimento: TControllerAbstract.Refresh
+  Resumo: Atualiza os dados na tabela.
+  Descrição:
+    Este procedimento atualiza os dados na tabela associada ao controlador. Isso significa que quaisquer alterações 
+    feitas em outros locais que afetam os dados na tabela serão refletidas na exibição atual.
+  Parâmetros:
+    Nenhum.
+  ---------------------------------------------------------------------------
+}
 procedure TControllerAbstract.Refresh;
 begin
  Dataset.Refresh;
@@ -230,6 +397,21 @@ begin
   FView := Value;
 end;
 
+
+{  --------------------------------------------------------------------------
+  Procedimento: TControllerAbstract.SetViewName
+  Resumo: Define o nome da visualização e associa-a ao controlador.
+  Descrição:
+    Este procedimento define o nome da visualização e associa-a ao controlador. Ele também configura 
+    o DataSource da visualização para usar o conjunto de dados do provedor associado ao controlador. 
+    Além disso, o método associa o próprio controlador à visualização.
+  Parâmetros:
+    - Value: O nome da visualização a ser definido.
+  Observações:
+    A visualização deve ser uma instância de TForm e deve ter um componente TDatasource com o nome 'oDs' 
+    para ser associada corretamente ao controlador.
+  ---------------------------------------------------------------------------
+}
 procedure TControllerAbstract.SetViewName(const Value: String);
 var
   Lview: TForm;
@@ -250,6 +432,20 @@ begin
   raise ENotImplemented.Create( 'Não implementado na classe base!' );
 end;
 
+
+
+{  --------------------------------------------------------------------------
+  Função: TControllerAbstract.ShowView
+  Resumo: Exibe a visualização com o nome especificado.
+  Descrição:
+    Esta função tenta localizar e exibir uma visualização com o nome especificado. Se a visualização for 
+    encontrada e for uma instância de TForm, ela será criada e retornada. Caso contrário, retorna nil.
+  Parâmetros:
+    - AViewName: O nome da visualização a ser exibida.
+  Retorno:
+    Uma instância de TForm se a visualização for encontrada e criada com sucesso, caso contrário, nil.
+  ---------------------------------------------------------------------------
+}
 function TControllerAbstract.ShowView( AviewName: String ): TForm;
 begin
   Result := nil; 
@@ -263,6 +459,24 @@ begin
 end;
 
 { TControllerFactory }
+
+{  --------------------------------------------------------------------------
+  Função: TControllerFactory.CreateController
+  Resumo: Cria uma instância do controlador com o nome registrado especificado.
+  Descrição:
+    Esta função cria uma instância do controlador com o nome registrado especificado. Se o 
+    nome registrado for encontrado no registro de classes e corresponder a uma classe que herda de 
+    TComponent, uma instância desse controlador será criada e seu método ShowController será chamado. 
+    Se ocorrer algum problema durante a criação ou execução do controlador, uma exceção será lançada.
+  Parâmetros:
+    - NomeRegistrado: O nome registrado do controlador a ser criado.
+  Retorno:
+    Uma instância do controlador criada, ou nil se ocorrer um erro durante o processo.
+  Observações:
+    Se o nome registrado não for encontrado no registro de classes ou se não corresponder a uma classe que 
+    herda de TComponent, uma exceção será lançada.
+  ---------------------------------------------------------------------------
+}
 
 class function TControllerFactory.CreateController(const NomeRegistrado: string): TObject;
 var
@@ -296,7 +510,27 @@ begin
 end;
 
 
-
+{  --------------------------------------------------------------------------
+  Função: TControllerFactory.CreateController
+  Resumo: Cria uma instância do controlador com o nome registrado especificado e associa ação e conjunto de dados.
+  Descrição:
+    Esta função cria uma instância do controlador com o nome registrado especificado e associa uma 
+    ação e um conjunto de dados a ele. Se o nome registrado for encontrado no registro de classes e 
+    corresponder a uma classe que herda de TComponent, uma instância desse controlador será criada e as 
+    propriedades ListenAction e ListenDataset serão atribuídas com os valores passados. Em seguida, 
+    o método ShowController será chamado. Se ocorrer algum problema durante a criação ou execução do controlador, 
+    uma exceção será lançada.
+  Parâmetros:
+    - NomeRegistrado: O nome registrado do controlador a ser criado.
+    - Action: A ação associada ao controlador.
+    - ADeps: O conjunto de dados associado ao controlador.
+  Retorno:
+    Uma instância do controlador criada, ou nil se ocorrer um erro durante o processo.
+  Observações:
+    Se o nome registrado não for encontrado no registro de classes ou se não corresponder a uma classe que 
+    herda de TComponent, uma exceção será lançada.
+  ---------------------------------------------------------------------------
+}
 class function TControllerFactory.CreateController(const NomeRegistrado: string; Action: TActionController;
   ADeps: TDataset): TObject;
 var
@@ -331,10 +565,20 @@ begin
 
   end
  
-end;
+end;     
 
-{ TViewController }
+{ TViewController } 
 
+{  --------------------------------------------------------------------------
+  Procedimento: TViewController.SetController
+  Resumo: Define o controlador associado à visualização.
+  Descrição:
+    Este procedimento define o controlador associado à visualização. 
+    Ele atribui o valor do parâmetro Value à propriedade FController da visualização.
+  Parâmetros:
+    - Value: O controlador a ser associado à visualização.
+  ---------------------------------------------------------------------------
+}
 procedure TViewController.SetController(const Value: TControllerAbstract);
 begin
   FController := Value;
