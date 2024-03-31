@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="4cslg1q8vbm_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::ti563yn3fzh_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:Web.Sockets.WebSocketServer.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:Web.Sockets.WebSocketServer.TWebSocketServer" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:Web.Sockets.WebSocketServer.TWebSocketIOHandlerHelper" />
+    </reference>
+  </view>
+</nodeSet>

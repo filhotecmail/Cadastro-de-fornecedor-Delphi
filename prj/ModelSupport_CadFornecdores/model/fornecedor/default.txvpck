@@ -4,5 +4,13 @@
     <property name="$defaultDiagram" value="true" />
     <property name="$metaclass" value="Package Diagram" />
     <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:model.fornecedor.TModelFornecedor">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:model.fornecedor.TModelFornecedor.oEmpresas" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:model.fornecedor.TModelFornecedor.AfterConstruction()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:model.fornecedor.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
   </view>
 </nodeSet>

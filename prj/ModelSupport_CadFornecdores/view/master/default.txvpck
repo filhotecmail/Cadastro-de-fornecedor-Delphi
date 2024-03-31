@@ -4,5 +4,67 @@
     <property name="$defaultDiagram" value="true" />
     <property name="$metaclass" value="Package Diagram" />
     <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:view.master.TViewmaster">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.MainMenu1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.M1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.C1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.I1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.S1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.oEnterAsTab" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.oBar" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.oAppEvents" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.D1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.JvPanel1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.oDs" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.obtAddFornecedores" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.Shape1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.obtAddEmpresa" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.oBtDoc" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.JvTransparentButton1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.N1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.S2" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.PageControl1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.TabSheet1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.GroupBox2" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.oGrid" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.GroupBox1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.Label1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.Image1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.oEdPesquisa" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.oFooter" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.TabSheet2" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.GroupBox3" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.JvDBGrid1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.GroupBox4" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.lbFiltro" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.oEdFilter" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.StatusBar1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.oRdgFilter" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.oBtFilter" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.TViewmaster.odsFilter" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.master.TViewmaster.C1Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.master.TViewmaster.I1Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.master.TViewmaster.oAppEventsException(System.TObject,System.SysUtils.Exception)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.master.TViewmaster.S1Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.master.TViewmaster.D1Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.master.TViewmaster.oEdPesquisaKeyDown(System.TObject,ref@System.Word,TShiftState)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.master.TViewmaster.FormShow(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.master.TViewmaster.obtAddEmpresaClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.master.TViewmaster.obtAddFornecedoresClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.master.TViewmaster.JvTransparentButton1Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.master.TViewmaster.oBtDocClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.master.TViewmaster.S2Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.master.TViewmaster.oGridDrawColumnCell(System.TObject,System.Types.TRect,System.Integer,Vcl.DBGrids.TColumn,TGridDrawState)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.master.TViewmaster.oBtFilterClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.master.TViewmaster.DoActionShowDocApp()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.master.TViewmaster.DoActionShowDatabaseDoc()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.master.TViewmaster.DoActionCloseApp()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:view.master.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_ast:src:CadFornecdores:view.master.@unitclass.Viewmaster" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.master.@unitclass.Viewmaster" />
+    </reference>
   </view>
 </nodeSet>

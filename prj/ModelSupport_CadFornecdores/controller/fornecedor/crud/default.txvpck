@@ -4,5 +4,14 @@
     <property name="$defaultDiagram" value="true" />
     <property name="$metaclass" value="Package Diagram" />
     <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.fornecedor.crud.TControllerFornecedorCrud">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.fornecedor.crud.TControllerFornecedorCrud.OnValidateDataNasc(Data.DB.TField,System.string)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.fornecedor.crud.TControllerFornecedorCrud.AfterConstruction()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.fornecedor.crud.TControllerFornecedorCrud.ShowController()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.fornecedor.crud.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
   </view>
 </nodeSet>

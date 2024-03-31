@@ -11,6 +11,7 @@
       <reference referencedUin="design:view:::l6zl8oab5n6x60zbr_v" />
       <reference referencedUin="design:view:::jn4jir8npn69kog4j_v" />
       <reference referencedUin="design:view:::lr1oxinio6j25g2h_v" />
+      <reference referencedUin="design:view:::o1aj5ax737k_v" />
     </reference>
     <reference referencedUin="design:view:::yuqy6ifr16i_v">
       <property name="$shortcutReference" value="true" />
@@ -28,6 +29,7 @@
       <reference referencedUin="design:view:::dokp1a2pfuo_v" />
       <reference referencedUin="design:view:::x3pbe3jrkpi_v" />
       <reference referencedUin="design:view:::68q98nw28gm_v" />
+      <reference referencedUin="design:view:::dyqnvcnhizf_v" />
     </reference>
     <reference referencedUin="design:view:::ceykp05yy4o_v">
       <property name="$shortcutReference" value="true" />
@@ -37,6 +39,7 @@
       <reference referencedUin="design:view:::acr2ndl0whj_v" />
       <reference referencedUin="design:view:::f58cv2unm1t_v" />
       <reference referencedUin="design:view:::ztzyjt5z31t_v" />
+      <reference referencedUin="design:view:::qhvr7mqc4mk_v" />
     </reference>
     <reference referencedUin="design:view:::o7cn4zkr34r_v">
       <property name="$shortcutReference" value="true" />
@@ -44,6 +47,15 @@
       <property name="location_set_by_user" value="True" />
       <property name="bounds_setted_by_user" value="True" />
       <reference referencedUin="delphi:e_class:src:CadFornecdores:CadFornecdores.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::3iona5wdykh_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::4cslg1q8vbm_v" />
+    </reference>
+    <reference referencedUin="design:view:::2qghqu98tjo_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::530hpp5l66m_v" />
+      <reference referencedUin="design:view:::fu4uq4srkur_v" />
     </reference>
   </view>
 </nodeSet>

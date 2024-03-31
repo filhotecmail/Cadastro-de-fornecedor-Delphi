@@ -27,7 +27,7 @@ interface
 uses
   System.SysUtils,
   System.Classes,
-  Winapi.CommDlg,  
+  Winapi.CommDlg,
   Winapi.Windows,
   Vcl.Dialogs,
   Vcl.Controls,
@@ -38,13 +38,15 @@ uses
   model.abstract,
   Datasnap.Provider, Vcl.ExtCtrls, System.ImageList, Vcl.ImgList;
 
- Type TActionController = (oActionNone,oActionAppend,oActionOpen); 
+ Type TActionController = (oActionNone,oActionAppend,oActionOpen);
 
  type
   TControllerAbstract = class;
   TControllerFactory  = class;
-  TViewController     = class;    
+  TViewController     = class;
 
+  /// <author>Carlos Alberto Dias da Silva Filho</author>
+  /// <version>1.0</version>
   TControllerAbstract = class( TDataModule )
     oProvider: TDataSetProvider;
     oTimerStatus: TTimer;
@@ -146,8 +148,8 @@ uses
       ///  <seealso cref="TDataset"/>
       property OutherDataset: TDataset read FOutherDataset write SetOutherDataset;
 
-  end;    
- 
+  end;
+
   TControllerFactory = class
   public
   ///  <summary>Cria uma instância do controlador registrado especificado.</summary>
@@ -177,6 +179,15 @@ uses
       function AsformatedDoc:String;
  end;
 
+ {  --------------------------------------------------------------------------
+  Classe: TExceptionHelper
+  Resumo: Fornece métodos auxiliares para trabalhar com exceções.
+  Descrição:
+    Esta classe fornece métodos auxiliares para trabalhar com exceções, como a capacidade de verificar se uma
+    exceção contém determinadas mensagens de erro e criar uma nova exceção com uma mensagem especificada
+    e lançá-la imediatamente.
+  ---------------------------------------------------------------------------
+}
  type
   TExceptionHelper = class helper for Exception
     function Match(const Messages: array of string): Integer;
@@ -222,8 +233,8 @@ end;
   Procedimento: TControllerAbstract.Append
   Resumo: Solicita confirmação antes de iniciar um novo registro na tabela.
   Descrição:
-    Este procedimento exibe um diálogo de confirmação para o usuário antes de iniciar um novo registro na 
-    tabela associada ao controlador. O diálogo apresenta uma mensagem perguntando se o usuário deseja iniciar 
+    Este procedimento exibe um diálogo de confirmação para o usuário antes de iniciar um novo registro na
+    tabela associada ao controlador. O diálogo apresenta uma mensagem perguntando se o usuário deseja iniciar
     um novo registro. Se o usuário confirmar, um novo registro é iniciado na tabela.
   Parâmetros:
     Nenhum.
@@ -264,7 +275,7 @@ begin
     TaskDialog.CommonButtons := [tcbYes, tcbNo];
 
     if TaskDialog.Execute  then
-      if TaskDialog.ModalResult= mrYes then       
+      if TaskDialog.ModalResult= mrYes then
          Dataset.Append;
 
   finally
@@ -276,8 +287,8 @@ end;
   Procedimento: TControllerAbstract.Cancel
   Resumo: Solicita confirmação antes de cancelar a operação atual.
   Descrição:
-    Este procedimento exibe um diálogo de confirmação para o usuário antes de cancelar a operação atual. 
-    O diálogo apresenta uma mensagem perguntando se o usuário realmente deseja cancelar a operação atual, 
+    Este procedimento exibe um diálogo de confirmação para o usuário antes de cancelar a operação atual.
+    O diálogo apresenta uma mensagem perguntando se o usuário realmente deseja cancelar a operação atual,
     alertando que os dados serão perdidos se confirmado. Se o usuário confirmar, a operação atual é cancelada.
   Parâmetros:
     Nenhum.
@@ -320,7 +331,7 @@ begin
     TaskDialog.CommonButtons := [tcbYes, tcbNo];
 
     if TaskDialog.Execute  then
-      if TaskDialog.ModalResult= mrYes then       
+      if TaskDialog.ModalResult= mrYes then
          Dataset.Cancel;
 
   finally
@@ -333,9 +344,9 @@ end;
   Procedimento: TControllerAbstract.Delete
   Resumo: Solicita confirmação antes de excluir o registro atual.
   Descrição:
-    Este procedimento verifica se o conjunto de dados está vazio e, em seguida, exibe um diálogo de confirmação 
-    para o usuário antes de excluir o registro atual. O diálogo apresenta uma mensagem perguntando se o usuário 
-    realmente deseja excluir o registro atual, alertando que os dados serão perdidos se confirmado. 
+    Este procedimento verifica se o conjunto de dados está vazio e, em seguida, exibe um diálogo de confirmação
+    para o usuário antes de excluir o registro atual. O diálogo apresenta uma mensagem perguntando se o usuário
+    realmente deseja excluir o registro atual, alertando que os dados serão perdidos se confirmado.
     Se o usuário confirmar, o registro atual é excluído.
   Parâmetros:
     Nenhum.
@@ -348,7 +359,7 @@ var
   TaskDialog: TTaskDialog;
 begin
   if Dataset.IsEmpty then Exit;
-    
+
   TaskDialog := TTaskDialog.Create(nil);
   try
     TaskDialog.Caption  := 'Confirmação de exclusão de registro!';
@@ -357,7 +368,7 @@ begin
     TaskDialog.CommonButtons := [tcbYes, tcbNo];
 
     if TaskDialog.Execute  then
-      if TaskDialog.ModalResult= mrYes then       
+      if TaskDialog.ModalResult= mrYes then
          Dataset.Delete;
 
   finally
@@ -370,8 +381,8 @@ end;
   Procedimento: TControllerAbstract.Edit
   Resumo: Solicita confirmação antes de editar o registro atual.
   Descrição:
-    Este procedimento verifica se o conjunto de dados está vazio e, em seguida, exibe um diálogo de confirmação 
-    para o usuário antes de editar o registro atual. O diálogo apresenta uma mensagem perguntando se o usuário 
+    Este procedimento verifica se o conjunto de dados está vazio e, em seguida, exibe um diálogo de confirmação
+    para o usuário antes de editar o registro atual. O diálogo apresenta uma mensagem perguntando se o usuário
     realmente deseja editar o registro atual. Se o usuário confirmar, o registro atual é editado.
   Parâmetros:
     Nenhum.
@@ -384,7 +395,7 @@ var
   TaskDialog: TTaskDialog;
 begin
   if Dataset.IsEmpty then Exit;
-  
+
   TaskDialog := TTaskDialog.Create(nil);
   try
     TaskDialog.Caption  := 'Confirmação de Edição';
@@ -393,7 +404,7 @@ begin
     TaskDialog.CommonButtons := [tcbYes, tcbNo];
 
     if TaskDialog.Execute  then
-      if TaskDialog.ModalResult= mrYes then       
+      if TaskDialog.ModalResult= mrYes then
          Dataset.Edit;
 
   finally
@@ -408,7 +419,7 @@ end;
 
 procedure TControllerAbstract.Open(AValues: array of variant);
 begin
-// 
+//
 end;
 
 {  --------------------------------------------------------------------------
@@ -432,7 +443,7 @@ procedure TControllerAbstract.oTimerStatusTimer(Sender: TObject);
 var
   LStatusBar: TStatusBar;
 begin
- 
+
  if View = nil then Exit;
 
  LStatusBar:= View.FindComponent('oBar') as TStatusBar;
@@ -456,13 +467,13 @@ begin
     end;
 
   end else
-  begin 
+  begin
 
    with LStatusBar.Panels[1] do
         Text:= DateTimeToStr(now);
 
   end;
-   
+
 end;
 
 {  --------------------------------------------------------------------------
@@ -470,8 +481,8 @@ end;
   Resumo: Solicita confirmação antes de gravar os dados na tabela.
   Descrição:
     Este procedimento exibe um diálogo de confirmação para o usuário antes de gravar os dados na tabela
-    associada ao controlador. O diálogo apresenta uma mensagem perguntando se o usuário realmente deseja 
-    gravar os dados na tabela, com uma nota para revisar os dados antes de confirmar. Se o usuário confirmar, 
+    associada ao controlador. O diálogo apresenta uma mensagem perguntando se o usuário realmente deseja
+    gravar os dados na tabela, com uma nota para revisar os dados antes de confirmar. Se o usuário confirmar,
     os dados são gravados na tabela.
   Parâmetros:
     Nenhum.
@@ -492,7 +503,7 @@ begin
     TaskDialog.CommonButtons := [tcbYes, tcbNo];
 
     if TaskDialog.Execute  then
-      if TaskDialog.ModalResult= mrYes then       
+      if TaskDialog.ModalResult= mrYes then
          Dataset.Post;
 
   finally
@@ -505,7 +516,7 @@ end;
   Procedimento: TControllerAbstract.Refresh
   Resumo: Atualiza os dados na tabela.
   Descrição:
-    Este procedimento atualiza os dados na tabela associada ao controlador. Isso significa que quaisquer alterações 
+    Este procedimento atualiza os dados na tabela associada ao controlador. Isso significa que quaisquer alterações
     feitas em outros locais que afetam os dados na tabela serão refletidas na exibição atual.
   Parâmetros:
     Nenhum.
@@ -546,20 +557,20 @@ end;
 procedure TControllerAbstract.SetView(const Value: TViewController);
 begin
   FView := Value;
-  
+
 end;
 
 {  --------------------------------------------------------------------------
   Procedimento: TControllerAbstract.SetViewName
   Resumo: Define o nome da visualização e associa-a ao controlador.
   Descrição:
-    Este procedimento define o nome da visualização e associa-a ao controlador. Ele também configura 
-    o DataSource da visualização para usar o conjunto de dados do provedor associado ao controlador. 
+    Este procedimento define o nome da visualização e associa-a ao controlador. Ele também configura
+    o DataSource da visualização para usar o conjunto de dados do provedor associado ao controlador.
     Além disso, o método associa o próprio controlador à visualização.
   Parâmetros:
     - Value: O nome da visualização a ser definido.
   Observações:
-    A visualização deve ser uma instância de TForm e deve ter um componente TDatasource com o nome 'oDs' 
+    A visualização deve ser uma instância de TForm e deve ter um componente TDatasource com o nome 'oDs'
     para ser associada corretamente ao controlador.
   ---------------------------------------------------------------------------
 }
@@ -573,9 +584,9 @@ begin
   View:= TViewController(Lview);
   LDatasource:= (Lview.FindComponent('oDs') as TDatasource);
   if LDatasource <> nil then
-     LDatasource.DataSet:= oProvider.DataSet; 
-  Dataset:=  LDatasource.DataSet; 
-  TViewController(Lview).Controller:= Self;  
+     LDatasource.DataSet:= oProvider.DataSet;
+  Dataset:=  LDatasource.DataSet;
+  TViewController(Lview).Controller:= Self;
 end;
 
 procedure TControllerAbstract.ShowController;
@@ -588,7 +599,7 @@ end;
   Função: TControllerAbstract.ShowView
   Resumo: Exibe a visualização com o nome especificado.
   Descrição:
-    Esta função tenta localizar e exibir uma visualização com o nome especificado. Se a visualização for 
+    Esta função tenta localizar e exibir uma visualização com o nome especificado. Se a visualização for
     encontrada e for uma instância de TForm, ela será criada e retornada. Caso contrário, retorna nil.
   Parâmetros:
     - AViewName: O nome da visualização a ser exibida.
@@ -598,7 +609,7 @@ end;
 }
 function TControllerAbstract.ShowView( AviewName: String ): TForm;
 begin
-  Result := nil; 
+  Result := nil;
   FClassView := FindClass( AviewName );
   if ( FClassView <> nil ) and FClassView.InheritsFrom( TForm )
   then
@@ -614,16 +625,16 @@ end;
   Função: TControllerFactory.CreateController
   Resumo: Cria uma instância do controlador com o nome registrado especificado.
   Descrição:
-    Esta função cria uma instância do controlador com o nome registrado especificado. Se o 
-    nome registrado for encontrado no registro de classes e corresponder a uma classe que herda de 
-    TComponent, uma instância desse controlador será criada e seu método ShowController será chamado. 
+    Esta função cria uma instância do controlador com o nome registrado especificado. Se o
+    nome registrado for encontrado no registro de classes e corresponder a uma classe que herda de
+    TComponent, uma instância desse controlador será criada e seu método ShowController será chamado.
     Se ocorrer algum problema durante a criação ou execução do controlador, uma exceção será lançada.
   Parâmetros:
     - NomeRegistrado: O nome registrado do controlador a ser criado.
   Retorno:
     Uma instância do controlador criada, ou nil se ocorrer um erro durante o processo.
   Observações:
-    Se o nome registrado não for encontrado no registro de classes ou se não corresponder a uma classe que 
+    Se o nome registrado não for encontrado no registro de classes ou se não corresponder a uma classe que
     herda de TComponent, uma exceção será lançada.
   ---------------------------------------------------------------------------
 }
@@ -656,7 +667,7 @@ begin
       raise Exception.CreateFmt( CMessageB , [NomeRegistrado, E.Message]);
 
   end
-  
+
 end;
 
 
@@ -664,11 +675,11 @@ end;
   Função: TControllerFactory.CreateController
   Resumo: Cria uma instância do controlador com o nome registrado especificado e associa ação e conjunto de dados.
   Descrição:
-    Esta função cria uma instância do controlador com o nome registrado especificado e associa uma 
-    ação e um conjunto de dados a ele. Se o nome registrado for encontrado no registro de classes e 
-    corresponder a uma classe que herda de TComponent, uma instância desse controlador será criada e as 
-    propriedades ListenAction e ListenDataset serão atribuídas com os valores passados. Em seguida, 
-    o método ShowController será chamado. Se ocorrer algum problema durante a criação ou execução do controlador, 
+    Esta função cria uma instância do controlador com o nome registrado especificado e associa uma
+    ação e um conjunto de dados a ele. Se o nome registrado for encontrado no registro de classes e
+    corresponder a uma classe que herda de TComponent, uma instância desse controlador será criada e as
+    propriedades ListenAction e ListenDataset serão atribuídas com os valores passados. Em seguida,
+    o método ShowController será chamado. Se ocorrer algum problema durante a criação ou execução do controlador,
     uma exceção será lançada.
   Parâmetros:
     - NomeRegistrado: O nome registrado do controlador a ser criado.
@@ -677,7 +688,7 @@ end;
   Retorno:
     Uma instância do controlador criada, ou nil se ocorrer um erro durante o processo.
   Observações:
-    Se o nome registrado não for encontrado no registro de classes ou se não corresponder a uma classe que 
+    Se o nome registrado não for encontrado no registro de classes ou se não corresponder a uma classe que
     herda de TComponent, uma exceção será lançada.
   ---------------------------------------------------------------------------
 }
@@ -703,7 +714,7 @@ begin
 
         ControllerInstance.ListenAction  := Action;
         ControllerInstance.ListenDataset := ADeps;
-        
+
         ControllerInstance.ShowController;
       end
       else FreeAndNil(Result);
@@ -714,10 +725,10 @@ begin
       raise Exception.CreateFmt( CMessageB , [NomeRegistrado, E.Message]);
 
   end
- 
-end;     
 
-{ TViewController } 
+end;
+
+{ TViewController }
 
 {
   --------------------------------------------------------------------------
@@ -741,7 +752,7 @@ end;
 function TFieldHelper.AsformatedDoc: String;
 begin
  if AsString.Trim.IsEmpty then Exit;
- 
+
  if AsString.Length <= 11 then
     Result:= Self.FormatAsCpf
     else
@@ -761,6 +772,19 @@ end;
 
 { TExceptionHelper }
 
+{  --------------------------------------------------------------------------
+      Função: TExceptionHelper.Match
+      Resumo: Verifica se a mensagem de exceção corresponde a uma das mensagens especificadas.
+      Descrição:
+        Este método verifica se a mensagem da exceção atual contém alguma das mensagens especificadas no array fornecido.
+        Retorna o índice da primeira mensagem correspondente encontrada no array, ou -1 se nenhuma
+        correspondência for encontrada.
+      Parâmetros:
+        - Messages: Um array de strings contendo as mensagens a serem verificadas na exceção.
+      Retorno:
+        O índice da primeira mensagem correspondente encontrada no array, ou -1 se nenhuma correspondência for encontrada.
+      ---------------------------------------------------------------------------
+    }
 function TExceptionHelper.Match(const Messages: array of string): Integer;
  var
   ErrorMessage: string;
@@ -778,6 +802,18 @@ begin
 
 end;
 
+{  --------------------------------------------------------------------------
+      Função: TExceptionHelper.Panic
+      Resumo: Cria uma nova exceção com a mensagem especificada e a lança imediatamente.
+      Descrição:
+        Este método cria uma nova exceção com a mensagem especificada e a lança imediatamente.
+        É útil para gerar exceções de pânico em situações críticas.
+      Parâmetros:
+        - PMessage: A mensagem a ser atribuída à nova exceção.
+      Retorno:
+        A exceção recém-criada e lançada.
+      ---------------------------------------------------------------------------
+    }
 function TExceptionHelper.Panic(const PMessage: string): Exception;
 begin
  Result:= Exception.Create(PMessage);

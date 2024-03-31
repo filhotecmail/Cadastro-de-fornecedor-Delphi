@@ -4,5 +4,10 @@
     <property name="$defaultDiagram" value="true" />
     <property name="$metaclass" value="Package Diagram" />
     <property name="$name" value="default" />
+    <reference referencedUin="design:view:::x6v8r27skus_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:dao.abstract.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:dao.abstract.TDaoAbstract" />
+    </reference>
   </view>
 </nodeSet>

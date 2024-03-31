@@ -19,13 +19,13 @@
 <P CLASS="Base"><A HREF="#_TABLES">Tables</A>&nbsp(2)</P>
 <P CLASS="Base">Views&nbsp(0)</P>
 <P CLASS="Base"><A HREF="#_PROCEDURES">Procedures</A>&nbsp(4)</P>
-<P CLASS="Base"><A HREF="#_TRIGGERS">Triggers</A>&nbsp(2)</P>
+<P CLASS="Base"><A HREF="#_TRIGGERS">Triggers</A>&nbsp(4)</P>
 <P CLASS="Base"><A HREF="#_GENERATORS">Generators</A>&nbsp(2)</P>
-<P CLASS="Base">Exceptions&nbsp(0)</P>
+<P CLASS="Base"><A HREF="#_EXCEPTIONS">Exceptions</A>&nbsp(2)</P>
 <P CLASS="Base"><A HREF="#_UDFS">UDFs</A>&nbsp(2)</P>
 <P CLASS="Base"><A HREF="#_INDICES">Indices</A>&nbsp(5)</P>
 <P CLASS="Base"><A HREF="#_FOREIGN_KEYS">Foreign Keys</A>&nbsp(1)</P>
-<P CLASS="Base"><A HREF="#_CHECKS">Checks</A>&nbsp(4)</P>
+<P CLASS="Base"><A HREF="#_CHECKS">Checks</A>&nbsp(3)</P>
 <P CLASS="Base"><A HREF="#_ROLES">Roles</A>&nbsp(1)</P>
 <HR><A NAME="_DOMAINS"><P CLASS="Header0">Domains</P></A>
 <P CLASS="Base">&nbsp;</P>
@@ -264,6 +264,36 @@
     <TD><P CLASS="Base2">&nbsp;</P></TD>
     <TD><P CLASS="Base2">Razão Social ou Nome do fornecedor</P></TD>
   </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="FORNECEDOR.F004RG"><P CLASS="Base2">F004RG</P></A></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">VARCHAR(14)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">Documento RG, caso seja pessoa Física</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="FORNECEDOR.F005TELCOM"><P CLASS="Base2">F005TELCOM</P></A></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">VARCHAR(14)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/No.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">'n/a'</P></TD>
+    <TD><P CLASS="Base2">Telefone comercial</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="FORNECEDOR.F006TELCONTACT"><P CLASS="Base2">F006TELCONTACT</P></A></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">VARCHAR(14)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/No.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">'n/a'</P></TD>
+    <TD><P CLASS="Base2">Telefone de contato</P></TD>
+  </TR>
 </TABLE>
 <P CLASS="Base">&nbsp;</P>
 <P CLASS="Header1">Triggers</P>
@@ -278,6 +308,20 @@
     <TD><P CLASS="Base2">BEFORE&nbsp;INSERT</TD>
     <TD><P CLASS="Base2">Yes</TD>
     <TD ALIGN="right"><P CLASS="Base2">0</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#TRG_FORNECEDOR_CHECKRG">FORNECEDOR_CHECKRG</A></TD>
+    <TD><P CLASS="Base2">BEFORE&nbsp;INSERT&nbsp;OR&nbsp;UPDATE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">1</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#TRG_FORNECEDOR_CHECK_DATENASC">FORNECEDOR_CHECK_DATENASC</A></TD>
+    <TD><P CLASS="Base2">BEFORE&nbsp;INSERT&nbsp;OR&nbsp;UPDATE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">2</TD>
     <TD><P CLASS="Base2">&nbsp</TD>
   </TR>
 </TABLE>
@@ -342,22 +386,12 @@
 <b>    </b>F001DATETIEMEC<b>    </b><b>TIMESTAMP</b><b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
 <b>    </b>F002CPFCNPJ<b>       </b><b>VARCHAR</b><b>(</b>14<b>)</b><b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
 <b>    </b>F003FUNDDATANASC<b>  </b><b>DATE</b><b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
-<b>    </b>F004NOMERAZAO<b>     </b><b>VARCHAR</b><b>(</b>60<b>)</b><b> </b><b>NOT</b><b> </b><b>NULL</b>
+<b>    </b>F004NOMERAZAO<b>     </b><b>VARCHAR</b><b>(</b>60<b>)</b><b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>F004RG<b>            </b><b>VARCHAR</b><b>(</b>14<b>)</b><b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>F005TELCOM<b>        </b><b>VARCHAR</b><b>(</b>14<b>)</b><b> </b><b>DEFAULT</b><b> </b>'n/a'<b>,</b>
+<b>    </b>F006TELCONTACT<b>    </b><b>VARCHAR</b><b>(</b>14<b>)</b><b> </b><b>DEFAULT</b><b> </b>'n/a'
 <b>)</b><b>;</b>
 
-<b>ALTER</b><b> </b><b>TABLE</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>CHK_FORNECEDOR_DATANASC<b> </b><b>CHECK</b><b> </b><b>(</b><b>(</b>
-<b>        </b><b>CHARACTER_LENGTH</b><b>(</b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b>.</b>F002CPFCNPJ<b>)</b><b> </b><b>=</b><b> </b>11<b> </b><font color="# 0 0FF"><i>-- Verifica se é um CPF válido</i></font>
-<b>        </b><b>AND</b><b> </b>
-<b>        </b><b>DATEADD</b><b>(</b><b>YEAR</b><b>,</b><b> </b>18<b>,</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b>.</b>F003FUNDDATANASC<b>)</b><b> </b><b>&lt;</b><b> </b><b>CURRENT_DATE</b><b> </b><font color="# 0 0FF"><i>-- Verifica se o fornecedor tem menos de 18 anos</i></font>
-<b>        </b><b>AND</b>
-<b>        </b><b>(</b>
-<b>            </b><b>SELECT</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b>.</b>E002UF
-<b>            </b><b>FROM</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A>
-<b>            </b><b>WHERE</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b>.</b>E003CNPJ<b> </b><b>=</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b>.</b><A HREF="#TBL_EMPRESA">EMPRESA</A>
-<b>        </b><b>)</b><b> </b><b>=</b><b> </b>'PR'
-<b>    </b><b>)</b>
-<b>    </b><b>OR</b>
-<b>    </b><b>CHARACTER_LENGTH</b><b>(</b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b>.</b>F002CPFCNPJ<b>)</b><b> </b><b>&lt;</b><b>&gt;</b><b> </b>11<b>)</b><b>;</b>
 <b>ALTER</b><b> </b><b>TABLE</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>CHK_FORNECEDOR_ISVALIDDOC<b> </b><b>CHECK</b><b> </b><b>(</b>
 <b>       </b><b>IIF</b><b>(</b><b> </b><b>CHARACTER_LENGTH</b><b>(</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b>.</b>F002CPFCNPJ<b>)</b><b> </b><b>&lt;</b><b> </b>14<b> </b><b>,</b><b> </b><b>(</b><b> </b><b>SELECT</b><b> </b>VALIDO
 <b>                                                               </b><b>FROM</b><b> </b><A HREF="#PROC_PROC_VALID_CPF">PROC_VALID_CPF</A><b>(</b>F002CPFCNPJ<b>)</b><b>  </b><b>)</b><b>,</b>
@@ -409,6 +443,22 @@
     <TD ALIGN="right"><P CLASS="Base2">0</TD>
     <TD><P CLASS="Base2">&nbsp</TD>
   </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#TRG_FORNECEDOR_CHECKRG">FORNECEDOR_CHECKRG</A></TD>
+    <TD><P CLASS="Base2"><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A></TD>
+    <TD><P CLASS="Base2">BEFORE&nbsp;INSERT&nbsp;OR&nbsp;UPDATE</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="right"><P CLASS="Base2">1</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#TRG_FORNECEDOR_CHECK_DATENASC">FORNECEDOR_CHECK_DATENASC</A></TD>
+    <TD><P CLASS="Base2"><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A></TD>
+    <TD><P CLASS="Base2">BEFORE&nbsp;INSERT&nbsp;OR&nbsp;UPDATE</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="right"><P CLASS="Base2">2</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
 </TABLE>
 
 <HR><A NAME="TRG_EMPRESA_BI"><P CLASS="Header0">Trigger: EMPRESA_BI</P><P CLASS="Base">&nbsp;</P>
@@ -443,6 +493,56 @@
 <b>BEGIN</b>
 <b>  </b><b>IF</b><b> </b><b>(</b><b>NEW</b><b>.</b>ID<b> </b><b>IS</b><b> </b><b>NULL</b><b>)</b><b> </b><b>THEN</b>
 <b>    </b><b>NEW</b><b>.</b>ID<b> </b><b>=</b><b> </b><b>GEN_ID</b><b>(</b><A HREF="#GEN_GEN_FORNECEDOR_ID">GEN_FORNECEDOR_ID</A><b>,</b>1<b>)</b><b>;</b>
+<b>END</b>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+
+<HR><A NAME="TRG_FORNECEDOR_CHECKRG"><P CLASS="Header0">Trigger: FORNECEDOR_CHECKRG</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base"><I>(There is no description for trigger FORNECEDOR_CHECKRG)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>TRIGGER</b><b> </b><A HREF="#TRG_FORNECEDOR_CHECKRG">FORNECEDOR_CHECKRG</A><b> </b><b>FOR</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A>
+<b>ACTIVE</b><b> </b><b>BEFORE</b><b> </b><b>INSERT</b><b> </b><b>OR</b><b> </b><b>UPDATE</b><b> </b><b>POSITION</b><b> </b>1
+<b>AS</b>
+<b>begin</b>
+<b> </b><b>IF</b><b> </b><b>(</b><b> </b><b>CHARACTER_LENGTH</b><b>(</b><b>NEW</b><b>.</b>F002CPFCNPJ<b>)</b><b> </b><b>&lt;</b><b>=</b><b> </b>11<b>)</b><b> </b><b>THEN</b>
+<b>    </b><b>IF</b><b> </b><b>(</b><b>NEW</b><b>.</b>F004RG<b> </b><b>IS</b><b> </b><b>NULL</b><b>)</b><b> </b><b>THEN</b>
+<b>     </b><b>EXCEPTION</b><b> </b><A HREF="#EXC_EERGISNULL">EERGISNULL</A><b>;</b>
+<b>end</b>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+
+<HR><A NAME="TRG_FORNECEDOR_CHECK_DATENASC"><P CLASS="Header0">Trigger: FORNECEDOR_CHECK_DATENASC</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base"><I>(There is no description for trigger FORNECEDOR_CHECK_DATENASC)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>TRIGGER</b><b> </b><A HREF="#TRG_FORNECEDOR_CHECK_DATENASC">FORNECEDOR_CHECK_DATENASC</A><b> </b><b>FOR</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A>
+<b>ACTIVE</b><b> </b><b>BEFORE</b><b> </b><b>INSERT</b><b> </b><b>OR</b><b> </b><b>UPDATE</b><b> </b><b>POSITION</b><b> </b>2
+<b>AS</b>
+<b>DECLARE</b><b> </b><b>VARIABLE</b><b> </b>LISPARANA<b> </b><b>SMALLINT</b><b>;</b>
+<b>DECLARE</b><b> </b><b>VARIABLE</b><b> </b>LOK<b> </b><b>SMALLINT</b><b>;</b>
+<b>BEGIN</b>
+<b> </b><b>IF</b><b> </b><b>(</b><b> </b><b>CHARACTER_LENGTH</b><b>(</b><b>NEW</b><b>.</b>F002CPFCNPJ<b>)</b><b> </b><b>&gt;</b><b> </b>11<b> </b><b>)</b><b> </b><b>THEN</b><b> </b><b>EXIT</b><b>;</b>
+<b>  </b>LISPARANA<b> </b><b>=</b><b> </b><b>IIF</b><b>(</b><b>(</b><b> </b><b>SELECT</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b>.</b>E002UF
+<b>                </b><b>FROM</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A>
+<b>                 </b><b>WHERE</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b>.</b>E003CNPJ<b> </b><b>=</b><b> </b><b>NEW</b><b>.</b><A HREF="#TBL_EMPRESA">&quot;EMPRESA&quot;</A>
+<b>                </b><b>)</b><b> </b><b>=</b><b> </b>'PR'<b> </b><b>,</b><b> </b>1<b>,</b><b> </b>0<b> </b><b>)</b><b>;</b>
+
+<b>  </b><b>IF</b><b> </b><b>(</b>LISPARANA<b> </b><b>=</b><b> </b>0<b>)</b><b> </b><b>THEN</b><b> </b><b>EXIT</b><b>;</b>
+
+<b> </b>LOK<b> </b><b>=</b><b> </b><b>IIF</b><b>(</b><b>DATEDIFF</b><b>(</b><b>YEAR</b><b>,</b><b> </b><b>NEW</b><b>.</b>F003FUNDDATANASC<b>,</b><b> </b><b>CURRENT_DATE</b><b>)</b><b> </b><b>&gt;</b><b>=</b><b> </b>18<b>,</b>1<b>,</b>0<b>)</b><b>;</b>
+<b> </b><b>IF</b><b> </b><b>(</b>LOK<b> </b><b>=</b><b> </b>0<b>)</b><b> </b><b>THEN</b><b> </b><b>EXCEPTION</b><b> </b><A HREF="#EXC_EEPRRESTR_IDADE">EEPRRESTR_IDADE</A><b>;</b>
+
 <b>END</b>
 
 </pre></code>
@@ -789,11 +889,11 @@
   <TH><P CLASS="Base2"><B>Value</B></P>
   <TR>
     <TD><P CLASS="Base2"><A HREF="#GEN_GEN_EMPRESA_ID">GEN_EMPRESA_ID</A></TD>
-    <TD ALIGN="right"><P CLASS="Base2">8</TD>
+    <TD ALIGN="right"><P CLASS="Base2">35</TD>
   </TR>
   <TR>
     <TD><P CLASS="Base2"><A HREF="#GEN_GEN_FORNECEDOR_ID">GEN_FORNECEDOR_ID</A></TD>
-    <TD ALIGN="right"><P CLASS="Base2">1</TD>
+    <TD ALIGN="right"><P CLASS="Base2">86</TD>
   </TR>
 </TABLE>
 
@@ -827,7 +927,43 @@
   <TH WIDTH="1%"><P CLASS="Base2"><B>ID</B></P>
   <TH WIDTH="45%"><P CLASS="Base2"><B>Exception text</B></P>
   <TH WIDTH="50%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#EXC_EEPRRESTR_IDADE">EEPRRESTR_IDADE</A></TD>
+    <TD><P CLASS="Base2">2</TD>
+    <TD><P CLASS="Base2">Caso a empresa seja do Paraná, não permitir cadastrar um fornecedor pessoa física menor de idade</TD>
+    <TD><P CLASS="Base2">Exception Caso a empresa seja do Paraná, não permitir cadastrar um fornecedor pessoa física menor de idade;</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="#EXC_EERGISNULL">EERGISNULL</A></TD>
+    <TD><P CLASS="Base2">1</TD>
+    <TD><P CLASS="Base2">O Documento CNPJ não pode ser vazio!</TD>
+    <TD><P CLASS="Base2">Exception para caso o Fornecedor seja pessoa física e o documento RG não seja informado!</TD>
+  </TR>
 </TABLE>
+
+<HR>
+<A NAME="EXC_EEPRRESTR_IDADE"><P CLASS="Header0">Exception: EEPRRESTR_IDADE</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>EXCEPTION</b><b> </b><A HREF="#EXC_EEPRRESTR_IDADE">EEPRRESTR_IDADE</A><b> </b><b>AS</b><b> </b>'Caso a empresa seja do Paraná, não permitir cadastrar um fornecedor pessoa física menor de idade'
+
+</pre></code>
+</span></P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base">Exception Caso a empresa seja do Paraná, não permitir cadastrar um fornecedor pessoa física menor de idade;</P>
+
+<HR>
+<A NAME="EXC_EERGISNULL"><P CLASS="Header0">Exception: EERGISNULL</P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>EXCEPTION</b><b> </b><A HREF="#EXC_EERGISNULL">EERGISNULL</A><b> </b><b>AS</b><b> </b>'O Documento CNPJ não pode ser vazio!'
+
+</pre></code>
+</span></P><P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base">Exception para caso o Fornecedor seja pessoa física e o documento RG não seja informado!</P>
 
 <HR>
 <A NAME="_UDFS"><P CLASS="Header0">UDFs</P></A>
@@ -1045,11 +1181,6 @@
     <TD><P CLASS="Base2">CHECK (UPPER(E002UF) IN ('AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'))</P></TD>
   </TR>
   <TR>
-    <TD><P CLASS="Base2"><A HREF="#CHECK_CHK_FORNECEDOR_DATANASC">CHK_FORNECEDOR_DATANASC</A></P></TD>
-    <TD><P CLASS="Base2"><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A></P></TD>
-    <TD><P CLASS="Base2">CHECK ((<br>        CHARACTER_LENGTH(FORNECEDOR.F002CPFCNPJ) = 11 -- Verifica se é um CPF válido<br>        AND <br>        DATEADD(YEAR, 18, FORNECEDOR.F003FUNDDATANASC) < CURRENT_DATE -- Verifica se o fornecedor tem menos de 18 anos<br>        AND<br>        (<br>            SELECT EMPRESA.E002UF<br>            FROM EMPRESA<br>            WHERE EMPRESA.E003CNPJ = FORNECEDOR.EMPRESA<br>        ) = 'PR'<br>    )<br>    OR<br>    CHARACTER_LENGTH(FORNECEDOR.F002CPFCNPJ) <> 11)</P></TD>
-  </TR>
-  <TR>
     <TD><P CLASS="Base2"><A HREF="#CHECK_CHK_FORNECEDOR_ISVALIDDOC">CHK_FORNECEDOR_ISVALIDDOC</A></P></TD>
     <TD><P CLASS="Base2"><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A></P></TD>
     <TD><P CLASS="Base2">CHECK (<br>       IIF( CHARACTER_LENGTH( FORNECEDOR.F002CPFCNPJ) < 14 , ( SELECT VALIDO<br>                                                               FROM PROC_VALID_CPF(F002CPFCNPJ)  ),<br><br>                                                               (select VALIDO<br>                                                               from PROC_VALID_CNPJ(F002CPFCNPJ)<br>                                                               )) =1<br><br>      )</P></TD>
@@ -1072,28 +1203,6 @@
 <P CLASS="Base"><span class="DDLCode">
 <code><pre>
 <b>ALTER</b><b> </b><b>TABLE</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>CHK_EMPRESA_UF<b> </b><b>CHECK</b><b> </b><b>(</b><b>UPPER</b><b>(</b>E002UF<b>)</b><b> </b><b>IN</b><b> </b><b>(</b>'AC'<b>,</b><b> </b>'AL'<b>,</b><b> </b>'AP'<b>,</b><b> </b>'AM'<b>,</b><b> </b>'BA'<b>,</b><b> </b>'CE'<b>,</b><b> </b>'DF'<b>,</b><b> </b>'ES'<b>,</b><b> </b>'GO'<b>,</b><b> </b>'MA'<b>,</b><b> </b>'MT'<b>,</b><b> </b>'MS'<b>,</b><b> </b>'MG'<b>,</b><b> </b>'PA'<b>,</b><b> </b>'PB'<b>,</b><b> </b>'PR'<b>,</b><b> </b>'PE'<b>,</b><b> </b>'PI'<b>,</b><b> </b>'RJ'<b>,</b><b> </b>'RN'<b>,</b><b> </b>'RS'<b>,</b><b> </b>'RO'<b>,</b><b> </b>'RR'<b>,</b><b> </b>'SC'<b>,</b><b> </b>'SP'<b>,</b><b> </b>'SE'<b>,</b><b> </b>'TO'<b>)</b><b>)</b>
-
-</pre></code>
-</span></P>
-
-<HR>
-<A NAME="CHECK_CHK_FORNECEDOR_DATANASC"><P CLASS="Header0">Check: CHK_FORNECEDOR_DATANASC</P><P CLASS="Base">&nbsp;</P>
-<P CLASS="Header1">Definition</P>
-<P CLASS="Base"><span class="DDLCode">
-<code><pre>
-<b>ALTER</b><b> </b><b>TABLE</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>CHK_FORNECEDOR_DATANASC<b> </b><b>CHECK</b><b> </b><b>(</b><b>(</b>
-<b>        </b><b>CHARACTER_LENGTH</b><b>(</b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b>.</b>F002CPFCNPJ<b>)</b><b> </b><b>=</b><b> </b>11<b> </b><font color="# 0 0FF"><i>-- Verifica se é um CPF válido</i></font>
-<b>        </b><b>AND</b><b> </b>
-<b>        </b><b>DATEADD</b><b>(</b><b>YEAR</b><b>,</b><b> </b>18<b>,</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b>.</b>F003FUNDDATANASC<b>)</b><b> </b><b>&lt;</b><b> </b><b>CURRENT_DATE</b><b> </b><font color="# 0 0FF"><i>-- Verifica se o fornecedor tem menos de 18 anos</i></font>
-<b>        </b><b>AND</b>
-<b>        </b><b>(</b>
-<b>            </b><b>SELECT</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b>.</b>E002UF
-<b>            </b><b>FROM</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A>
-<b>            </b><b>WHERE</b><b> </b><A HREF="#TBL_EMPRESA">EMPRESA</A><b>.</b>E003CNPJ<b> </b><b>=</b><b> </b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b>.</b><A HREF="#TBL_EMPRESA">EMPRESA</A>
-<b>        </b><b>)</b><b> </b><b>=</b><b> </b>'PR'
-<b>    </b><b>)</b>
-<b>    </b><b>OR</b>
-<b>    </b><b>CHARACTER_LENGTH</b><b>(</b><A HREF="#TBL_FORNECEDOR">FORNECEDOR</A><b>.</b>F002CPFCNPJ<b>)</b><b> </b><b>&lt;</b><b>&gt;</b><b> </b>11<b>)</b>
 
 </pre></code>
 </span></P>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="h7kzpfgygvj_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:commom.system.logger.ILogger">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_ast:src:CadFornecdores:commom.system.logger.ILogger.Unload" />
+      <reference referencedUin="delphi:l_ast:src:CadFornecdores:commom.system.logger.ILogger.Load" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.ILogger.WriteLog(System.string)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.ILogger.WriteLog(System.string,System.TVarRec[])" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.ILogger.WriteLog(System.TClass,System.string,System.SysUtils.TProc)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.ILogger.WriteLogApp(System.string,System.TVarRec[])" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.ILogger.WriteLogConstrutor(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.ILogger.WriteLogDestructor(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.ILogger.WriteException(System.SysUtils.Exception)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.ILogger.Trace(System.TObject,System.SysUtils.TProc)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.ILogger.WriteTest(System.TObject,System.SysUtils.TProc)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.ILogger.WriteTest(System.TObject,System.string,System.Boolean)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.ILogger.Options()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.ILogger.GetFLoad()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.ILogger.GetUnload()" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:commom.system.logger.ILogger.Load" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:commom.system.logger.ILogger.Unload" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.ILogger.ReadMemory()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:commom.system.logger.THardDiskRecord">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:commom.system.logger.THardDiskRecord.TotalNumberOfBytes" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:commom.system.logger.THardDiskRecord.FreeBytesAvailable" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:commom.system.logger.ExceptionHelper">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.ExceptionHelper.Describe()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.ExceptionHelper.RaiseNotImplementedException(System.TClass,System.string)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.ExceptionHelper.GetStackTrace()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:commom.system.logger.TLogger">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_ast:src:CadFornecdores:commom.system.logger.TLogger.Unload" />
+      <reference referencedUin="delphi:l_ast:src:CadFornecdores:commom.system.logger.TLogger.Load" />
+      <reference referencedUin="delphi:l_impl:src:CadFornecdores:commom.system.logger.TLogger:commom.system.logger.ILogger" />
+      <reference referencedUin="delphi:l_ast:src:CadFornecdores:commom.system.logger.TLogger.FOptions" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:commom.system.logger.TLogger.FOptions" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:commom.system.logger.TLogger.FServer" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:commom.system.logger.TLogger.FIo" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:commom.system.logger.TLogger.FContextList" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:commom.system.logger.TLogger.FLoad" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.CreateSocket()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.DoInternalLoad()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.DoUnload()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.Connect(IdContext.TIdContext)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.Disconnect(IdContext.TIdContext)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.Execute(IdContext.TIdContext)" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:commom.system.logger.TLogger.FLogs" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:commom.system.logger.TLogger.FFileName" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.InternalWriteLog(System.string)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.GetFLoad()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.GetUnload()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.WriteLog(System.string)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.WriteLog(System.TClass,System.string,System.SysUtils.TProc)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.WriteLog(System.string,System.TVarRec[])" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.WriteLogApp(System.string,System.TVarRec[])" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.WriteLogConstrutor(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.WriteLogDestructor(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.WriteException(System.SysUtils.Exception)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.Trace(System.TObject,System.SysUtils.TProc)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.WriteTest(System.TObject,System.SysUtils.TProc)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.WriteTest(System.TObject,System.string,System.Boolean)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.ReadMemory()" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:commom.system.logger.TLogger.Load" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:commom.system.logger.TLogger.Unload" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.Options()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.New()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TLogger.New(System.Word)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:commom.system.logger.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_ast:src:CadFornecdores:commom.system.logger.@unitclass.GlobalInstance" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.@unitclass.logger()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.@unitclass.loggerDef(System.Int64)" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:commom.system.logger.@unitclass.GlobalInstance" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.@unitclass.GetSizeSuffix(System.Int64)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.@unitclass.SaveGlobalInstanceToRegistry()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.@unitclass.GetExceptionMethodName()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.@unitclass.TrimAppMemorySize()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.@unitclass.GetPageFaultsAppProcessStr(.Cardinal)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.@unitclass.GetHardDiskSizeStr()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.@unitclass.GetOperatingSystemName()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.@unitclass.GetCurrentHdLetterApp()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.@unitclass.GetCurrentProcessID()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.@unitclass.GetCurrentProcessIdStr()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.@unitclass.GetFreeMemory()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.@unitclass.GetCardinalMemoryUsageApp()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.@unitclass.GetMemoryUsageApp()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.@unitclass.GetTotalMemory()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.@unitclass.GetAppVersion()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.@unitclass.FormatByteSize(System.Int64)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.@unitclass.GetMethodName(System.TClass,System.string)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:commom.system.logger.TOptionsLog">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:commom.system.logger.TOptionsLog.FHeaderLog" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:commom.system.logger.TOptionsLog.FFileNameLog" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:commom.system.logger.TOptionsLog.FSocketPort" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:commom.system.logger.TOptionsLog.FUseSocket" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TOptionsLog.SetFileNameLog(System.string)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TOptionsLog.SetHeaderLog(System.string)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TOptionsLog.SetSocketPort(.UInt64)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:commom.system.logger.TOptionsLog.SetUseSocket(System.Boolean)" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:commom.system.logger.TOptionsLog.HeaderLog" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:commom.system.logger.TOptionsLog.FileNameLog" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:commom.system.logger.TOptionsLog.UseSocket" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:commom.system.logger.TOptionsLog.SocketPort" />
+    </reference>
+  </view>
+</nodeSet>

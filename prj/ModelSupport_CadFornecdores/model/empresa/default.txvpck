@@ -4,5 +4,12 @@
     <property name="$defaultDiagram" value="true" />
     <property name="$metaclass" value="Package Diagram" />
     <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:model.empresa.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:model.empresa.TModelEmpresa">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:model.empresa.TModelEmpresa.AfterConstruction()" />
+    </reference>
   </view>
 </nodeSet>

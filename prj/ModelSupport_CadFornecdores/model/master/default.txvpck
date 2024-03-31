@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="dyqnvcnhizf_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:model.master.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:model.master.TModelMaster">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:model.master.TModelMaster.oFiltered" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:model.master.TModelMaster.AfterConstruction()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:model.master.TModelMaster.BeforeDestruction()" />
+    </reference>
+  </view>
+</nodeSet>

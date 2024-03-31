@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="o1aj5ax737k_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::b8mx4m5p25k_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:view.doc.database.TViewDocDatabase" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:view.doc.database.@unitclass" />
+    </reference>
+  </view>
+</nodeSet>

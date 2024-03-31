@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <node uin="p0t0s609yco33smal_n">
+    <property name="$metaclass" value="Note" />
+    <property name="$name" value="Note1" />
+    <property name="$note_text" value="Classe Controller Base para todos os controladores de domínios da aplicação" />
+    <link uin="5x564ow7m6q09ihmi_l">
+      <property name="$metaclass" value="Note Link" />
+      <property name="$name" value="Note Link1" />
+      <participant referencedUin="delphi:e_class:src:CadFornecdores:controller.abstract.TControllerAbstract" role="Client" />
+      <participant referencedUin="design:node:::p0t0s609yco33smal_n" role="Supplier" />
+    </link>
+  </node>
+</nodeSet>
