@@ -4,5 +4,31 @@
     <property name="$defaultDiagram" value="true" />
     <property name="$metaclass" value="Package Diagram" />
     <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:view.empresa.TViewEmpresa">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.TViewEmpresa.oEnterAsTab" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.TViewEmpresa.GroupBox2" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.TViewEmpresa.oGrid" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.TViewEmpresa.ods" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.TViewEmpresa.StatusBar1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.TViewEmpresa.GroupBox1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.TViewEmpresa.oEditar" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.TViewEmpresa.oExluir" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.TViewEmpresa.ImageList1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.TViewEmpresa.Button1" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.empresa.TViewEmpresa.I1Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.empresa.TViewEmpresa.oGridDblClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.empresa.TViewEmpresa.oExluirClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.empresa.TViewEmpresa.Button1Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.empresa.TViewEmpresa.oEditarClick(System.TObject)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:view.empresa.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="design:view:::hdw6p85q8mq6sfh9r_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:view.empresa.crud.@unitclass" />
+    </reference>
   </view>
 </nodeSet>

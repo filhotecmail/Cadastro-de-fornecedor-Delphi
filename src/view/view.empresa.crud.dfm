@@ -13,6 +13,7 @@ object ViewEmpresaCrud: TViewEmpresaCrud
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnCloseQuery = FormCloseQuery
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13

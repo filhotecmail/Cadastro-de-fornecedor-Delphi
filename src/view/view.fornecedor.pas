@@ -79,15 +79,15 @@ implementation
   LController: TObject;
 begin
 
-begin
+  if Controller.OutherDataset.RecordCount <= 0 then
+     raise Exception.Create('Não existem empresas cadastradas no sistema!');
+
  try
   LController:=  TControllerFactory.CreateController( 'controller crud fornecedor', oActionAppend , ods.Dataset );
   Controller.Refresh;
  finally
   FreeAndNil( LController );
  end;
-
-end;
 
 end;
 

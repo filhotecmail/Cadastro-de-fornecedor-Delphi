@@ -4,5 +4,33 @@
     <property name="$defaultDiagram" value="true" />
     <property name="$metaclass" value="Package Diagram" />
     <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:dao.abstract.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:dao.abstract.@unitclass.TrimAppMemorySize()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:dao.abstract.TDaoAbstract">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:dao.abstract.TDaoAbstract.oCon" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:dao.abstract.TDaoAbstract.oMonitor" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:dao.abstract.TDaoAbstract.oMonitorOutput(FireDAC.Moni.Base.TFDMoniClientLinkBase,System.string,System.string,System.string)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:dao.abstract.TDaoAbstract.oConAfterCommit(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:dao.abstract.TDaoAbstract.oConAfterConnect(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:dao.abstract.TDaoAbstract.oConAfterDisconnect(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:dao.abstract.TDaoAbstract.oConAfterRollback(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:dao.abstract.TDaoAbstract.oConAfterStartTransaction(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:dao.abstract.TDaoAbstract.oConBeforeCommit(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:dao.abstract.TDaoAbstract.oConBeforeConnect(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:dao.abstract.TDaoAbstract.oConBeforeDisconnect(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:dao.abstract.TDaoAbstract.oConBeforeRollback(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:dao.abstract.TDaoAbstract.oConBeforeStartTransaction(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:dao.abstract.TDaoAbstract.oConError(System.TObject,System.TObject,ref@System.SysUtils.Exception)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:dao.abstract.TDaoAbstract.oConLogin(FireDAC.Comp.Client.TFDCustomConnection,FireDAC.Stan.Intf.TFDConnectionDefParams)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:dao.abstract.TDaoAbstract.oConLost(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:dao.abstract.TDaoAbstract.oConRecover(System.TObject,System.TObject,System.SysUtils.Exception,ref@FireDAC.Phys.Intf.TFDPhysConnectionRecoverAction)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:dao.abstract.TDaoAbstract.oConRestored(System.TObject)" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:dao.abstract.TDaoAbstract.FInRelease" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:dao.abstract.TDaoAbstract.BeforeDestruction()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:dao.abstract.TDaoAbstract.AfterConstruction()" />
+    </reference>
   </view>
 </nodeSet>

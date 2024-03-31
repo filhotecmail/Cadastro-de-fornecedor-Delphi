@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="wfv2gbi0kwo_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.view.master.TControllerMasterView">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.view.master.TControllerMasterView.AfterConstruction()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.view.master.TControllerMasterView.ShowController()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.view.master.TControllerMasterView.Open(System.Variant[])" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.view.master.TControllerMasterView.Filter(System.string,System.string)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.view.master.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>

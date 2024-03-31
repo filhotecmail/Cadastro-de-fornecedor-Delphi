@@ -4,5 +4,18 @@
     <property name="$defaultDiagram" value="true" />
     <property name="$metaclass" value="Package Diagram" />
     <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.fornecedor.TControllerFornecedor">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.fornecedor.TControllerFornecedor.AfterConstruction()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.fornecedor.TControllerFornecedor.ShowController()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.fornecedor.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="design:view:::r4gi8boodm6oiblfi_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.fornecedor.crud.TControllerFornecedorCrud" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.fornecedor.crud.@unitclass" />
+    </reference>
   </view>
 </nodeSet>

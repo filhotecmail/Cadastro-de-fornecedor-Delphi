@@ -1,0 +1,630 @@
+﻿<html >
+<head ><STYLE TYPE="text/css">@import "../../stylesheet.css";</STYLE><title ></title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script  language='JavaScript'>
+			function doClick(imageHref) {
+			if (parent.imageFrame != null)
+				parent.imageFrame.location.href = imageHref;
+			}
+		</script></head><table  border='0' width='100%' cellpadding='1' cellspacing='0'>
+<tr >
+<td  colspan='2' class='NavBarCellCommon'>
+<table  border='0' cellpadding='0' cellspacing='3'>
+<tr  align='center' valign='top'>
+<td  class='NavBarCellCommon'>
+<a  href='../../overview-summary.html'>
+<font  size='+1' class='NavBarFont1'>
+<b >Overview</b></font></a>&nbsp;</td><td  class='NavBarCellCommon'>
+<a  href='package-summary.html'>
+<font  size='+1' class='NavBarFont1'>
+<b >Namespace</b></font></a>&nbsp;</td><td  class='NavBarCellCommonRev'>
+<font  size='+1' class='NavBarFont1'>
+<b >Classifier</b></font>&nbsp;</td><td  class='NavBarCellCommon'>
+<font  size='+1' class='NavBarFont1'>Tree</font>&nbsp;</td><td  class='NavBarCellCommon'>
+<a  href='../../index-all.html'>
+<font  size='+1' class='NavBarFont1'>
+<b >Index</b></font></a>&nbsp;</td><td  class='NavBarCellCommon'>
+<a  href='../../help-doc.html'>
+<font  size='+1' class='NavBarFont1'>
+<b >Help</b></font></a>&nbsp;</td></tr></table><td  align='right' valign='top' rowspan='3'>
+<em ></em></td></td></tr><tr >
+<td  class='NavBarCellPrevNext'>
+<font  size='-2'><a href="../../controller/abstract/TActionController.html" target="classFrame" onclick="doClick('../../controller/abstract/doc-files/default.txvpck.html')">PREV </a> &nbsp;&nbsp;<a href="../../controller/abstract/TControllerFactory.html" target="classFrame" onclick="doClick('../../controller/abstract/doc-files/default.txvpck.html')">NEXT </a> </font></td><td  class='NavBarCellPrevNext'>
+<font  size='-2'>
+<a  href='../../index.html' target='_top'>
+<b >FRAMES</b></a>&nbsp;<a  href='../../controller/abstract/TControllerAbstract.html' target='_top'>
+<b >NO FRAMES</b></a></font></td></tr><tr >
+<td  valign='top' class='NavBarCell3'>
+<font  size='-2'>SUMMARY:&nbsp;INNER&nbsp;|&nbsp;<a  href='#field_summary'>FIELD</a>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;DESTR&nbsp;|&nbsp;<a  href='#method_summary'>METHOD</a></font></td><td  valign='top' class='NavBarCell3'>
+<font  size='-2'>DETAIL:&nbsp;<a  href='#field_detail'>FIELD</a>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;DESTR&nbsp;|&nbsp;<a  href='#method_detail'>METHOD</a></font></td></tr></table><hr /><h2 >
+<font  size='-1'>
+<i >Namespace: </i>controller.abstract<br /></font><br />Class TControllerAbstract</h2><pre >System.Classes.TDataModule
+  |
+  +-- controller.abstract.TControllerAbstract
+</pre><dl >
+<dt /><b >Direct Known Subclasses: </b><dd ><a href="../../controller/fornecedor/crud/TControllerFornecedorCrud.html" target="classFrame" onclick="doClick('../../controller/fornecedor/crud/doc-files/default.txvpck.html')">TControllerFornecedorCrud</a>    , <a href="../../controller/fornecedor/TControllerFornecedor.html" target="classFrame" onclick="doClick('../../controller/fornecedor/doc-files/default.txvpck.html')">TControllerFornecedor</a>    , <a href="../../controller/empresa/crud/TControllerEmpresaCrud.html" target="classFrame" onclick="doClick('../../controller/empresa/crud/doc-files/default.txvpck.html')">TControllerEmpresaCrud</a>    , <a href="../../controller/empresa/TControllerEmpresa.html" target="classFrame" onclick="doClick('../../controller/empresa/doc-files/default.txvpck.html')">TControllerEmpresa</a>    , <a href="../../controller/view/master/TControllerMasterView.html" target="classFrame" onclick="doClick('../../controller/view/master/doc-files/default.txvpck.html')">TControllerMasterView</a>   </dd></dl><hr /><dl >
+<dt />public&nbsp;class <b >TControllerAbstract</b> ( System.Classes.TDataModule   ) </dl><p /><dl >
+<dt /><b >Abstract</b><dd >False</dd></dl><dl >
+<dt /><b >Persistent</b><dd >False</dd></dl><dl >
+<dt /><b >Sealed</b><dd >False</dd></dl><dl >
+<dt /><b >Version</b><dd >1.0</dd></dl><dl >
+<dt /><b >Author</b><dd >Carlos Alberto Dias da Silva Filho</dd></dl><hr /><p /><a  name='field_summary'/><table  border='1' cellpadding='3' cellspacing='0' width='100%'>
+<tr  class='TableHeaderStyle'>
+<td  colspan='2'>
+<font  size='+2'>
+<b >Field Summary</b></font></td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+						&nbsp; internal&nbsp; 
+							<b >TPersistentClass</b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#FClassView'>FClassView</a></b></code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+						&nbsp; internal&nbsp; 
+							<b >TDataset</b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#FDataset'>FDataset</a></b></code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+						&nbsp; internal&nbsp; 
+							<b ><a href="../../controller/abstract/TActionController.html" target="classFrame" onclick="doClick('../../controller/abstract/doc-files/default.txvpck.html')">TActionController</a> </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#FListenAction'>FListenAction</a></b></code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+						&nbsp; internal&nbsp; 
+							<b >TDataset</b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#FListenDataset'>FListenDataset</a></b></code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+						&nbsp; internal&nbsp; 
+							<b ><a href="../../model/abstract/TModelAbstract.html" target="classFrame" onclick="doClick('../../model/abstract/doc-files/default.txvpck.html')">model.abstract.TModelAbstract</a> </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#FModelName'>FModelName</a></b></code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+						&nbsp; internal&nbsp; 
+							<b >TDataset</b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#FOutherDataset'>FOutherDataset</a></b></code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+						&nbsp; internal&nbsp; 
+							<b ><a href="../../controller/abstract/TViewController.html" target="classFrame" onclick="doClick('../../controller/abstract/doc-files/default.txvpck.html')">TViewController</a> </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#FView'>FView</a></b></code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+						&nbsp; internal&nbsp; 
+							<b >String</b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#FViewName'>FViewName</a></b></code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+						&nbsp; public&nbsp; 
+							<b >TDataSetProvider</b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#oProvider'>oProvider</a></b></code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+						&nbsp; public&nbsp; 
+							<b >TTimer</b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#oTimerStatus'>oTimerStatus</a></b></code><br />	 </td></tr></table> <p /><a  name='field_summary'/><table  border='1' cellpadding='3' cellspacing='0' width='100%'>
+<tr  class='TableHeaderStyle'>
+<td  colspan='2'>
+<font  size='+2'>
+<b >Property Summary</b></font></td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+						&nbsp; public&nbsp; 
+							<b >TDataset</b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#Dataset'>Dataset</a></b></code><br />	    Representa o conjunto de dados associado a este controlador.<br /></td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+						&nbsp; public&nbsp; 
+							<b ><a href="../../controller/abstract/TActionController.html" target="classFrame" onclick="doClick('../../controller/abstract/doc-files/default.txvpck.html')">TActionController</a> </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#ListenAction'>ListenAction</a></b></code><br />	    Representa a ação de escuta associada a este controlador.<br /></td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+						&nbsp; public&nbsp; 
+							<b >TDataset</b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#ListenDataset'>ListenDataset</a></b></code><br />	    Representa o conjunto de dados de escuta associado a este controlador.<br /></td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+						&nbsp; public&nbsp; 
+							<b ><a href="../../model/abstract/TModelAbstract.html" target="classFrame" onclick="doClick('../../model/abstract/doc-files/default.txvpck.html')">model.abstract.TModelAbstract</a> </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#model'>model</a></b></code><br />	    Representa o modelo associado a este controlador.<br /></td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+						&nbsp; public&nbsp; 
+							<b >TDataset</b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#OutherDataset'>OutherDataset</a></b></code><br />	    Representa outro conjunto de dados associado a este controlador.<br /></td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+						&nbsp; public&nbsp; 
+							<b ><a href="../../controller/abstract/TViewController.html" target="classFrame" onclick="doClick('../../controller/abstract/doc-files/default.txvpck.html')">TViewController</a> </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#View'>View</a></b></code><br />	    Representa a visualização associada a este controlador.<br /></td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+						&nbsp; public&nbsp; 
+							<b >String</b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#ViewName'>ViewName</a></b></code><br />	    Representa o nome da visualização associada a este controlador.<br /></td></tr></table> <p /><a  name='method_summary'/><table  border='1' cellpadding='3' cellspacing='0' width='100%'>
+<tr  class='TableHeaderStyle'>
+<td  colspan='2'>
+<font  size='+2'>
+<b >Method Summary</b></font></td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+                                                &nbsp; public <b >Sub </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#AfterConstruction()'>AfterConstruction</a></b>()</code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+                                                &nbsp; public <b >Sub </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#Append()'>Append</a></b>()</code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+                                                &nbsp; public <b >function TFDQuery</b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#AsFd()'>AsFd</a></b>()</code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+                                                &nbsp; public <b >Sub </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#BeforeDestruction()'>BeforeDestruction</a></b>()</code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+                                                &nbsp; public <b >Sub </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#Cancel()'>Cancel</a></b>()</code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+                                                &nbsp; public <b >Sub </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#Delete()'>Delete</a></b>()</code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+                                                &nbsp; public <b >Sub </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#Edit()'>Edit</a></b>()</code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+                                                &nbsp; public <b >Sub </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#Filter(string/String)'>Filter</a></b>(ACondition: string; AValue: String)</code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+                                                &nbsp; public <b >Sub </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#Open(Variant)'>Open</a></b>(AValues: Array of variant)</code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+                                                &nbsp; public <b >Sub </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#oTimerStatusTimer(TObject)'>oTimerStatusTimer</a></b>(Sender: TObject)</code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+                                                &nbsp; public <b >Sub </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#Post()'>Post</a></b>()</code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+                                                &nbsp; public <b >Sub </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#Refresh()'>Refresh</a></b>()</code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+                                                &nbsp; internal <b >Sub </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#SetDataset(TDataSet)'>SetDataset</a></b>(Value: TDataset)</code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+                                                &nbsp; internal <b >Sub </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#SetListenAction(TActionController)'>SetListenAction</a></b>(Value: <a href="../../controller/abstract/TActionController.html" target="classFrame" onclick="doClick('../../controller/abstract/doc-files/default.txvpck.html')">TActionController</a> )</code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+                                                &nbsp; internal <b >Sub </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#SetListenDataset(TDataSet)'>SetListenDataset</a></b>(Value: TDataset)</code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+                                                &nbsp; internal <b >Sub </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#SetModelName(TModelAbstract)'>SetModelName</a></b>(Value: <a href="../../model/abstract/TModelAbstract.html" target="classFrame" onclick="doClick('../../model/abstract/doc-files/default.txvpck.html')">model.abstract.TModelAbstract</a> )</code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+                                                &nbsp; internal <b >Sub </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#SetOutherDataset(TDataSet)'>SetOutherDataset</a></b>(Value: TDataset)</code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+                                                &nbsp; internal <b >Sub </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#SetView(TViewController)'>SetView</a></b>(Value: <a href="../../controller/abstract/TViewController.html" target="classFrame" onclick="doClick('../../controller/abstract/doc-files/default.txvpck.html')">TViewController</a> )</code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+                                                &nbsp; internal <b >Sub </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#SetViewName(String)'>SetViewName</a></b>(Value: String)</code><br />	 </td></tr><tr  class='TableRow'>
+<td  align='right' valign='top' width='20%'>
+<font  size='-1'>
+<code >
+                                                &nbsp; public <b >Sub </b></code></font></td><td >
+<code >
+<b >
+<a  href='../../controller/abstract/TControllerAbstract.html#ShowController()'>ShowController</a></b>()</code><br />	 </td></tr></table> <p /><p /><a  Name='field_detail'/><table  border='1' cellpadding='3' cellspacing='0' width='100%'>
+<tr  class='TableHeaderStyle'>
+<td  colspan='2'>
+<font  size='+2'>
+<b >Field Detail</b></font></td></tr></table><br /><a  name='FClassView'>
+<h3 >FClassView</h3></a><pre >internal&nbsp;FClassView: TPersistentClass</pre><dl >
+<dt /><b >Type</b><dd >TPersistentClass</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Const</b><dd >False</dd></dl><hr /><a  name='FDataset'>
+<h3 >FDataset</h3></a><pre >internal&nbsp;FDataset: TDataset</pre><dl >
+<dt /><b >Type</b><dd >TDataset</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Const</b><dd >False</dd></dl><hr /><a  name='FListenAction'>
+<h3 >FListenAction</h3></a><pre >internal&nbsp;FListenAction: <a href="../../controller/abstract/TActionController.html" target="classFrame" onclick="doClick('../../controller/abstract/doc-files/default.txvpck.html')">TActionController</a> </pre><dl >
+<dt /><b >Type</b><dd >TActionController</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Const</b><dd >False</dd></dl><hr /><a  name='FListenDataset'>
+<h3 >FListenDataset</h3></a><pre >internal&nbsp;FListenDataset: TDataset</pre><dl >
+<dt /><b >Type</b><dd >TDataset</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Const</b><dd >False</dd></dl><hr /><a  name='FModelName'>
+<h3 >FModelName</h3></a><pre >internal&nbsp;FModelName: <a href="../../model/abstract/TModelAbstract.html" target="classFrame" onclick="doClick('../../model/abstract/doc-files/default.txvpck.html')">model.abstract.TModelAbstract</a> </pre><dl >
+<dt /><b >Type</b><dd >TModelAbstract</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Const</b><dd >False</dd></dl><hr /><a  name='FOutherDataset'>
+<h3 >FOutherDataset</h3></a><pre >internal&nbsp;FOutherDataset: TDataset</pre><dl >
+<dt /><b >Type</b><dd >TDataset</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Const</b><dd >False</dd></dl><hr /><a  name='FView'>
+<h3 >FView</h3></a><pre >internal&nbsp;FView: <a href="../../controller/abstract/TViewController.html" target="classFrame" onclick="doClick('../../controller/abstract/doc-files/default.txvpck.html')">TViewController</a> </pre><dl >
+<dt /><b >Type</b><dd >TViewController</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Const</b><dd >False</dd></dl><hr /><a  name='FViewName'>
+<h3 >FViewName</h3></a><pre >internal&nbsp;FViewName: String</pre><dl >
+<dt /><b >Type</b><dd >String</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Const</b><dd >False</dd></dl><hr /><a  name='oProvider'>
+<h3 >oProvider</h3></a><pre >public&nbsp;oProvider: TDataSetProvider</pre><dl >
+<dt /><b >Type</b><dd >TDataSetProvider</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Const</b><dd >False</dd></dl><hr /><a  name='oTimerStatus'>
+<h3 >oTimerStatus</h3></a><pre >public&nbsp;oTimerStatus: TTimer</pre><dl >
+<dt /><b >Type</b><dd >TTimer</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Const</b><dd >False</dd></dl><hr /><a  Name='field_detail'/><table  border='1' cellpadding='3' cellspacing='0' width='100%'>
+<tr  class='TableHeaderStyle'>
+<td  colspan='2'>
+<font  size='+2'>
+<b >Property Detail</b></font></td></tr></table><br /><a  name='Dataset'>
+<h3 >Dataset</h3></a><pre >public&nbsp;Dataset: TDataset</pre><dl >
+<dt /><b >Type</b><dd >TDataset</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Access</b><dd >read/write</dd></dl><dl >
+<dt /><b >summary</b><dd >    Representa o conjunto de dados associado a este controlador.<br /></dd></dl><dl >
+<dt /><b >remarks</b><dd ><br />    Utilize esta propriedade para acessar e manipular o conjunto de dados associado a este controlador.<br /></dd></dl><hr /><a  name='ListenAction'>
+<h3 >ListenAction</h3></a><pre >public&nbsp;ListenAction: <a href="../../controller/abstract/TActionController.html" target="classFrame" onclick="doClick('../../controller/abstract/doc-files/default.txvpck.html')">TActionController</a> </pre><dl >
+<dt /><b >Type</b><dd >TActionController</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Access</b><dd >read/write</dd></dl><dl >
+<dt /><b >summary</b><dd >    Representa a ação de escuta associada a este controlador.<br /></dd></dl><dl >
+<dt /><b >remarks</b><dd ><br />    Utilize esta propriedade para obter ou definir a ação de escuta associada a este controlador.<br /></dd></dl><hr /><a  name='ListenDataset'>
+<h3 >ListenDataset</h3></a><pre >public&nbsp;ListenDataset: TDataset</pre><dl >
+<dt /><b >Type</b><dd >TDataset</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Access</b><dd >read/write</dd></dl><dl >
+<dt /><b >summary</b><dd >    Representa o conjunto de dados de escuta associado a este controlador.<br /></dd></dl><dl >
+<dt /><b >remarks</b><dd ><br />    Utilize esta propriedade para acessar e manipular o conjunto de dados de escuta associado a este controlador.<br /></dd></dl><hr /><a  name='model'>
+<h3 >model</h3></a><pre >public&nbsp;model: <a href="../../model/abstract/TModelAbstract.html" target="classFrame" onclick="doClick('../../model/abstract/doc-files/default.txvpck.html')">model.abstract.TModelAbstract</a> </pre><dl >
+<dt /><b >Type</b><dd >TModelAbstract</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Access</b><dd >read/write</dd></dl><dl >
+<dt /><b >summary</b><dd >    Representa o modelo associado a este controlador.<br /></dd></dl><dl >
+<dt /><b >remarks</b><dd ><br />    Utilize esta propriedade para acessar e manipular o modelo de dados associado a este controlador.<br /></dd></dl><hr /><a  name='OutherDataset'>
+<h3 >OutherDataset</h3></a><pre >public&nbsp;OutherDataset: TDataset</pre><dl >
+<dt /><b >Type</b><dd >TDataset</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Access</b><dd >read/write</dd></dl><dl >
+<dt /><b >summary</b><dd >    Representa outro conjunto de dados associado a este controlador.<br /></dd></dl><dl >
+<dt /><b >remarks</b><dd ><br />    Utilize esta propriedade para acessar e manipular outro conjunto de dados associado a este controlador.<br /></dd></dl><hr /><a  name='View'>
+<h3 >View</h3></a><pre >public&nbsp;View: <a href="../../controller/abstract/TViewController.html" target="classFrame" onclick="doClick('../../controller/abstract/doc-files/default.txvpck.html')">TViewController</a> </pre><dl >
+<dt /><b >Type</b><dd >TViewController</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Access</b><dd >read/write</dd></dl><dl >
+<dt /><b >summary</b><dd >    Representa a visualização associada a este controlador.<br /></dd></dl><dl >
+<dt /><b >remarks</b><dd ><br />    Utilize esta propriedade para obter ou definir a visualização associada a este controlador.<br /></dd></dl><hr /><a  name='ViewName'>
+<h3 >ViewName</h3></a><pre >public&nbsp;ViewName: String</pre><dl >
+<dt /><b >Type</b><dd >String</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Access</b><dd >read/write</dd></dl><dl >
+<dt /><b >summary</b><dd >    Representa o nome da visualização associada a este controlador.<br /></dd></dl><dl >
+<dt /><b >remarks</b><dd ><br />    Utilize esta propriedade para obter ou definir o nome da visualização associada a este controlador.<br /></dd></dl><hr /><a  name='method_detail'/><table  border='1' cellpadding='3' cellspacing='0' width='100%'>
+<tr  class='TableHeaderStyle'>
+<td  colspan='2'>
+<font  size='+2'>
+<b >Method Detail</b></font></td></tr></table><br /><a  name='AfterConstruction()'>
+<h3 >AfterConstruction</h3></a><pre >public&nbsp;procedure AfterConstruction()</pre><dl >
+<dt /><b >Abstract</b><dd >False</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Virtual</b><dd >False</dd></dl><dl >
+<dt /><b >Override</b><dd >True</dd></dl><dl >
+<dt /><b >Final</b><dd >False</dd></dl><dl >
+<dt /><b >Reintroduce</b><dd >False</dd></dl><hr /><a  name='Append()'>
+<h3 >Append</h3></a><pre >public&nbsp;procedure Append()</pre><dl >
+<dt /><b >Abstract</b><dd >False</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Virtual</b><dd >False</dd></dl><dl >
+<dt /><b >Override</b><dd >False</dd></dl><dl >
+<dt /><b >Final</b><dd >False</dd></dl><dl >
+<dt /><b >Reintroduce</b><dd >False</dd></dl><hr /><a  name='AsFd()'>
+<h3 >AsFd</h3></a><pre >public&nbsp;function AsFd(): TFDQuery</pre><dl >
+<dt /><b >Abstract</b><dd >False</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Virtual</b><dd >False</dd></dl><dl >
+<dt /><b >Override</b><dd >False</dd></dl><dl >
+<dt /><b >Final</b><dd >False</dd></dl><dl >
+<dt /><b >Reintroduce</b><dd >False</dd></dl><dl >
+<dt /><b >Returns</b><dd >TFDQuery</dd></dl><hr /><a  name='BeforeDestruction()'>
+<h3 >BeforeDestruction</h3></a><pre >public&nbsp;procedure BeforeDestruction()</pre><dl >
+<dt /><b >Abstract</b><dd >False</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Virtual</b><dd >False</dd></dl><dl >
+<dt /><b >Override</b><dd >True</dd></dl><dl >
+<dt /><b >Final</b><dd >False</dd></dl><dl >
+<dt /><b >Reintroduce</b><dd >False</dd></dl><hr /><a  name='Cancel()'>
+<h3 >Cancel</h3></a><pre >public&nbsp;procedure Cancel()</pre><dl >
+<dt /><b >Abstract</b><dd >False</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Virtual</b><dd >False</dd></dl><dl >
+<dt /><b >Override</b><dd >False</dd></dl><dl >
+<dt /><b >Final</b><dd >False</dd></dl><dl >
+<dt /><b >Reintroduce</b><dd >False</dd></dl><hr /><a  name='Delete()'>
+<h3 >Delete</h3></a><pre >public&nbsp;procedure Delete()</pre><dl >
+<dt /><b >Abstract</b><dd >False</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Virtual</b><dd >False</dd></dl><dl >
+<dt /><b >Override</b><dd >False</dd></dl><dl >
+<dt /><b >Final</b><dd >False</dd></dl><dl >
+<dt /><b >Reintroduce</b><dd >False</dd></dl><hr /><a  name='Edit()'>
+<h3 >Edit</h3></a><pre >public&nbsp;procedure Edit()</pre><dl >
+<dt /><b >Abstract</b><dd >False</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Virtual</b><dd >False</dd></dl><dl >
+<dt /><b >Override</b><dd >False</dd></dl><dl >
+<dt /><b >Final</b><dd >False</dd></dl><dl >
+<dt /><b >Reintroduce</b><dd >False</dd></dl><hr /><a  name='Filter(string/String)'>
+<h3 >Filter</h3></a><pre >public&nbsp;procedure Filter(ACondition: string; AValue: String)</pre><dl >
+<dt /><b >Abstract</b><dd >False</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Virtual</b><dd >True</dd></dl><dl >
+<dt /><b >Override</b><dd >False</dd></dl><dl >
+<dt /><b >Final</b><dd >False</dd></dl><dl >
+<dt /><b >Reintroduce</b><dd >False</dd></dl><hr /><a  name='Open(Variant)'>
+<h3 >Open</h3></a><pre >public&nbsp;procedure Open(AValues: Array of variant)</pre><dl >
+<dt /><b >Abstract</b><dd >False</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Virtual</b><dd >True</dd></dl><dl >
+<dt /><b >Override</b><dd >False</dd></dl><dl >
+<dt /><b >Final</b><dd >False</dd></dl><dl >
+<dt /><b >Reintroduce</b><dd >False</dd></dl><hr /><a  name='oTimerStatusTimer(TObject)'>
+<h3 >oTimerStatusTimer</h3></a><pre >public&nbsp;procedure oTimerStatusTimer(Sender: TObject)</pre><dl >
+<dt /><b >Abstract</b><dd >False</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Virtual</b><dd >False</dd></dl><dl >
+<dt /><b >Override</b><dd >False</dd></dl><dl >
+<dt /><b >Final</b><dd >False</dd></dl><dl >
+<dt /><b >Reintroduce</b><dd >False</dd></dl><hr /><a  name='Post()'>
+<h3 >Post</h3></a><pre >public&nbsp;procedure Post()</pre><dl >
+<dt /><b >Abstract</b><dd >False</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Virtual</b><dd >False</dd></dl><dl >
+<dt /><b >Override</b><dd >False</dd></dl><dl >
+<dt /><b >Final</b><dd >False</dd></dl><dl >
+<dt /><b >Reintroduce</b><dd >False</dd></dl><hr /><a  name='Refresh()'>
+<h3 >Refresh</h3></a><pre >public&nbsp;procedure Refresh()</pre><dl >
+<dt /><b >Abstract</b><dd >False</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Virtual</b><dd >False</dd></dl><dl >
+<dt /><b >Override</b><dd >False</dd></dl><dl >
+<dt /><b >Final</b><dd >False</dd></dl><dl >
+<dt /><b >Reintroduce</b><dd >False</dd></dl><hr /><a  name='SetDataset(TDataSet)'>
+<h3 >SetDataset</h3></a><pre >internal&nbsp;procedure SetDataset(Value: TDataset)</pre><dl >
+<dt /><b >Abstract</b><dd >False</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Virtual</b><dd >False</dd></dl><dl >
+<dt /><b >Override</b><dd >False</dd></dl><dl >
+<dt /><b >Final</b><dd >False</dd></dl><dl >
+<dt /><b >Reintroduce</b><dd >False</dd></dl><hr /><a  name='SetListenAction(TActionController)'>
+<h3 >SetListenAction</h3></a><pre >internal&nbsp;procedure SetListenAction(Value: <a href="../../controller/abstract/TActionController.html" target="classFrame" onclick="doClick('../../controller/abstract/doc-files/default.txvpck.html')">TActionController</a> )</pre><dl >
+<dt /><b >Abstract</b><dd >False</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Virtual</b><dd >False</dd></dl><dl >
+<dt /><b >Override</b><dd >False</dd></dl><dl >
+<dt /><b >Final</b><dd >False</dd></dl><dl >
+<dt /><b >Reintroduce</b><dd >False</dd></dl><hr /><a  name='SetListenDataset(TDataSet)'>
+<h3 >SetListenDataset</h3></a><pre >internal&nbsp;procedure SetListenDataset(Value: TDataset)</pre><dl >
+<dt /><b >Abstract</b><dd >False</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Virtual</b><dd >False</dd></dl><dl >
+<dt /><b >Override</b><dd >False</dd></dl><dl >
+<dt /><b >Final</b><dd >False</dd></dl><dl >
+<dt /><b >Reintroduce</b><dd >False</dd></dl><hr /><a  name='SetModelName(TModelAbstract)'>
+<h3 >SetModelName</h3></a><pre >internal&nbsp;procedure SetModelName(Value: <a href="../../model/abstract/TModelAbstract.html" target="classFrame" onclick="doClick('../../model/abstract/doc-files/default.txvpck.html')">model.abstract.TModelAbstract</a> )</pre><dl >
+<dt /><b >Abstract</b><dd >False</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Virtual</b><dd >False</dd></dl><dl >
+<dt /><b >Override</b><dd >False</dd></dl><dl >
+<dt /><b >Final</b><dd >False</dd></dl><dl >
+<dt /><b >Reintroduce</b><dd >False</dd></dl><hr /><a  name='SetOutherDataset(TDataSet)'>
+<h3 >SetOutherDataset</h3></a><pre >internal&nbsp;procedure SetOutherDataset(Value: TDataset)</pre><dl >
+<dt /><b >Abstract</b><dd >False</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Virtual</b><dd >False</dd></dl><dl >
+<dt /><b >Override</b><dd >False</dd></dl><dl >
+<dt /><b >Final</b><dd >False</dd></dl><dl >
+<dt /><b >Reintroduce</b><dd >False</dd></dl><hr /><a  name='SetView(TViewController)'>
+<h3 >SetView</h3></a><pre >internal&nbsp;procedure SetView(Value: <a href="../../controller/abstract/TViewController.html" target="classFrame" onclick="doClick('../../controller/abstract/doc-files/default.txvpck.html')">TViewController</a> )</pre><dl >
+<dt /><b >Abstract</b><dd >False</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Virtual</b><dd >False</dd></dl><dl >
+<dt /><b >Override</b><dd >False</dd></dl><dl >
+<dt /><b >Final</b><dd >False</dd></dl><dl >
+<dt /><b >Reintroduce</b><dd >False</dd></dl><hr /><a  name='SetViewName(String)'>
+<h3 >SetViewName</h3></a><pre >internal&nbsp;procedure SetViewName(Value: String)</pre><dl >
+<dt /><b >Abstract</b><dd >False</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Virtual</b><dd >False</dd></dl><dl >
+<dt /><b >Override</b><dd >False</dd></dl><dl >
+<dt /><b >Final</b><dd >False</dd></dl><dl >
+<dt /><b >Reintroduce</b><dd >False</dd></dl><hr /><a  name='ShowController()'>
+<h3 >ShowController</h3></a><pre >public&nbsp;procedure ShowController()</pre><dl >
+<dt /><b >Abstract</b><dd >False</dd></dl><dl >
+<dt /><b >Class</b><dd >False</dd></dl><dl >
+<dt /><b >Virtual</b><dd >True</dd></dl><dl >
+<dt /><b >Override</b><dd >False</dd></dl><dl >
+<dt /><b >Final</b><dd >False</dd></dl><dl >
+<dt /><b >Reintroduce</b><dd >False</dd></dl><hr /><p /><table  border='0' cellpadding='0' cellspacing='0'>
+<tr  class='TableHeaderStyle'>
+<td >
+<font  size='+0'>
+<b >Association Link</b></font></td></tr></table><br />to Class  <a href="../../model/abstract/TModelAbstract.html" target="classFrame" onclick="doClick('../../model/abstract/doc-files/default.txvpck.html')">TModelAbstract</a> <p /><dl >
+<dt /><b >Client</b><dd >FModelName</dd></dl><dl >
+<dt /><b >Directed</b><dd >False</dd></dl><dl >
+<dt /><b >Supplier</b><dd >TModelAbstract</dd></dl><dl >
+<dt /><b >Type</b><dd >association</dd></dl><br />to Class  <a href="../../controller/abstract/TViewController.html" target="classFrame" onclick="doClick('../../controller/abstract/doc-files/default.txvpck.html')">TViewController</a> <p /><dl >
+<dt /><b >Client</b><dd >FView</dd></dl><dl >
+<dt /><b >Directed</b><dd >False</dd></dl><dl >
+<dt /><b >Supplier</b><dd >TViewController</dd></dl><dl >
+<dt /><b >Type</b><dd >association</dd></dl><br />to Enum  <a href="../../controller/abstract/TActionController.html" target="classFrame" onclick="doClick('../../controller/abstract/doc-files/default.txvpck.html')">TActionController</a> <p /><dl >
+<dt /><b >Client</b><dd >FListenAction</dd></dl><dl >
+<dt /><b >Directed</b><dd >False</dd></dl><dl >
+<dt /><b >Supplier</b><dd >TActionController</dd></dl><dl >
+<dt /><b >Type</b><dd >association</dd></dl><br />to Class  <a href="../../model/abstract/TModelAbstract.html" target="classFrame" onclick="doClick('../../model/abstract/doc-files/default.txvpck.html')">TModelAbstract</a> <p /><dl >
+<dt /><b >Client</b><dd >model</dd></dl><dl >
+<dt /><b >Directed</b><dd >False</dd></dl><dl >
+<dt /><b >Supplier</b><dd >TModelAbstract</dd></dl><dl >
+<dt /><b >Type</b><dd >association</dd></dl><br />to Class  <a href="../../controller/abstract/TViewController.html" target="classFrame" onclick="doClick('../../controller/abstract/doc-files/default.txvpck.html')">TViewController</a> <p /><dl >
+<dt /><b >Client</b><dd >View</dd></dl><dl >
+<dt /><b >Directed</b><dd >False</dd></dl><dl >
+<dt /><b >Supplier</b><dd >TViewController</dd></dl><dl >
+<dt /><b >Type</b><dd >association</dd></dl><br />to Enum  <a href="../../controller/abstract/TActionController.html" target="classFrame" onclick="doClick('../../controller/abstract/doc-files/default.txvpck.html')">TActionController</a> <p /><dl >
+<dt /><b >Client</b><dd >ListenAction</dd></dl><dl >
+<dt /><b >Directed</b><dd >False</dd></dl><dl >
+<dt /><b >Supplier</b><dd >TActionController</dd></dl><dl >
+<dt /><b >Type</b><dd >association</dd></dl><br /><hr /><table  border='0' width='100%' cellpadding='1' cellspacing='0'>
+<tr >
+<td  colspan='2' class='NavBarCellCommon'>
+<table  border='0' cellpadding='0' cellspacing='3'>
+<tr  align='center' valign='top'>
+<td  class='NavBarCellCommon'>
+<a  href='../../overview-summary.html'>
+<font  size='+1' class='NavBarFont1'>
+<b >Overview</b></font></a>&nbsp;</td><td  class='NavBarCellCommon'>
+<a  href='package-summary.html'>
+<font  size='+1' class='NavBarFont1'>
+<b >Namespace</b></font></a>&nbsp;</td><td  class='NavBarCellCommonRev'>
+<font  size='+1' class='NavBarFont1'>
+<b >Classifier</b></font>&nbsp;</td><td  class='NavBarCellCommon'>
+<font  size='+1' class='NavBarFont1'>Tree</font>&nbsp;</td><td  class='NavBarCellCommon'>
+<a  href='../../index-all.html'>
+<font  size='+1' class='NavBarFont1'>
+<b >Index</b></font></a>&nbsp;</td><td  class='NavBarCellCommon'>
+<a  href='../../help-doc.html'>
+<font  size='+1' class='NavBarFont1'>
+<b >Help</b></font></a>&nbsp;</td></tr></table><td  align='right' valign='top' rowspan='3'>
+<em ></em></td></td></tr><tr >
+<td  class='NavBarCellPrevNext'>
+<font  size='-2'><a href="../../controller/abstract/TActionController.html" target="classFrame" onclick="doClick('../../controller/abstract/doc-files/default.txvpck.html')">PREV </a> &nbsp;&nbsp;<a href="../../controller/abstract/TControllerFactory.html" target="classFrame" onclick="doClick('../../controller/abstract/doc-files/default.txvpck.html')">NEXT </a> </font></td><td  class='NavBarCellPrevNext'>
+<font  size='-2'>
+<a  href='../../index.html' target='_top'>
+<b >FRAMES</b></a>&nbsp;<a  href='../../controller/abstract/TControllerAbstract.html' target='_top'>
+<b >NO FRAMES</b></a></font></td></tr><tr >
+<td  valign='top' class='NavBarCell3'>
+<font  size='-2'>SUMMARY:&nbsp;INNER&nbsp;|&nbsp;<a  href='#field_summary'>FIELD</a>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;DESTR&nbsp;|&nbsp;<a  href='#method_summary'>METHOD</a></font></td><td  valign='top' class='NavBarCell3'>
+<font  size='-2'>DETAIL:&nbsp;<a  href='#field_detail'>FIELD</a>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;DESTR&nbsp;|&nbsp;<a  href='#method_detail'>METHOD</a></font></td></tr></table><br /><p /></html>

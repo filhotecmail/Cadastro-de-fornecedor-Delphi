@@ -4,5 +4,10 @@
     <property name="$defaultDiagram" value="true" />
     <property name="$metaclass" value="Package Diagram" />
     <property name="$name" value="default" />
+    <reference referencedUin="design:view:::jznkksbtdkq0jk1jq_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:view.forcenedor.crud.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud" />
+    </reference>
   </view>
 </nodeSet>

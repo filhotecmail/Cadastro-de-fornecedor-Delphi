@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="jznkksbtdkq0jk1jq_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:view.forcenedor.crud.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.StatusBar1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.oEnterAsTab" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.ods" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.GroupBox2" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.GroupBox1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.oBtConfirm" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.oBtCancel" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.oInfo" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.GroupBox4" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.Label5" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.Label6" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.Label2" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.Label4" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.Label9" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.Label1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.DBEdit1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.oComboEmpresas" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.oXFant" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.oCnpj" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.oTel2" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.oTel1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.GroupBox5" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.Label3" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.Label7" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.oRg" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.oDataNasc" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.oBtEdit" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.oXFantEmpresa" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.oCnpjEmpresa" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.oUfEmpresa" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.Label8" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.Label10" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.Label11" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.oBtCancelClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.oBtConfirmClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.oBtEditClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.FormShow(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.oCnpjKeyPress(System.TObject,ref@System.Char)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.FormCloseQuery(System.TObject,ref@System.Boolean)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.oComboEmpresasChange(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.forcenedor.crud.TViewFornecedorCrud.ControlStateButtons()" />
+    </reference>
+  </view>
+</nodeSet>

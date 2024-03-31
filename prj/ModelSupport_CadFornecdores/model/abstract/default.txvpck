@@ -4,5 +4,35 @@
     <property name="$defaultDiagram" value="true" />
     <property name="$metaclass" value="Package Diagram" />
     <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:model.abstract.TModelAbstract">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:model.abstract.TModelAbstract.oDataset" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:model.abstract.TModelAbstract.ConfiureFirebirdDriver(System.IniFiles.TIniFile)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:model.abstract.TModelAbstract.ConfiurePostgresDriver(System.IniFiles.TIniFile)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:model.abstract.TModelAbstract.ConfiureOracleDriver(System.IniFiles.TIniFile)" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:model.abstract.TModelAbstract.FTDatabaseDriverAbstract" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:model.abstract.TModelAbstract.FTablename" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:model.abstract.TModelAbstract.FAutoincField" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:model.abstract.TModelAbstract.FFields" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:model.abstract.TModelAbstract.FGeneratorName" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:model.abstract.TModelAbstract.FWhereClausule" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:model.abstract.TModelAbstract.SetAutoincField(System.string)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:model.abstract.TModelAbstract.SetFields(System.string[])" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:model.abstract.TModelAbstract.SetGeneratorName(System.string)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:model.abstract.TModelAbstract.SetTablename(System.string)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:model.abstract.TModelAbstract.SetWhereClausule(System.string[])" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:model.abstract.TModelAbstract.Create(System.Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:model.abstract.TModelAbstract.BeforeDestruction()" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:model.abstract.TModelAbstract.Tablename" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:model.abstract.TModelAbstract.GeneratorName" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:model.abstract.TModelAbstract.AutoincField" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:model.abstract.TModelAbstract.Fields" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:model.abstract.TModelAbstract.WhereClausule" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:model.abstract.TModelAbstract.GetDatasetbyName(System.string)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:model.abstract.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:model.abstract.@unitclass.C_InifileConfigdatabase" />
+    </reference>
   </view>
 </nodeSet>
