@@ -148,3 +148,101 @@ A entidade **FORNECEDOR** desempenha um papel fundamental em um sistema ERP (Ent
 
 Essas restrições e relacionamentos garantem a consistência e a integridade dos dados na tabela de fornecedores, essenciais para um funcionamento adequado do sistema ERP.
 
+# Micro Framework Controller
+
+O Micro Framework Controller é uma estrutura simples para gerenciar controladores em aplicativos Delphi. Ele fornece uma maneira fácil de criar e manipular controladores que lidam com modelos de dados e visualizações.
+
+## Classes Principais
+
+### TControllerAbstract
+
+A classe `TControllerAbstract` é a base para todos os controladores. Ela gerencia a conexão entre o modelo de dados e a visualização, bem como a lógica de negócios associada.
+
+#### Propriedades
+
+- **model**: Representa o modelo associado a este controlador.
+- **ViewName**: Representa o nome da visualização associada a este controlador.
+- **Dataset**: Representa o conjunto de dados associado a este controlador.
+- **View**: Representa a visualização associada a este controlador.
+- **ListenAction**: Representa a ação de escuta associada a este controlador.
+- **ListenDataset**: Representa o conjunto de dados de escuta associado a este controlador.
+- **OutherDataset**: Representa outro conjunto de dados associado a este controlador.
+
+#### Métodos Principais
+
+- **Append**: Inicia um novo registro.
+- **Cancel**: Cancela a operação atual.
+- **Delete**: Exclui o registro atual.
+- **Edit**: Edita o registro atual.
+- **Open**: Abre a visualização com valores específicos.
+- **Filter**: Aplica um filtro aos dados.
+- **Refresh**: Atualiza os dados.
+- **Post**: Grava os dados no conjunto de dados.
+
+### TControllerFactory
+
+A classe `TControllerFactory` é responsável por criar instâncias de controladores registrados.
+
+#### Métodos
+
+- **CreateController**: Cria uma instância do controlador registrado especificado.
+
+### TViewController
+
+A classe `TViewController` representa a visualização associada a um controlador.
+
+## Helpers
+
+### TFieldHelper
+
+O helper `TFieldHelper` fornece métodos de formatação para campos de dados.
+
+#### Métodos
+
+- **FormatAsCnpj**: Formata o campo como um CNPJ.
+- **FormatAsCpf**: Formata o campo como um CPF.
+- **AsformatedDoc**: Formata o campo como um documento.
+
+### TExceptionHelper
+
+O helper `TExceptionHelper` fornece métodos auxiliares para trabalhar com exceções.
+
+#### Métodos
+
+- **Match**: Verifica se a mensagem de exceção corresponde a uma das mensagens especificadas.
+- **Panic**: Cria uma nova exceção com a mensagem especificada e a lança imediatamente.
+
+## Exemplos de Uso
+
+```delphi
+// Criar uma instância do controlador
+var
+  Controller: TControllerAbstract;
+begin
+  Controller := TControllerFactory.CreateController('NomeDoControlador');
+  Controller.Append;
+end;
+// Formatando um campo como CNPJ
+var
+  Field: TField;
+  FormatedCnpj: String;
+begin
+  FormatedCnpj := Field.FormatAsCnpj;
+end;
+// Lidando com exceções
+try
+  // Algum código que possa gerar uma exceção
+except
+  on E: Exception do
+  begin
+    if E.Match(['Error 1', 'Error 2']) >= 0 then
+    begin
+      // Tratar a exceção
+    end
+    else
+    begin
+      E.Panic('Erro crítico ocorreu!');
+    end;
+  end;
+end;
+
