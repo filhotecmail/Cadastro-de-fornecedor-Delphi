@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{9142B3F0-40A1-41C8-8C38-6FA5A51C98C5}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="CadFornecdores.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Test\CadFornecdoresTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CadFornecdores">
+        <MSBuild Projects="CadFornecdores.dproj"/>
+    </Target>
+    <Target Name="CadFornecdores:Clean">
+        <MSBuild Projects="CadFornecdores.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CadFornecdores:Make">
+        <MSBuild Projects="CadFornecdores.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CadFornecdoresTests">
+        <MSBuild Projects="Test\CadFornecdoresTests.dproj"/>
+    </Target>
+    <Target Name="CadFornecdoresTests:Clean">
+        <MSBuild Projects="Test\CadFornecdoresTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CadFornecdoresTests:Make">
+        <MSBuild Projects="Test\CadFornecdoresTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CadFornecdores;CadFornecdoresTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CadFornecdores:Clean;CadFornecdoresTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CadFornecdores:Make;CadFornecdoresTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -5,12 +5,25 @@ interface
 uses
   System.SysUtils,
   System.Classes,
+  System.Types,
   System.IoUtils,
+  Winapi.Windows,
+  ShellAPI,
   IniFiles,
   Datasnap.Provider,
-  database.driver.abstract, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client;
+  database.driver.abstract,
+  FireDAC.Stan.Intf,
+  FireDAC.Stan.Option,
+  FireDAC.Stan.Param,
+  FireDAC.Stan.Error,
+  FireDAC.DatS,
+  FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf,
+  FireDAC.Stan.Async,
+  FireDAC.DApt,
+  Data.DB,
+  FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client, FireDAC.UI.Intf, FireDAC.Comp.ScriptCommands, FireDAC.Stan.Util, FireDAC.Comp.Script;
 
  const C_InifileConfigdatabase  = 'conf.ini';
  type
@@ -36,6 +49,8 @@ uses
      { Private declarations }
   public
     constructor Create(AOwner: TComponent); override;
+    procedure BeforeDestruction; override;
+
     { Public declarations }
     property Tablename: String read FTablename write SetTablename;
     property GeneratorName: string read FGeneratorName write SetGeneratorName;
@@ -44,17 +59,31 @@ uses
     property WhereClausule: TArray<String> read FWhereClausule write SetWhereClausule;
     function GetDatasetbyName(ADatasetname: String):TDataset;
   end;
-
+       
 implementation
 {%CLASSGROUP 'Vcl.Controls.TControl'}
+
+uses commom.system.logger;
 {$R *.dfm}
 
+
 { TModelAbstract }
+procedure TModelAbstract.BeforeDestruction;
+begin
+  inherited;
+ logger.WriteLogDestructor(Self);
+end;
 
 procedure TModelAbstract.ConfiureFirebirdDriver(PInifile: TIniFile);
  var oParams: TStringList;
+     LDatabasename: string;
 begin
-  oParams := TStringList.Create;
+  oParams := TStringList.Create; 
+  LDatabasename:= PIniFile.ReadString('FIREBIRD', 'DATABASE', '');
+
+  if not FileExists( LDatabasename )  then
+     raise Exception.CreateFmt('Banco de dados não existe na pasta %s',[ LDatabasename ]);
+
  try
   oParams.Add(Format('Server=%s'    , [PIniFile.ReadString('FIREBIRD', 'HOST', '')]));
   oParams.Add(Format('Database=%s'  , [PIniFile.ReadString('FIREBIRD', 'DATABASE', '')]));
@@ -65,8 +94,12 @@ begin
   oParams.Add(Format('Port=%s'      , [PIniFile.ReadString('FIREBIRD', 'PORT', '')]));
   oParams.Add(Format('VendorHome=%s', [PIniFile.ReadString('FIREBIRD', 'VENDORHOME', '')]));
   oParams.Add(Format('VendorLib=%s' , [PIniFile.ReadString('FIREBIRD', 'VENDORLIB', '')]));
+
   FTDatabaseDriverAbstract.ParamStr := oParams;
   oDataset.Connection := FTDatabaseDriverAbstract.Connection;
+  logger.WriteLog( 'constríndo Parametos de conexão' );
+  logger.WriteLog( oParams.Text );
+  
  finally
   FreeAndNil( oParams );
  end;
@@ -86,14 +119,13 @@ constructor TModelAbstract.Create(AOwner: TComponent);
 var
   LInifile: TInifile;
   LFileName: TFileName;
-  LParams: TStrings;
 begin
   inherited;
   FTDatabaseDriverAbstract:= TDatabaseDriverAbstract.Create( AOwner );
   LFileName:= TPath.Combine( ExtractFilePath( ParamStr( 0 ) ), C_InifileConfigdatabase );
   LInifile := TIniFile.Create( LFileName );
   ConfiureFirebirdDriver( LInifile );
-
+  logger.WriteLogConstrutor(Self);    
 end;
 
 function TModelAbstract.GetDatasetbyName(ADatasetname: String): TDataset;

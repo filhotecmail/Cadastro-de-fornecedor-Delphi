@@ -1,9 +1,15 @@
 object ControllerAbstract: TControllerAbstract
   OldCreateOrder = False
-  Height = 150
-  Width = 215
+  Height = 70
+  Width = 159
   object oProvider: TDataSetProvider
-    Left = 88
-    Top = 48
+    Left = 17
+    Top = 10
+  end
+  object oTimerStatus: TTimer
+    Enabled = False
+    OnTimer = oTimerStatusTimer
+    Left = 81
+    Top = 10
   end
 end

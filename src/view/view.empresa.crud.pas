@@ -47,6 +47,7 @@ type
     procedure oBtCancelClick(Sender: TObject);
     procedure oBtEditClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
   private
     { Private declarations }
     procedure ControlStateButtons;
@@ -68,6 +69,37 @@ begin
  obtEdit.Enabled    := not ( Controller.Dataset.State in dsWriteModes );
  oBtConfirm.Enabled := Controller.Dataset.State in dsWriteModes;
  oBtCancel.Enabled  := Controller.Dataset.State in dsWriteModes;
+end;
+
+procedure TViewEmpresaCrud.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+var
+  TaskDialog: TTaskDialog;
+begin
+  CanClose := not (Controller.Dataset.State in dsWriteModes);
+  if not CanClose then
+  begin
+    TaskDialog := TTaskDialog.Create(nil);
+    try
+      TaskDialog.Caption := 'Confirmação de Fechamento';
+      TaskDialog.Text := 'Existem registros não salvos. Deseja continuar e descartar as alterações?';
+      TaskDialog.MainIcon := tdiWarning;
+      TaskDialog.CommonButtons := [tcbYes, tcbNo];
+
+      if TaskDialog.Execute then
+      begin
+        if TaskDialog.ModalResult = mrYes then
+         begin
+          Controller.Dataset.Cancel;
+          ControlStateButtons;
+         end;
+      end
+      else
+        CanClose := False;
+    finally
+      TaskDialog.Free;
+    end;
+  end;
+
 end;
 
 procedure TViewEmpresaCrud.FormShow(Sender: TObject);

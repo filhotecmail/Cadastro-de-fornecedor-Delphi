@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="hdw6p85q8mq6sfh9r_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.GroupBox2" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.oEnterAsTab" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.ods" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.oID" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.oXFant" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.oCnpj" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.Label1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.Label2" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.Label3" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.Label4" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.oUfs" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.StatusBar1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.GroupBox1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.oBtConfirm" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.oBtCancel" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.oBtEdit" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.oBtConfirmClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.oBtCancelClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.oBtEditClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.FormShow(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.FormCloseQuery(System.TObject,ref@System.Boolean)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.empresa.crud.TViewEmpresaCrud.ControlStateButtons()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:view.empresa.crud.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>

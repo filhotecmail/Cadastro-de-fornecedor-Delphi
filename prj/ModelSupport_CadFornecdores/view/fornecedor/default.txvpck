@@ -4,5 +4,35 @@
     <property name="$defaultDiagram" value="true" />
     <property name="$metaclass" value="Package Diagram" />
     <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:view.fornecedor.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:view.fornecedor.TViewFornecedor">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.fornecedor.TViewFornecedor.StatusBar1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.fornecedor.TViewFornecedor.MainMenu1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.fornecedor.TViewFornecedor.M1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.fornecedor.TViewFornecedor.C1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.fornecedor.TViewFornecedor.I1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.fornecedor.TViewFornecedor.S1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.fornecedor.TViewFornecedor.oEnterAsTab" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.fornecedor.TViewFornecedor.GroupBox2" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.fornecedor.TViewFornecedor.oGrid" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.fornecedor.TViewFornecedor.MainMenu2" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.fornecedor.TViewFornecedor.MenuItem1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.fornecedor.TViewFornecedor.D1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.fornecedor.TViewFornecedor.MenuItem2" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.fornecedor.TViewFornecedor.ods" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.fornecedor.TViewFornecedor.StatusBar2" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.fornecedor.TViewFornecedor.ImageList1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.fornecedor.TViewFornecedor.GroupBox1" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.fornecedor.TViewFornecedor.oEditar" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.fornecedor.TViewFornecedor.oExluir" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:view.fornecedor.TViewFornecedor.Button1" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.fornecedor.TViewFornecedor.Button1Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.fornecedor.TViewFornecedor.oGridDblClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.fornecedor.TViewFornecedor.oExluirClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:view.fornecedor.TViewFornecedor.oEditarClick(System.TObject)" />
+    </reference>
   </view>
 </nodeSet>

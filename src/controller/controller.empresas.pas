@@ -6,7 +6,7 @@ uses
   System.SysUtils,
   System.Classes,
   controller.abstract,
-  Datasnap.Provider;
+  Datasnap.Provider, Vcl.ExtCtrls;
 
 type
   TControllerEmpresas = class(TControllerAbstract)

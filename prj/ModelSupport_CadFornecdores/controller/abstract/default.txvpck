@@ -4,5 +4,127 @@
     <property name="$defaultDiagram" value="true" />
     <property name="$metaclass" value="Package Diagram" />
     <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.abstract.TExceptionHelper">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="10,10,117,99" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TExceptionHelper.Match(System.string[])" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TExceptionHelper.Panic(System.string)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.abstract.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.@unitclass.FormatCPF(System.string)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.@unitclass.FormatCNPJ(System.string)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.abstract.TFieldHelper">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="146,1,147,114" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TFieldHelper.FormatAsCnpj()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TFieldHelper.FormatAsCpf()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TFieldHelper.AsformatedDoc()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.abstract.TControllerAbstract">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="312,1,190,657" />
+      <reference referencedUin="delphi:l_ast:src:CadFornecdores:controller.abstract.TControllerAbstract.ListenAction">
+        <property name="sourceAnchor" value="312,177" />
+        <property name="targetAnchor" value="241,177" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:src:CadFornecdores:controller.abstract.TControllerAbstract.FListenAction">
+        <property name="sourceAnchor" value="312,168" />
+        <property name="targetAnchor" value="241,169" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:src:CadFornecdores:controller.abstract.TControllerAbstract.View">
+        <property name="sourceAnchor" value="312,301" />
+        <property name="targetAnchor" value="307,301" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:src:CadFornecdores:controller.abstract.TControllerAbstract.FView">
+        <property name="sourceAnchor" value="312,292" />
+        <property name="targetAnchor" value="307,293" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:controller.abstract.TControllerAbstract.oProvider" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:controller.abstract.TControllerAbstract.oTimerStatus" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerAbstract.oTimerStatusTimer(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerAbstract.ShowView(System.string)" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:controller.abstract.TControllerAbstract.FModelName" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:controller.abstract.TControllerAbstract.FViewName" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:controller.abstract.TControllerAbstract.FDataset" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:controller.abstract.TControllerAbstract.FView" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:controller.abstract.TControllerAbstract.FClassView" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:controller.abstract.TControllerAbstract.FListenAction" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:controller.abstract.TControllerAbstract.FListenDataset" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:controller.abstract.TControllerAbstract.FOutherDataset" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerAbstract.SetModelName(model.abstract.TModelAbstract)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerAbstract.SetViewName(System.string)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerAbstract.SetDataset(Data.DB.TDataSet)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerAbstract.SetView(controller.abstract.TViewController)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerAbstract.SetListenAction(controller.abstract.TActionController)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerAbstract.SetListenDataset(Data.DB.TDataSet)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerAbstract.SetOutherDataset(Data.DB.TDataSet)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerAbstract.ShowController()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerAbstract.Post()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerAbstract.Append()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerAbstract.Cancel()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerAbstract.Delete()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerAbstract.Refresh()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerAbstract.Edit()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerAbstract.Open(System.Variant[])" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerAbstract.Filter(System.string,System.string)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerAbstract.AsFd()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerAbstract.AfterConstruction()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerAbstract.BeforeDestruction()" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:controller.abstract.TControllerAbstract.model" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:controller.abstract.TControllerAbstract.ViewName" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:controller.abstract.TControllerAbstract.Dataset" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:controller.abstract.TControllerAbstract.View" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:controller.abstract.TControllerAbstract.ListenAction" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:controller.abstract.TControllerAbstract.ListenDataset" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:controller.abstract.TControllerAbstract.OutherDataset" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.abstract.TActionController">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="127,128,114,98" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:controller.abstract.TActionController.oActionNone" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:controller.abstract.TActionController.oActionAppend" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:controller.abstract.TActionController.oActionOpen" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.abstract.TViewController">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="120,240,187,132" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:l_ast:src:CadFornecdores:controller.abstract.TViewController.FController">
+        <property name="sourceAnchor" value="307,317" />
+        <property name="targetAnchor" value="312,317" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:src:CadFornecdores:controller.abstract.TViewController.Controller">
+        <property name="sourceAnchor" value="307,309" />
+        <property name="targetAnchor" value="312,309" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:controller.abstract.TViewController.FController" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TViewController.SetController(controller.abstract.TControllerAbstract)" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:controller.abstract.TViewController.Controller" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:controller.abstract.TControllerFactory">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="540,1,164,99" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerFactory.CreateController(System.string)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:controller.abstract.TControllerFactory.CreateController(System.string,controller.abstract.TActionController,Data.DB.TDataSet)" />
+    </reference>
+    <reference referencedUin="design:node:::p0t0s609yco33smal_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="620,220,140,80" />
+      <property name="location_set_by_user" value="True" />
+      <property name="bounds_setted_by_user" value="True" />
+      <reference referencedUin="design:link:::5x564ow7m6q09ihmi_l:p0t0s609yco33smal_n">
+        <property name="sourceAnchor" value="502,234" />
+        <property name="targetAnchor" value="620,235" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
   </view>
 </nodeSet>

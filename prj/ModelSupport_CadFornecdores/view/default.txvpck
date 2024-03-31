@@ -4,5 +4,29 @@
     <property name="$defaultDiagram" value="true" />
     <property name="$metaclass" value="Package Diagram" />
     <property name="$name" value="default" />
+    <reference referencedUin="design:view:::l6zl8oab5n6x60zbr_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:view.empresa.TViewEmpresa" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:view.empresa.@unitclass" />
+      <reference referencedUin="design:view:::hdw6p85q8mq6sfh9r_v" />
+    </reference>
+    <reference referencedUin="design:view:::lr1oxinio6j25g2h_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::jznkksbtdkq0jk1jq_v" />
+    </reference>
+    <reference referencedUin="design:view:::ll4nmrsjr5o_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:view.master.TViewmaster" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:view.master.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::jn4jir8npn69kog4j_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:view.fornecedor.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:view.fornecedor.TViewFornecedor" />
+    </reference>
+    <reference referencedUin="design:view:::o1aj5ax737k_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::b8mx4m5p25k_v" />
+    </reference>
   </view>
 </nodeSet>

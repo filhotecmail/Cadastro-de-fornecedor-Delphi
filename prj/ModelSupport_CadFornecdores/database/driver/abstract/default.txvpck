@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="euka9sf2jq0wndjt_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:database.driver.abstract.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:database.driver.abstract.TDatabaseDriverAbstract">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:database.driver.abstract.TDatabaseDriverAbstract.oFbDriver" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:database.driver.abstract.TDatabaseDriverAbstract.oFbDriverDriverCreated(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:database.driver.abstract.TDatabaseDriverAbstract.oFbDriverDriverDestroying(System.TObject)" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:database.driver.abstract.TDatabaseDriverAbstract.FParamStr" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:database.driver.abstract.TDatabaseDriverAbstract.FDao" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:database.driver.abstract.TDatabaseDriverAbstract.FConnection" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:database.driver.abstract.TDatabaseDriverAbstract.SetParamStr(System.Classes.TStringList)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:database.driver.abstract.TDatabaseDriverAbstract.SetConnection(FireDAC.Comp.Client.TFDCustomConnection)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:database.driver.abstract.TDatabaseDriverAbstract.getFConnection()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:database.driver.abstract.TDatabaseDriverAbstract.Create(System.Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:database.driver.abstract.TDatabaseDriverAbstract.BeforeDestruction()" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:database.driver.abstract.TDatabaseDriverAbstract.ParamStr" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:database.driver.abstract.TDatabaseDriverAbstract.Connection" />
+    </reference>
+  </view>
+</nodeSet>

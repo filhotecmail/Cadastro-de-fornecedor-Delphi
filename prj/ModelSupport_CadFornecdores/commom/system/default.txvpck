@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="530hpp5l66m_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::h7kzpfgygvj_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:commom.system.logger.ILogger" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:commom.system.logger.THardDiskRecord" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:commom.system.logger.ExceptionHelper" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:commom.system.logger.TLogger" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:commom.system.logger.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:CadFornecdores:commom.system.logger.TOptionsLog" />
+    </reference>
+  </view>
+</nodeSet>

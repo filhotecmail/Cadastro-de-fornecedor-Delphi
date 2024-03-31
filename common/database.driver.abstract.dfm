@@ -1,10 +1,12 @@
 object DatabaseDriverAbstract: TDatabaseDriverAbstract
   OldCreateOrder = False
-  Height = 113
-  Width = 231
+  Height = 150
+  Width = 215
   object oFbDriver: TFDPhysFBDriverLink
+    OnDriverCreated = oFbDriverDriverCreated
+    OnDriverDestroying = oFbDriverDriverDestroying
     ThreadSafe = True
-    Left = 128
-    Top = 40
+    Left = 88
+    Top = 48
   end
 end

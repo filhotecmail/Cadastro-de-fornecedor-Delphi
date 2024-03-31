@@ -7,7 +7,7 @@ uses
   System.Classes,
   Vcl.forms,
   Data.DB,
-  controller.abstract, Datasnap.Provider;
+  controller.abstract, Datasnap.Provider, Vcl.ExtCtrls;
 
 type
   TControllerEmpresa = class( TControllerAbstract )

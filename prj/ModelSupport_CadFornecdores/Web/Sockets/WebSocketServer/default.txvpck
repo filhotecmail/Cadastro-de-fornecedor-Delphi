@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="ti563yn3fzh_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:Web.Sockets.WebSocketServer.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:Web.Sockets.WebSocketServer.@unitclass.HeadersParse(System.string)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:Web.Sockets.WebSocketServer.TWebSocketServer">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:Web.Sockets.WebSocketServer.TWebSocketServer.IdServerIOHandlerSSLOpenSSL" />
+      <reference referencedUin="delphi:e_field:src:CadFornecdores:Web.Sockets.WebSocketServer.TWebSocketServer.HashSHA1" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:Web.Sockets.WebSocketServer.TWebSocketServer.DoConnect(IdContext.TIdContext)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:Web.Sockets.WebSocketServer.TWebSocketServer.DoExecute(IdContext.TIdContext)" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:Web.Sockets.WebSocketServer.TWebSocketServer.InitSSL(IdSSLOpenSSL.TIdServerIOHandlerSSLOpenSSL)" />
+      <reference referencedUin="delphi:e_property:src:CadFornecdores:Web.Sockets.WebSocketServer.TWebSocketServer.OnExecute" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:Web.Sockets.WebSocketServer.TWebSocketServer.Create()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:Web.Sockets.WebSocketServer.TWebSocketServer.Destroy()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CadFornecdores:Web.Sockets.WebSocketServer.TWebSocketIOHandlerHelper">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:Web.Sockets.WebSocketServer.TWebSocketIOHandlerHelper.ReadBytesX()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:Web.Sockets.WebSocketServer.TWebSocketIOHandlerHelper.ReadString()" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:Web.Sockets.WebSocketServer.TWebSocketIOHandlerHelper.WriteBytes(System.Byte[])" />
+      <reference referencedUin="delphi:e_method:src:CadFornecdores:Web.Sockets.WebSocketServer.TWebSocketIOHandlerHelper.WriteString(System.string)" />
+    </reference>
+  </view>
+</nodeSet>
