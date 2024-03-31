@@ -31,10 +31,12 @@ uses
   Winapi.Windows,
   Vcl.Dialogs,
   Vcl.Controls,
+  Vcl.ComCtrls,
+  Firedac.comp.client,
   Data.DB,
   Vcl.forms,
   model.abstract,
-  Datasnap.Provider;
+  Datasnap.Provider, Vcl.ExtCtrls, System.ImageList, Vcl.ImgList;
 
  Type TActionController = (oActionNone,oActionAppend,oActionOpen); 
 
@@ -45,6 +47,8 @@ uses
 
   TControllerAbstract = class( TDataModule )
     oProvider: TDataSetProvider;
+    oTimerStatus: TTimer;
+    procedure oTimerStatusTimer(Sender: TObject);
   protected
     function ShowView( AviewName: String ): TForm;
   private
@@ -66,7 +70,7 @@ uses
     procedure SetOutherDataset(const Value: TDataset);
   public
    { Public declarations }
-    procedure ShowController; virtual;  
+    procedure ShowController; virtual;
    {Controles}
     procedure Post;
     procedure Append;
@@ -74,7 +78,12 @@ uses
     procedure Delete;
     procedure Refresh;
     procedure Edit;
-   {Propriedades} 
+    procedure Open(AValues: Array of variant); virtual;
+    procedure Filter(ACondition: string; AValue: String); virtual;
+    function AsFd:TFDQuery;
+    procedure AfterConstruction; override;
+    procedure BeforeDestruction; override;
+   {Propriedades}
        ///  <summary>
       ///    Representa o modelo associado a este controlador.
       ///  </summary>
@@ -158,13 +167,54 @@ uses
   private
     FController: TControllerAbstract;
     procedure SetController(const Value: TControllerAbstract);
-  published
+  public
       property Controller: TControllerAbstract read FController write SetController;
  end;
 
+ type TFieldHelper = class Helper for TField
+      function FormatAsCnpj: String;
+      function FormatAsCpf: String;
+      function AsformatedDoc:String;
+ end;
+
+ type
+  TExceptionHelper = class helper for Exception
+    function Match(const Messages: array of string): Integer;
+    function Panic(const PMessage: string):Exception;
+  end;
+
 implementation
 {%CLASSGROUP 'Vcl.Controls.TControl'}
+
+uses commom.system.logger, dao.abstract;
 {$R *.dfm}
+
+function FormatCPF(const CPF: string): string;
+begin
+
+  if Length(CPF) <> 11 then
+  begin
+    Result := CPF;
+    Exit;
+  end;
+
+  Result := Format('%s.%s.%s-%s', [Copy(CPF, 1, 3), Copy(CPF, 4, 3),
+    Copy(CPF, 7, 3), Copy(CPF, 10, 2)]);
+end;
+
+function FormatCNPJ(const CNPJ: string): string;
+begin
+
+  if Length(CNPJ) <> 14 then
+  begin
+    Result := CNPJ;
+    Exit;
+  end;
+
+  Result := Format('%s.%s.%s/%s-%s', [Copy(CNPJ, 1, 2), Copy(CNPJ, 3, 3),
+    Copy(CNPJ, 6, 3), Copy(CNPJ, 9, 4), Copy(CNPJ, 13, 2)]);
+
+end;
 
 { TControllerAbstract }
 
@@ -181,10 +231,29 @@ implementation
     O diálogo de confirmação é exibido com um ícone de escudo e botões "Sim" e "Não".
   ---------------------------------------------------------------------------
 }
+procedure TControllerAbstract.AfterConstruction;
+begin
+  inherited;
+  oTimerStatus.Enabled := true;
+  logger.WriteLogConstrutor( Self );
+end;
+
+
+{  --------------------------------------------------------------------------
+  Procedimento: TControllerAbstract.Append
+  Resumo: Executa a ação de inclusão de um novo registro.
+  Descrição:
+    Este procedimento exibe uma caixa de diálogo de confirmação para iniciar a inclusão de um novo registro na
+    tabela associada. Se o usuário confirmar a ação, o método Dataset.Append é chamado para iniciar a inclusão
+    do novo registro.
+  Observações:
+    Certifique-se de que o conjunto de dados (Dataset) associado ao controlador está devidamente configurado antes de
+    chamar este método. A exibição da caixa de diálogo e a inclusão do registro são condicionadas à interação do usuário.
+  ---------------------------------------------------------------------------
+}
 procedure TControllerAbstract.Append;
 var
   TaskDialog: TTaskDialog;
-  TaskDialogButtonItem: TTaskDialogBaseButtonItem;
 begin
 
   TaskDialog := TTaskDialog.Create(nil);
@@ -216,10 +285,31 @@ end;
     O diálogo de confirmação é exibido com um ícone de escudo e botões "Sim" e "Não".
   ---------------------------------------------------------------------------
 }
+function TControllerAbstract.AsFd: TFDQuery;
+begin
+ Result:= TFDQuery(Dataset);
+end;
+
+{  --------------------------------------------------------------------------
+  Procedimento: TControllerAbstract.BeforeDestruction
+  Resumo: Executa ações antes da destruição do objeto.
+  Descrição:
+    Este procedimento é chamado automaticamente pelo sistema antes da destruição do objeto.
+    Ele chama o método BeforeDestruction da classe pai e registra uma entrada de log indicando a destruição do objeto.
+  Observações:
+    Este procedimento é geralmente usado para executar limpezas finais ou ações de desalocação de recursos antes
+    da destruição do objeto.
+  ---------------------------------------------------------------------------
+}
+procedure TControllerAbstract.BeforeDestruction;
+begin
+  inherited;
+ logger.WriteLogDestructor( Self );
+end;
+
 procedure TControllerAbstract.Cancel;
  var
   TaskDialog: TTaskDialog;
-  TaskDialogButtonItem: TTaskDialogBaseButtonItem;
 begin
 
   TaskDialog := TTaskDialog.Create(nil);
@@ -256,7 +346,6 @@ end;
 procedure TControllerAbstract.Delete;
 var
   TaskDialog: TTaskDialog;
-  TaskDialogButtonItem: TTaskDialogBaseButtonItem;
 begin
   if Dataset.IsEmpty then Exit;
     
@@ -293,7 +382,6 @@ end;
 procedure TControllerAbstract.Edit;
 var
   TaskDialog: TTaskDialog;
-  TaskDialogButtonItem: TTaskDialogBaseButtonItem;
 begin
   if Dataset.IsEmpty then Exit;
   
@@ -313,11 +401,75 @@ begin
   end;
 end;
 
+procedure TControllerAbstract.Filter(ACondition, AValue: String);
+begin
+ raise ENotImplemented.Create('Não implementado!');
+end;
+
+procedure TControllerAbstract.Open(AValues: array of variant);
+begin
+// 
+end;
+
+{  --------------------------------------------------------------------------
+  Procedimento: TControllerAbstract.oTimerStatusTimer
+  Resumo: Manipula o evento OnTimer do temporizador para atualizar informações na barra de status.
+  Descrição:
+    Este procedimento é chamado periodicamente pelo evento OnTimer de um temporizador para atualizar as
+     informações exibidas na barra de status. Ele verifica se a visualização associada está disponível e se a
+     barra de status está presente. Em seguida, configura o evento OnDrawPanel da barra de status para o método
+     StatusBarDrawPanel, que é responsável por desenhar um ícone de status personalizado em um dos painéis da barra de
+     status. Se não houver painéis na barra de status, adiciona os painéis necessários e configura seus textos iniciais.
+     Caso contrário, atualiza o texto do segundo painel com a data e hora atual.
+  Parâmetros:
+    - Sender: O objeto que gerou o evento, neste caso, o temporizador.
+  Observações:
+    Certifique-se de que um objeto TStatusBar com o nome 'oBar' está presente na visualização associada a este
+    controlador para que a atualização da barra de status ocorra corretamente.
+  ---------------------------------------------------------------------------
+}
+procedure TControllerAbstract.oTimerStatusTimer(Sender: TObject);
+var
+  LStatusBar: TStatusBar;
+begin
+ 
+ if View = nil then Exit;
+
+ LStatusBar:= View.FindComponent('oBar') as TStatusBar;
+
+ if LStatusBar = nil then Exit;
+
+ if LStatusBar.Panels.Count <= 0 then
+  begin
+
+    with LStatusBar.Panels.Add do
+    begin
+      Text  := 'Data e hora';
+      Width := 120;
+    end;
+
+    with LStatusBar.Panels.Add do
+    begin
+      Text  := '';
+      Width := 120;
+      Text  := DateTimeToStr(now);
+    end;
+
+  end else
+  begin 
+
+   with LStatusBar.Panels[1] do
+        Text:= DateTimeToStr(now);
+
+  end;
+   
+end;
+
 {  --------------------------------------------------------------------------
   Procedimento: TControllerAbstract.Post
   Resumo: Solicita confirmação antes de gravar os dados na tabela.
   Descrição:
-    Este procedimento exibe um diálogo de confirmação para o usuário antes de gravar os dados na tabela 
+    Este procedimento exibe um diálogo de confirmação para o usuário antes de gravar os dados na tabela
     associada ao controlador. O diálogo apresenta uma mensagem perguntando se o usuário realmente deseja 
     gravar os dados na tabela, com uma nota para revisar os dados antes de confirmar. Se o usuário confirmar, 
     os dados são gravados na tabela.
@@ -330,7 +482,6 @@ end;
 procedure TControllerAbstract.Post;
 var
   TaskDialog: TTaskDialog;
-  TaskDialogButtonItem: TTaskDialogBaseButtonItem;
 begin
 
   TaskDialog := TTaskDialog.Create(nil);
@@ -395,8 +546,8 @@ end;
 procedure TControllerAbstract.SetView(const Value: TViewController);
 begin
   FView := Value;
+  
 end;
-
 
 {  --------------------------------------------------------------------------
   Procedimento: TControllerAbstract.SetViewName
@@ -431,7 +582,6 @@ procedure TControllerAbstract.ShowController;
 begin
   raise ENotImplemented.Create( 'Não implementado na classe base!' );
 end;
-
 
 
 {  --------------------------------------------------------------------------
@@ -491,7 +641,7 @@ begin
     LClass := GetClass(NomeRegistrado);
     if (Assigned(LClass)) and (LClass.InheritsFrom(TComponent)) then
     begin
-      Result := TComponentClass(LClass).Create(nil);
+      Result := TComponentClass(LClass).Create(Application);
 
       if (Result is TControllerAbstract) then
       begin
@@ -569,19 +719,69 @@ end;
 
 { TViewController } 
 
-{  --------------------------------------------------------------------------
-  Procedimento: TViewController.SetController
-  Resumo: Define o controlador associado à visualização.
-  Descrição:
-    Este procedimento define o controlador associado à visualização. 
+{
+  --------------------------------------------------------------------------
+   Procedimento: TViewController.SetController
+   Resumo: Define o controlador associado à visualização.
+   Descrição:
+    Este procedimento define o controlador associado à visualização.
     Ele atribui o valor do parâmetro Value à propriedade FController da visualização.
-  Parâmetros:
-    - Value: O controlador a ser associado à visualização.
+
+   Parâmetros:
+   - Value: O controlador a ser associado à visualização.
   ---------------------------------------------------------------------------
 }
 procedure TViewController.SetController(const Value: TControllerAbstract);
 begin
   FController := Value;
+end;
+
+{ TFieldHelper }
+
+function TFieldHelper.AsformatedDoc: String;
+begin
+ if AsString.Trim.IsEmpty then Exit;
+ 
+ if AsString.Length <= 11 then
+    Result:= Self.FormatAsCpf
+    else
+    Result:= Self.FormatAsCnpj;
+
+end;
+
+function TFieldHelper.FormatAsCnpj: String;
+begin
+ Result:=  FormatCNPJ( Self.AsString );
+end;
+
+function TFieldHelper.FormatAsCpf: String;
+begin
+ Result:=  FormatCPF( Self.AsString );
+end;
+
+{ TExceptionHelper }
+
+function TExceptionHelper.Match(const Messages: array of string): Integer;
+ var
+  ErrorMessage: string;
+  Lidx: integer;
+begin
+  Result := -1;
+
+  ErrorMessage := lowercase(Self.Message);
+  for Lidx := Low( Messages) to High(Messages) do
+    if Pos(lowercase(Messages[Lidx]), ErrorMessage) > 0 then
+    begin
+      Result:= Lidx;
+      Exit;
+    end;
+
+end;
+
+function TExceptionHelper.Panic(const PMessage: string): Exception;
+begin
+ Result:= Exception.Create(PMessage);
+ raise Result;
 end;
 
 end.

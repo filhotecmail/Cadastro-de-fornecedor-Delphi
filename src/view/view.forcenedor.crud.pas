@@ -37,27 +37,42 @@ type
     oEnterAsTab: TJvEnterAsTab;
     ods: TDataSource;
     GroupBox2: TGroupBox;
-    Label1: TLabel;
-    Label2: TLabel;
-    Label3: TLabel;
-    oID: TDBEdit;
-    oXFant: TDBEdit;
-    DBEdit1: TDBEdit;
-    Label5: TLabel;
-    JvDBDatePickerEdit1: TJvDBDatePickerEdit;
-    Label6: TLabel;
     GroupBox1: TGroupBox;
     oBtConfirm: TButton;
     oBtCancel: TButton;
-    oBtEdit: TButton;
-    oComboEmpresas: TJvDBComboBox;
-    oCnpj: TDBEdit;
+    oInfo: TGroupBox;
+    GroupBox4: TGroupBox;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label2: TLabel;
     Label4: TLabel;
+    Label9: TLabel;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    oComboEmpresas: TJvDBComboBox;
+    oXFant: TDBEdit;
+    oCnpj: TDBEdit;
+    oTel2: TDBEdit;
+    oTel1: TDBEdit;
+    GroupBox5: TGroupBox;
+    Label3: TLabel;
+    Label7: TLabel;
+    oRg: TDBEdit;
+    oDataNasc: TJvDBDatePickerEdit;
+    oBtEdit: TButton;
+    oXFantEmpresa: TEdit;
+    oCnpjEmpresa: TEdit;
+    oUfEmpresa: TEdit;
+    Label8: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
     procedure oBtCancelClick(Sender: TObject);
     procedure oBtConfirmClick(Sender: TObject);
     procedure oBtEditClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure oCnpjKeyPress(Sender: TObject; var Key: Char);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure oComboEmpresasChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -73,10 +88,14 @@ implementation
 procedure TViewFornecedorCrud.ControlStateButtons;
 var
   LDataset: TDataSet;
+  LCnpj: string;
+  LXFant: string;
+  Luf: string;
 begin
  obtEdit.Enabled    := not ( Controller.Dataset.State in dsWriteModes );
  oBtConfirm.Enabled := Controller.Dataset.State in dsWriteModes;
  oBtCancel.Enabled  := Controller.Dataset.State in dsWriteModes;
+ oDataNasc.Enabled  := Controller.Dataset.State in dsWriteModes;
 
  LDataset:= Controller.OutherDataset;
  LDataset.Open;
@@ -86,14 +105,50 @@ begin
 
  LDataset.first;
  LDataset.DisableControls;
- while not LDataset.Eof do
+  while not LDataset.Eof do
   begin
-    oComboEmpresas.Items.Add( LDataset.FieldByName('E003CNPJ').AsString + ' | '+ LDataset.FieldByName('E001XFANT').AsString );
-    oComboEmpresas.Values.Add( LDataset.FieldByName('E003CNPJ').AsString );
+    LCnpj := LDataset.FieldByName('E003CNPJ').AsString;
+    LXFant:= LDataset.FieldByName('E001XFANT').AsString;
+    Luf   := LDataset.FieldByName('E002UF').AsString;
+
+    oComboEmpresas.Items.Add( LCnpj + ' | '+ LXFant + ' | '+Luf );
+    oComboEmpresas.Values.Add( LCnpj );
+
     LDataset.Next;
   end;
 
 end;
+
+procedure TViewFornecedorCrud.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+var
+  TaskDialog: TTaskDialog;
+begin
+  CanClose := not (Controller.Dataset.State in dsWriteModes);
+  if not CanClose then
+  begin
+    TaskDialog := TTaskDialog.Create(nil);
+    try
+      TaskDialog.Caption := 'Confirmação de Fechamento';
+      TaskDialog.Text := 'Existem registros não salvos. Deseja continuar e descartar as alterações?';
+      TaskDialog.MainIcon := tdiWarning;
+      TaskDialog.CommonButtons := [tcbYes, tcbNo];
+
+      if TaskDialog.Execute then
+      begin
+        if TaskDialog.ModalResult = mrYes then
+         begin
+           Controller.Dataset.Cancel;
+           ControlStateButtons;
+         end;
+      end
+      else
+        CanClose := False; // Evita que o formulário seja fechado se o diálogo for cancelado
+    finally
+      TaskDialog.Free;
+    end;
+  end;
+end;
+
 
 procedure TViewFornecedorCrud.FormShow(Sender: TObject);
 begin
@@ -119,8 +174,30 @@ begin
 end;
 
 procedure TViewFornecedorCrud.oCnpjKeyPress(Sender: TObject; var Key: Char);
+var
+  LEhCpf: Boolean;
 begin
- if not (Key in['0'..'9',Chr(8)]) then Key:= #0;
+
+  if not (CharInSet(Key, ['0'..'9', '.', '-', Chr(8)])) then
+  Key := #0;
+  LEhCpf := Length(oCnpj.Text) <= 11;
+
+  oRg.Enabled       := LEhCpf;
+  oDataNasc.Enabled := LEhCpf;
+
+  if not LEhCpf then  oRg.Text := EmptyStr;
+
+end;
+
+
+procedure TViewFornecedorCrud.oComboEmpresasChange(Sender: TObject);
+begin
+
+ Controller.OutherDataset.Open;
+ Controller.OutherDataset.Locate('E003CNPJ',oComboEmpresas.Values[oComboEmpresas.ItemIndex],[]);
+ oXFantEmpresa.Text := Controller.OutherDataset.FieldByName('E001XFANT').AsString;
+ oCnpjEmpresa.Text  := Controller.OutherDataset.FieldByName('E003CNPJ').AsString;
+ oUfEmpresa.Text    := Controller.OutherDataset.FieldByName('E002UF').AsString;
 end;
 
 Initialization

@@ -5,7 +5,7 @@ interface
 uses
   System.SysUtils,
   System.Classes,
-  controller.abstract, Datasnap.Provider;
+  controller.abstract, Datasnap.Provider, Vcl.ExtCtrls, System.ImageList, Vcl.ImgList, Vcl.Controls;
 
 type
   TControllerFornecedor = class( TControllerAbstract )
@@ -29,11 +29,14 @@ begin
   inherited;
  Model    := TModelFornecedor.Create( Self );
  ViewName := 'fornecedor' ;
+  OutherDataset:= model.GetDatasetbyName('oEmpresas');
 end;
 
 
  procedure TControllerFornecedor.ShowController;
 begin
+  if OutherDataset <> nil then OutherDataset.Open;
+
   Dataset.Open;
   View.ShowModal;
 end;

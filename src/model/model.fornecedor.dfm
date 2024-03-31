@@ -1,6 +1,6 @@
 inherited ModelFornecedor: TModelFornecedor
   OldCreateOrder = True
-  Width = 202
+  Width = 338
   inherited oDataset: TFDQuery
     UpdateOptions.AssignedValues = [uvFetchGeneratorsPoint, uvGeneratorName]
     UpdateOptions.FetchGeneratorsPoint = gpImmediate

@@ -53,6 +53,7 @@ object ViewEmpresa: TViewEmpresa
       Font.Style = []
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
       ParentFont = False
+      ReadOnly = True
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
@@ -65,6 +66,7 @@ object ViewEmpresa: TViewEmpresa
       SelectColumnsDialogStrings.Caption = 'Select columns'
       SelectColumnsDialogStrings.OK = '&OK'
       SelectColumnsDialogStrings.NoSelectionWarning = 'At least one column must be visible!'
+      CanDelete = False
       EditControls = <>
       RowsHeight = 20
       TitleRowHeight = 20
