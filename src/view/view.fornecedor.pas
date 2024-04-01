@@ -27,18 +27,9 @@ uses
 type
   TViewFornecedor = class( TViewController )
     StatusBar1: TStatusBar;
-    MainMenu1: TMainMenu;
-    M1: TMenuItem;
-    C1: TMenuItem;
-    I1: TMenuItem;
-    S1: TMenuItem;
     oEnterAsTab: TJvEnterAsTab;
     GroupBox2: TGroupBox;
     oGrid: TJvDBGrid;
-    MainMenu2: TMainMenu;
-    MenuItem1: TMenuItem;
-    D1: TMenuItem;
-    MenuItem2: TMenuItem;
     ods: TDataSource;
     StatusBar2: TStatusBar;
     ImageList1: TImageList;

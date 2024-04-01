@@ -3,7 +3,7 @@ object ViewFornecedor: TViewFornecedor
   Top = 0
   BorderStyle = bsSizeToolWin
   Caption = 'Cadastro e manuten'#231#227'o de fornecedores no sistema'
-  ClientHeight = 698
+  ClientHeight = 738
   ClientWidth = 1010
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -11,24 +11,24 @@ object ViewFornecedor: TViewFornecedor
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  Menu = MainMenu1
   OldCreateOrder = False
   Position = poMainFormCenter
   PixelsPerInch = 96
   TextHeight = 13
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 679
+    Top = 719
     Width = 1010
     Height = 19
     Panels = <>
+    ExplicitTop = 679
   end
   object GroupBox2: TGroupBox
     AlignWithMargins = True
     Left = 10
     Top = 10
     Width = 990
-    Height = 640
+    Height = 680
     Margins.Left = 10
     Margins.Top = 10
     Margins.Right = 10
@@ -42,12 +42,13 @@ object ViewFornecedor: TViewFornecedor
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    ExplicitHeight = 640
     object oGrid: TJvDBGrid
       AlignWithMargins = True
       Left = 5
       Top = 28
       Width = 980
-      Height = 545
+      Height = 585
       Cursor = crHandPoint
       Margins.Top = 10
       Align = alClient
@@ -121,11 +122,12 @@ object ViewFornecedor: TViewFornecedor
     end
     object GroupBox1: TGroupBox
       Left = 2
-      Top = 576
+      Top = 616
       Width = 986
       Height = 62
       Align = alBottom
       TabOrder = 1
+      ExplicitTop = 576
       object oEditar: TButton
         Left = 156
         Top = 16
@@ -164,44 +166,16 @@ object ViewFornecedor: TViewFornecedor
   end
   object StatusBar2: TStatusBar
     Left = 0
-    Top = 660
+    Top = 700
     Width = 1010
     Height = 19
     Panels = <>
     SizeGrip = False
-  end
-  object MainMenu1: TMainMenu
-    Left = 760
-    Top = 304
-    object M1: TMenuItem
-      Caption = 'Menu principal'
-      object C1: TMenuItem
-        Caption = 'Cadastrar uma nova empresa no sistema'
-      end
-      object I1: TMenuItem
-        Caption = 'Incluir um fornecedor no sistema'
-      end
-      object S1: TMenuItem
-        Caption = 'Sobre o sistema'
-      end
-    end
+    ExplicitTop = 660
   end
   object oEnterAsTab: TJvEnterAsTab
     Left = 864
     Top = 88
-  end
-  object MainMenu2: TMainMenu
-    Left = 855
-    Top = 144
-    object MenuItem1: TMenuItem
-      Caption = 'Insere F1'
-    end
-    object D1: TMenuItem
-      Caption = 'Deleta F2'
-    end
-    object MenuItem2: TMenuItem
-      Caption = 'Sair F9'
-    end
   end
   object ods: TDataSource
     AutoEdit = False
