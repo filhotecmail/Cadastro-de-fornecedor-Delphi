@@ -24,8 +24,6 @@ object ViewFornecedorCrud: TViewFornecedorCrud
     Height = 19
     Panels = <>
     SizeGrip = False
-    ExplicitTop = 315
-    ExplicitWidth = 912
   end
   object GroupBox2: TGroupBox
     AlignWithMargins = True
@@ -46,8 +44,6 @@ object ViewFornecedorCrud: TViewFornecedorCrud
     Font.Style = []
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 892
-    ExplicitHeight = 295
     object GroupBox1: TGroupBox
       Left = 2
       Top = 475
@@ -55,8 +51,6 @@ object ViewFornecedorCrud: TViewFornecedorCrud
       Height = 62
       Align = alBottom
       TabOrder = 0
-      ExplicitTop = 231
-      ExplicitWidth = 888
       object oBtConfirm: TButton
         Left = 236
         Top = 16
@@ -85,7 +79,6 @@ object ViewFornecedorCrud: TViewFornecedorCrud
       Align = alTop
       Caption = 'Dados da empresa selecionada'
       TabOrder = 1
-      ExplicitLeft = 7
       object Label8: TLabel
         Left = 16
         Top = 34
@@ -144,10 +137,6 @@ object ViewFornecedorCrud: TViewFornecedorCrud
       Align = alClient
       Caption = '...'
       TabOrder = 2
-      ExplicitLeft = 1
-      ExplicitTop = 131
-      ExplicitWidth = 841
-      ExplicitHeight = 359
       object Label5: TLabel
         Left = 24
         Top = 26
@@ -366,7 +355,7 @@ object ViewFornecedorCrud: TViewFornecedorCrud
           Top = 47
           Width = 178
           Height = 27
-          AllowNoDate = True
+          AllowNoDate = False
           DataField = 'F003FUNDDATANASC'
           DataSource = ods
           Font.Charset = DEFAULT_CHARSET

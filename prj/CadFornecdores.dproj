@@ -113,7 +113,15 @@
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Debug>true</VerInfo_Debug>
+        <VerInfo_PreRelease>true</VerInfo_PreRelease>
+        <VerInfo_Special>true</VerInfo_Special>
+        <VerInfo_Private>true</VerInfo_Private>
+        <VerInfo_DLL>true</VerInfo_DLL>
+        <VerInfo_AutoGenVersion>true</VerInfo_AutoGenVersion>
         <Icon_MainIcon>CadFornecdores_Icon.ico</Icon_MainIcon>
+        <VerInfo_Keys>CompanyName=Teste listagem de fornecedores;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=CadFornecedor v1 ;LegalCopyright=listagem de fornecedores;LegalTrademarks=listagem de fornecedores;OriginalFilename=CadFornecedor v1 ;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=Executável criado para exemplificar um aplicativo Delphi simples para cadastro de clientes;SpecialBuild=;PrivateBuild=</VerInfo_Keys>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">

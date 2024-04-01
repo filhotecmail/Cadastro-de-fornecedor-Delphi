@@ -74,12 +74,12 @@ uses
    { Public declarations }
     procedure ShowController; virtual;
    {Controles}
-    procedure Post;
-    procedure Append;
-    procedure Cancel;
-    procedure Delete;
-    procedure Refresh;
-    procedure Edit;
+    procedure Post; virtual;
+    procedure Append; virtual;
+    procedure Cancel;virtual;
+    procedure Delete; virtual;
+    procedure Refresh; virtual;
+    procedure Edit; virtual;
     procedure Open(AValues: Array of variant); virtual;
     procedure Filter(ACondition: string; AValue: String); virtual;
     function AsFd:TFDQuery;

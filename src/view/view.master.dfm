@@ -2797,8 +2797,6 @@ object Viewmaster: TViewmaster
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 18
-        ExplicitTop = 18
         object JvDBGrid1: TJvDBGrid
           AlignWithMargins = True
           Left = 5
@@ -2986,9 +2984,6 @@ object Viewmaster: TViewmaster
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        ExplicitTop = 67
-        ExplicitWidth = 990
-        ExplicitHeight = 602
         object oGrid: TJvDBGrid
           AlignWithMargins = True
           Left = 5

@@ -26,6 +26,7 @@ type
     procedure ShowController; override;
     procedure Open(AValues: array of Variant); override;
     procedure Filter(ACondition: string; AValue: string); override;
+
   end;
 
 implementation
