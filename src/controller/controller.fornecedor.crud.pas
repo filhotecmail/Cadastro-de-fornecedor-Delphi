@@ -24,6 +24,8 @@ type
     { Public declarations }
     procedure AfterConstruction; override;
     procedure ShowController; override;
+    procedure Post; override;
+
   end;
 
 implementation
@@ -69,6 +71,19 @@ begin
          Free;
        end;
     end;
+
+end;
+
+procedure TControllerFornecedorCrud.Post;
+ var LIsPFis: boolean;
+begin
+ LIsPFis := ( Dataset.FieldByName('F002CPFCNPJ').AsString.Length <= 11 ) ;
+
+  if LIsPFis then
+    if Dataset.FieldByName('F003FUNDDATANASC').IsNull then
+       raise Exception.Create('A data de nacimento é obrigatória para fornecedores pessoa Física');
+
+  inherited;
 
 end;
 

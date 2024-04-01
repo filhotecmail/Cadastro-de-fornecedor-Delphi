@@ -107,11 +107,16 @@ implementation
 uses view.doc.database;
 
 procedure TViewmaster.oBtFilterClick(Sender: TObject);
+var
+  FilterValue: string;
 begin
  case oRdgFilter.ItemIndex of
    0: Controller.Filter('F004NOMERAZAO LIKE %s ', oEdFilter.Text);
    1: Controller.Filter('F002CPFCNPJ = %s', oEdFilter.Text);
-   2: Controller.Filter('F001DATETIEMEC = %s', oEdFilter.Text);
+   2: begin
+      FilterValue := FormatDateTime('YYYY-MM-DD HH:NN:SS', StrToDate(oEdFilter.Text));
+      Controller.Filter('DATE(F001DATETIEMEC) = %s', FilterValue);
+   end;
  end;
 end;
 
@@ -186,14 +191,16 @@ end;
 
 procedure TViewmaster.oAppEventsException(Sender: TObject; E: Exception);
 const
-  ErrInvalidCNPJ = 'O CNPJ informado é inválido ou está em um padrão que não corresponde a um CNPJ.';
-  ErrUnderage = 'A data de nascimento informada relata que o portador deste documento CPF é menor de idade, portanto o '
-                +'estado do Paraná não permite a inclusão deste fornecedor no cadastro.';
-  ErrDuplicateRecord = 'O CNPJ Informado corresponde a um CNPJ de um registro já existente no banco de dados.';
-  ErrInvalidDocument = 'O Documento CPF/CNPJ informado no cadastro não é um documento válido.';
+  ErrInvalidCNPJ          = 'O CNPJ informado é inválido ou está em um padrão que não corresponde a um CNPJ.';
+  ErrUnderage             = 'A data de nascimento informada relata que o portador deste documento CPF é menor de idade, portanto o '
+                             +'estado do Paraná não permite a inclusão deste fornecedor no cadastro.';
+  ErrDuplicateRecord      = 'O CNPJ Informado corresponde a um CNPJ de um registro já existente no banco de dados.';
+  ErrInvalidDocument      = 'O Documento CPF/CNPJ informado no cadastro não é um documento válido.';
+  ErrDataNascimentoIsnull = 'A data de nacimento é obrigatória para fornecedores pessoa Física';
+  ErrrgIsnull             = 'O RG é um campo obrigatório para cadastros de pessoas físicas';
 
-  C_ErrorPatterns: array[0..3] of string = ('CHK_EMPRESA_CNPJ', 'FORNECEDOR_CHECK_DATENASC', 'UNIQUE',
-                                            'CHK_FORNECEDOR_ISVALIDDOC');
+  C_ErrorPatterns: array[0..5] of string = ('CHK_EMPRESA_CNPJ', 'Paraná', 'UNIQUE',
+                                            'CHK_FORNECEDOR_ISVALIDDOC','A data de nacimento','O Documento RG');
 
 var
   ErrorMessage: string;
@@ -204,6 +211,8 @@ begin
   1: ErrorMessage := ErrUnderage;
   2: ErrorMessage := ErrDuplicateRecord;
   3: ErrorMessage := ErrInvalidDocument;
+  4: ErrorMessage := ErrDataNascimentoIsnull;
+  5: ErrorMessage := ErrrgIsnull;
   else
     ErrorMessage := E.Message;
  end;

@@ -5,7 +5,7 @@ interface
 uses
   System.SysUtils,
   System.Classes,
-  dao.abstract,
+  //
   FireDAC.Stan.Intf,
   FireDAC.Stan.Option,
   FireDAC.Stan.Param,
@@ -21,10 +21,12 @@ uses
   FireDAC.Phys.FBDef,
   FireDAC.Phys,
   FireDAC.Phys.IBBase,
-  FireDAC.Phys.FB;
+  FireDAC.Phys.FB,
+  //
+  dao.abstract;
 
 type
-  TDatabaseDriverAbstract = class sealed(TDataModule)
+  TDatabaseDriverAbstract = class(TDataModule)
     oFbDriver: TFDPhysFBDriverLink;
     procedure oFbDriverDriverCreated(Sender: TObject);
     procedure oFbDriverDriverDestroying(Sender: TObject);
