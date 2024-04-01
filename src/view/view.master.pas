@@ -70,7 +70,7 @@ type
     GroupBox4: TGroupBox;
     lbFiltro: TLabel;
     oEdFilter: TEdit;
-    StatusBar1: TStatusBar;
+    oFooterFilter: TStatusBar;
     oRdgFilter: TRadioGroup;
     oBtFilter: TButton;
     odsFilter: TDataSource;
@@ -118,6 +118,7 @@ begin
       Controller.Filter('DATE(F001DATETIEMEC) = %s', FilterValue);
    end;
  end;
+ oFooterFilter.Panels[1].Text := Controller.OutherDataset.RecordCount.ToString;
 end;
 
 procedure TViewmaster.C1Click(Sender: TObject);
@@ -249,7 +250,7 @@ end;
 
 procedure TViewmaster.oBtDocClick(Sender: TObject);
 begin
- DoActionCloseApp;
+ DoActionShowDocApp;
 end;
 
 procedure TViewmaster.oEdPesquisaKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);

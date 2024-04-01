@@ -2930,6 +2930,7 @@ object Viewmaster: TViewmaster
             Width = 230
             Height = 86
             Caption = 'Filtro'
+            ItemIndex = 0
             Items.Strings = (
               'Filtro por nome'
               'Filtro por cnpj'
@@ -2946,7 +2947,7 @@ object Viewmaster: TViewmaster
             OnClick = oBtFilterClick
           end
         end
-        object StatusBar1: TStatusBar
+        object oFooterFilter: TStatusBar
           Left = 2
           Top = 561
           Width = 978
@@ -3023,14 +3024,14 @@ object Viewmaster: TViewmaster
               Expanded = False
               FieldName = 'F001DATETIEMEC'
               Title.Caption = 'Registro'
-              Width = 131
+              Width = 127
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'E003CNPJ'
               Title.Caption = 'CNPJ da empresa'
-              Width = 133
+              Width = 154
               Visible = True
             end
             item
@@ -3044,21 +3045,21 @@ object Viewmaster: TViewmaster
               Expanded = False
               FieldName = 'F004NOMERAZAO'
               Title.Caption = 'Nome/Raz'#227'o Social do fornecedor'
-              Width = 384
+              Width = 374
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'F002CPFCNPJ'
               Title.Caption = 'CPF/CNPJ do fornecedor'
-              Width = 154
+              Width = 150
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'F003FUNDDATANASC'
               Title.Caption = 'Funda'#231#227'o'
-              Width = 114
+              Width = 111
               Visible = True
             end>
         end
